@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="NCategoria.cs" />
     <Compile Include="NNivelAcceso.cs" />
+    <Compile Include="NTallas.cs" />
     <Compile Include="NUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

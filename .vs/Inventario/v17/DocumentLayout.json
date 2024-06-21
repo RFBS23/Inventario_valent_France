@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25D75FF2-F7C3-4094-B584-701D0F18CB93}|Datos\\Datos.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\datos\\dcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25D75FF2-F7C3-4094-B584-701D0F18CB93}|Datos\\Datos.csproj|solutionrelative:datos\\dcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8FD7930-DD19-49DB-88B4-D2D35C4758C8}|Negocio\\Negocio.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\negocio\\ntallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8FD7930-DD19-49DB-88B4-D2D35C4758C8}|Negocio\\Negocio.csproj|solutionrelative:negocio\\ntallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25D75FF2-F7C3-4094-B584-701D0F18CB93}|Datos\\Datos.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\datos\\dtallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25D75FF2-F7C3-4094-B584-701D0F18CB93}|Datos\\Datos.csproj|solutionrelative:datos\\dtallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25D75FF2-F7C3-4094-B584-701D0F18CB93}|Datos\\Datos.csproj|C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\datos\\dusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25D75FF2-F7C3-4094-B584-701D0F18CB93}|Datos\\Datos.csproj|solutionrelative:datos\\dusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\presentacion\\frmtallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmtallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79785230-5A16-4DC2-AAFB-C8F6F2F7B3EE}|Entidad\\Entidad.csproj|C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\entidad\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79785230-5A16-4DC2-AAFB-C8F6F2F7B3EE}|Entidad\\Entidad.csproj|solutionrelative:entidad\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\presentacion\\frmtallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmtallas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,79 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 278,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmUsuarios.cs",
-              "RelativeDocumentMoniker": "presentacion\\frmUsuarios.cs",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmUsuarios.cs",
-              "RelativeToolTip": "presentacion\\frmUsuarios.cs",
-              "ViewState": "AQIAAOIAAAAAAAAAAAAAAO8AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T21:00:29.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Datos\\DUsuarios.cs",
-              "RelativeDocumentMoniker": "Datos\\DUsuarios.cs",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Datos\\DUsuarios.cs",
-              "RelativeToolTip": "Datos\\DUsuarios.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAuwHEAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:58:18.336Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmCategorias.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmCategorias.cs",
-              "RelativeDocumentMoniker": "presentacion\\frmCategorias.cs",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmCategorias.cs",
-              "RelativeToolTip": "presentacion\\frmCategorias.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAAAJoAAAAIAAAA",
+              "Title": "DTallas.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Datos\\DTallas.cs",
+              "RelativeDocumentMoniker": "Datos\\DTallas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Datos\\DTallas.cs",
+              "RelativeToolTip": "Datos\\DTallas.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAwDIAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:06:02.805Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmCategorias.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmCategorias.cs",
-              "RelativeDocumentMoniker": "presentacion\\frmCategorias.cs",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmCategorias.cs [Dise\u00F1o]",
-              "RelativeToolTip": "presentacion\\frmCategorias.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T19:52:39.693Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Datos\\DCategoria.cs",
-              "RelativeDocumentMoniker": "Datos\\DCategoria.cs",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Datos\\DCategoria.cs",
-              "RelativeToolTip": "Datos\\DCategoria.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAcwD4AAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T19:25:04.581Z",
+              "WhenOpened": "2024-06-21T00:39:36.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Entidad\\Categoria.cs",
-              "RelativeDocumentMoniker": "Entidad\\Categoria.cs",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Entidad\\Categoria.cs",
-              "RelativeToolTip": "Entidad\\Categoria.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAxAAAA",
+              "DocumentIndex": 2,
+              "Title": "frmTallas.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmTallas.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmTallas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmTallas.cs",
+              "RelativeToolTip": "presentacion\\frmTallas.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowB0AAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T19:24:43.05Z"
+              "WhenOpened": "2024-06-21T00:47:53.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NTallas.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Negocio\\NTallas.cs",
+              "RelativeDocumentMoniker": "Negocio\\NTallas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Negocio\\NTallas.cs",
+              "RelativeToolTip": "Negocio\\NTallas.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAkwBMAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T00:46:40.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmTallas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmTallas.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmTallas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmTallas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "presentacion\\frmTallas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T00:29:27.46Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

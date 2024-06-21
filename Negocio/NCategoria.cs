@@ -17,6 +17,11 @@ namespace Negocio
             return objd_categoria.Listar();
         }
 
+        public List<Categoria> ListarCategorias()
+        {
+            return objd_categoria.ListarCategorias();
+        }
+
         public int Registrar(Categoria obj, out string Mensaje)
         {
             Mensaje = string.Empty;

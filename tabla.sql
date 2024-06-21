@@ -82,6 +82,10 @@ create table tallasropa(
 	fechamodificado DATETIME DEFAULT GETDATE()
 )
 go
+
+select idtallaropa, c.idcategoria, c.nombrecategoria, nombretalla, tr.estado, CONVERT(VARCHAR(10), tr.fecharegistro, 120)AS fecharegistro_tallas, CONVERT(VARCHAR(10), tr.fechamodificado, 120)AS fechamodificada_tallas from tallasropa tr
+inner join categorias c on c.idcategoria = tr.idcategoria
+
 insert into tallasropa (nombretalla, idcategoria) values
 	('S', 1),
 	('M', 2)

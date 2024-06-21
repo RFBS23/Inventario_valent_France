@@ -140,5 +140,39 @@ namespace Datos
             return respuesta;
         }
 
+        public List<Categoria> ListarCategorias()
+        {
+            List<Categoria> lista = new List<Categoria>();
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("select idcategoria, nombrecategoria, estado from categorias where estado = 1");
+
+                    SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
+                    cmd.CommandType = CommandType.Text;
+
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Categoria()
+                            {
+                                idcategoria = Convert.ToInt32(dr["idcategoria"]),
+                                nombrecategoria = dr["nombrecategoria"].ToString(),
+                                estado = Convert.ToBoolean(dr["estado"])
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lista = new List<Categoria>();
+                }
+            }
+            return lista;
+        }
     }
 }
