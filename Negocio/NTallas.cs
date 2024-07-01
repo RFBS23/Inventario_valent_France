@@ -55,5 +55,10 @@ namespace Negocio
         {
             return objd_tallaropa.Eliminar(obj, out Mensaje);
         }
+
+        public List<Tallas> FiltrosTallas()
+        {
+            return objd_tallaropa.FiltrosTallas();
+        }
     }
 }

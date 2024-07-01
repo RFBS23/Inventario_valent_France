@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.SuspendLayout();
+            // 
+            // DashboardVendedor
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1519, 723);
+            this.MinimumSize = new System.Drawing.Size(1537, 770);
+            this.Name = "DashboardVendedor";
             this.Text = "DashboardVendedor";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

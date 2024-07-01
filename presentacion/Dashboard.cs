@@ -53,11 +53,11 @@ namespace presentacion
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            lblnombre.Text = usuarioActual.nombres + " " + usuarioActual.apellidos;
+            lblnombre.Text = "Bienvenido(a): " + usuarioActual.nombres + " " + usuarioActual.apellidos;
             // Obtener la fecha actual
             DateTime fechaActual = DateTime.Now;
-            lblfecha.Text = $"{fechaActual.Day}/{fechaActual.Month}/{fechaActual.Year}";
-            lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lblfecha.Text = $"Fecha ingreso: {fechaActual.Day}/{fechaActual.Month}/{fechaActual.Year}";
+            lblhora.Text = "Hora: " + DateTime.Now.ToString("hh:mm:ss tt");
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -103,6 +103,13 @@ namespace presentacion
         private void btnopreporte_Click(object sender, EventArgs e)
         {
             formularioAbierto(new frmReportes());
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form login = new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }

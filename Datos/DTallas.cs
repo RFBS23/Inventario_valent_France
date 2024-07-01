@@ -137,5 +137,42 @@ namespace Datos
             }
             return respuesta;
         }
+
+        public List<Tallas> FiltrosTallas()
+        {
+            List<Tallas> lista = new List<Tallas>();
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("WITH TallasUnicas AS (SELECT idtallaropa, c.idcategoria, c.nombrecategoria, nombretalla, tr.estado, CONVERT(VARCHAR(10), tr.fecharegistro, 120) AS fecharegistro_tallas, CONVERT(VARCHAR(10), tr.fechamodificado, 120) AS fechamodificada_tallas, ROW_NUMBER() OVER (PARTITION BY nombretalla ORDER BY tr.idtallaropa) AS rn FROM tallasropa tr INNER JOIN categorias c ON c.idcategoria = tr.idcategoria WHERE tr.estado = 1 )");
+                    query.AppendLine("SELECT idtallaropa, idcategoria, nombrecategoria, nombretalla, estado, fecharegistro_tallas, fechamodificada_tallas FROM TallasUnicas WHERE rn = 1;");
+                    SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Tallas()
+                            {
+                                idtallaropa = Convert.ToInt32(dr["idtallaropa"]),
+                                nombretalla = dr["nombretalla"].ToString(),
+                                estado = Convert.ToBoolean(dr["estado"]),
+                                oCategorias = new Categoria() { idcategoria = Convert.ToInt32(dr["idcategoria"]), nombrecategoria = dr["nombrecategoria"].ToString() },
+                                fecharegistro = dr["fecharegistro_tallas"].ToString(),
+                                fechamodificado = dr["fechamodificada_tallas"].ToString()
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lista = new List<Tallas>();
+                }
+            }
+            return lista;
+        }
     }
 }

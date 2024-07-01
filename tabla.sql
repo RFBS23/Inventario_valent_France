@@ -82,9 +82,14 @@ create table tallasropa(
 	fechamodificado DATETIME DEFAULT GETDATE()
 )
 go
+SELECT DISTINCT idtallaropa, nombretalla FROM tallasropa tr
+INNER JOIN categorias c ON c.idcategoria = tr.idcategoria
 
-select idtallaropa, c.idcategoria, c.nombrecategoria, nombretalla, tr.estado, CONVERT(VARCHAR(10), tr.fecharegistro, 120)AS fecharegistro_tallas, CONVERT(VARCHAR(10), tr.fechamodificado, 120)AS fechamodificada_tallas from tallasropa tr
-inner join categorias c on c.idcategoria = tr.idcategoria
+WITH TallasUnicas AS (SELECT idtallaropa, c.idcategoria, c.nombrecategoria, nombretalla, tr.estado, CONVERT(VARCHAR(10), tr.fecharegistro, 120) AS fecharegistro_tallas, CONVERT(VARCHAR(10), tr.fechamodificado, 120) AS fechamodificada_tallas, ROW_NUMBER() OVER (PARTITION BY nombretalla ORDER BY tr.idtallaropa) AS rn FROM tallasropa tr INNER JOIN categorias c ON c.idcategoria = tr.idcategoria WHERE tr.estado = 1 )
+SELECT idtallaropa, idcategoria, nombrecategoria, nombretalla, estado, fecharegistro_tallas, fechamodificada_tallas FROM TallasUnicas WHERE rn = 1;
+
+select distinct idtallaropa, c.idcategoria, c.nombrecategoria, nombretalla, tr.estado, CONVERT(VARCHAR(10), tr.fecharegistro, 120)AS fecharegistro_tallas, CONVERT(VARCHAR(10), tr.fechamodificado, 120)AS fechamodificada_tallas from tallasropa tr
+inner join categorias c on c.idcategoria = tr.idcategoria where tr.estado = 1
 
 insert into tallasropa (nombretalla, idcategoria) values
 	('S', 1),

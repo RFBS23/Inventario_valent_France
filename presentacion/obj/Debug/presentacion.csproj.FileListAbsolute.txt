@@ -34,6 +34,8 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Datos.pdb
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.csproj.AssemblyReference.cache
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Dashboard.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.DashboardAlmacen.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.DashboardVendedor.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmCategorias.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmProductos.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmTallas.resources

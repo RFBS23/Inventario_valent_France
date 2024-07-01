@@ -1,6 +1,7 @@
 use inventariovalentfrance
 go
 
+/*usuarios*/
 create procedure spu_registrar_usuario(
     @documento VARCHAR(20),
     @nombres VARCHAR(40),
@@ -91,6 +92,7 @@ BEGIN
 END
 GO
 
+/*categoria*/
 create procedure spu_registrar_categoria(
 	@nombrecategoria varchar(50),
 	@estado bit,
@@ -181,6 +183,7 @@ begin
 end
 go
 
+/*tallas*/
 create procedure spu_registrar_tallasropa(
 	@nombretalla varchar(50),
 	@idcategoria int,
@@ -232,5 +235,82 @@ begin
 			set @resultado = 0
 			set @mensaje = 'La Talla esta relacionada con uno de los productos y categorias'
 		end
+end
+go
+
+/*marcas*/
+create procedure spu_registrar_marca(
+	@nombremarca varchar(100),
+	@estado bit,
+	@resultado int output,
+	@mensaje varchar(100) output
+)as
+begin
+	set @resultado = 0
+	if not exists (select * from marca where nombremarca = @nombremarca)
+	begin
+		insert into marca(nombremarca, estado) values (@nombremarca, @estado)
+		set @resultado = SCOPE_IDENTITY()
+	end
+	else
+		set @Mensaje = 'No se puede duplicar las marcas'
+end
+go
+
+create procedure spu_editar_marca(
+	@idmarca int,
+	@nombremarca varchar(100),
+	@estado bit,
+	@resultado bit output,
+	@mensaje varchar(100) output
+)
+as
+begin
+	SET @resultado = 1
+    IF NOT EXISTS (SELECT 1 FROM marca WHERE nombremarca = @nombremarca AND idmarca != @idmarca)
+    BEGIN
+        -- Verificar si la marca estu relacionada a algun producto
+        IF (EXISTS (SELECT 1 FROM productosropa WHERE idmarca = @idmarca))
+        BEGIN
+            SET @resultado = 0
+            SET @mensaje = 'No se puede cambiar el estado de la marca porque esta relacionada a productos.'
+        END
+        ELSE
+        BEGIN
+            -- Si la marca no est� relacionada a productos, realizar la actualizaci�n
+            UPDATE marca
+            SET
+            nombremarca = @nombremarca,
+            estado = @estado
+            WHERE idmarca = @idmarca
+        END
+    END
+    ELSE
+    BEGIN
+        SET @resultado = 0
+        SET @mensaje = 'No se puede repetir el nombre de la marca.'
+    END
+end
+go
+
+create procedure spu_eliminar_marca(
+	@idmarca int,
+	@resultado bit output,
+	@mensaje varchar(100) output
+)
+as
+begin
+	SET @resultado = 1
+    -- Verificar si la marca esta relacionada a algun producto
+    IF EXISTS (SELECT 1 FROM productosropa WHERE idmarca = @idmarca)
+    BEGIN
+        SET @resultado = 0
+        SET @mensaje = 'La marca esta relacionada con productos y no se puede eliminar.'
+    END
+    ELSE
+    BEGIN
+        -- Eliminar la marca
+        DELETE FROM marca WHERE idmarca = @idmarca
+    END
 end
 go

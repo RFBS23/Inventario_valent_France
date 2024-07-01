@@ -179,6 +179,12 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DashboardAlmacen.resx">
+      <DependentUpon>DashboardAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardVendedor.resx">
+      <DependentUpon>DashboardVendedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>

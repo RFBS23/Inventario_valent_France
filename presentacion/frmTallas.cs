@@ -25,7 +25,8 @@ namespace presentacion
             cbcategoria.Items.Clear();
 
             DateTime fechaActual = DateTime.Now;
-            lblfecha.Text = $"{fechaActual.Day}/{fechaActual.Month}/{fechaActual.Year}";
+            lblfecha.Text = $"{fechaActual.Year}-{fechaActual.Month}-{fechaActual.Day}";
+            lblfechamodificada.Text = $"{fechaActual.Year}-{fechaActual.Month}-{fechaActual.Day}";
 
             List<Categoria> listacat = new NCategoria().ListarCategorias();
             cbcategoria.Items.Add(new OpcionesComboBox() { Valor = 0, Texto = "Elija una categoria" });
@@ -48,22 +49,62 @@ namespace presentacion
                 listabuscar.SelectedIndex = 0;
             }
 
-            cbestado.Items.Add(new OpcionesComboBox() { Valor = 1, Texto = "Activo" });
-            cbestado.Items.Add(new OpcionesComboBox() { Valor = 0, Texto = "Inactivo" });
-            cbestado.DisplayMember = "Texto";
-            cbestado.ValueMember = "Valor";
-            cbestado.SelectedIndex = 0;
-
             List<Tallas> listaropa = new NTallas().Listar();
             foreach (Tallas item in listaropa)
             {
-                tablatallas.Rows.Add(new object[] { "", item.idtallaropa, item.oCategorias.idcategoria, item.oCategorias.nombrecategoria, item.nombretalla, item.estado == true ? 1 : 0, item.estado == true ? "Activo" : "Inactivo", item.fecharegistro, item.fechamodificado });
+                tablatallas.Rows.Add(new object[] { "", item.idtallaropa, item.oCategorias.idcategoria, item.oCategorias.nombrecategoria, item.nombretalla, item.fecharegistro, item.fechamodificado });
             }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            string mensaje = string.Empty;
 
+            Tallas objropa = new Tallas()
+            {
+                idtallaropa = Convert.ToInt32(txtid.Text),
+                nombretalla = txtnombretalla.Text,
+                oCategorias = new Categoria() { idcategoria = Convert.ToInt32(((OpcionesComboBox)cbcategoria.SelectedItem).Valor) },
+
+            };
+            if (objropa.idtallaropa == 0 | btnAgregar.Text == "    Agregar")
+            {
+                int idtallaropagenerado = new NTallas().Registrar(objropa, out mensaje);
+
+                if (idtallaropagenerado != 0)
+                {
+                    tablatallas.Rows.Add(new object[] { "", idtallaropagenerado,
+                        ((OpcionesComboBox)cbcategoria.SelectedItem).Valor.ToString(),
+                        ((OpcionesComboBox)cbcategoria.SelectedItem).Texto.ToString(),
+                        txtnombretalla.Text,
+                        lblfecha.Text,
+                        lblfechamodificada.Text });
+                    Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
+            }
+            else if (btnAgregar.Text == "    Editar")
+            {
+                bool resultado = new NTallas().Editar(objropa, out mensaje);
+                if (resultado)
+                {
+                    DataGridViewRow row = tablatallas.Rows[Convert.ToInt32(txtindice.Text)];
+                    row.Cells["idtallaropa"].Value = txtid.Text;
+                    row.Cells["idcategoria"].Value = ((OpcionesComboBox)cbcategoria.SelectedItem).Valor.ToString();
+                    row.Cells["nombrecategoria"].Value = ((OpcionesComboBox)cbcategoria.SelectedItem).Texto.ToString();
+                    row.Cells["nombretalla"].Value = txtnombretalla.Text;
+                    row.Cells["fechamodificacion"].Value = lblfechamodificada.Text;
+                    Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
+                btnAgregar.Text = "    Agregar";
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -73,7 +114,31 @@ namespace presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (Convert.ToInt32(txtid.Text) != 0)
+            {
+                if (MessageBox.Show("¿Desea eliminar la talla?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
 
+                    string mensaje = string.Empty;
+                    Tallas objtallas = new Tallas()
+                    {
+                        idtallaropa = Convert.ToInt32(txtid.Text)
+                    };
+
+                    bool respuesta = new NTallas().Eliminar(objtallas, out mensaje);
+
+                    if (respuesta)
+                    {
+                        tablatallas.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                }
+            }
+            Limpiar();
         }
 
         private void Limpiar()
@@ -82,7 +147,6 @@ namespace presentacion
             txtid.Text = "0";
 
             txtnombretalla.Text = "";
-            cbestado.SelectedIndex = 0;
             cbcategoria.SelectedIndex = 0;
             cbcategoria.Select();
         }
@@ -107,16 +171,7 @@ namespace presentacion
                         }
                     }
 
-                    txtnombretalla.Text = tablatallas.Rows[indice].Cells["nombretalla"].Value.ToString();
-                    foreach (OpcionesComboBox oc in cbestado.Items)
-                    {
-                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(tablatallas.Rows[indice].Cells["valorestado"].Value))
-                        {
-                            int indice_combo = cbestado.Items.IndexOf(oc);
-                            cbestado.SelectedIndex = indice_combo;
-                            break;
-                        }
-                    }                    
+                    txtnombretalla.Text = tablatallas.Rows[indice].Cells["nombretalla"].Value.ToString();   
                     btnAgregar.Text = "    Editar";
                 }
             }
@@ -157,6 +212,31 @@ namespace presentacion
             txtbuscar.Text = txtbuscar.Text.ToUpper();
             txtbuscar.SelectionStart = selectionStart;
             txtbuscar.SelectionLength = selectionLength;
+        }
+
+        private void btnbuscarlista_Click(object sender, EventArgs e)
+        {
+            String columnaFiltro = ((OpcionesComboBox)listabuscar.SelectedItem).Valor.ToString();
+            if (tablatallas.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in tablatallas.Rows)
+                {
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtbuscar.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+                }
+            }
+        }
+
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
+        {
+            txtbuscar.Text = "";
+            foreach (DataGridViewRow row in tablatallas.Rows)
+            {
+                row.Visible = true;
+            }
+            txtbuscar.Select();
         }
     }
 }

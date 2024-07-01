@@ -8,5 +8,16 @@ namespace Entidad
 {
     public class Ventas
     {
+        public int idventa { get; set; }
+        public Usuarios oUsuarios { get; set; }
+        public string tipodocumento { get; set; }
+        public string numerodocumento { get; set; }
+        public string documentocliente { get; set; }
+        public string nombrecliente { get; set; }
+        public decimal montopago { get; set; }
+        public decimal montocambio { get; set; }
+        public decimal montototal { get; set; }
+        public List<DetallesVentas> oDetalle_Venta { get; set; }
+        public string fecharegistro { get; set; }
     }
 }

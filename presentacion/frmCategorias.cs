@@ -206,8 +206,5 @@ namespace presentacion
             }
             txtbuscar.Select();
         }
-
-
-
     }
 }

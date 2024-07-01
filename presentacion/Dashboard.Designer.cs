@@ -45,14 +45,11 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panelFormularios = new Guna.UI2.WinForms.Guna2Panel();
             this.banner = new Guna.UI2.WinForms.Guna2Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblfecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
+            this.lblfecha = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tablacards = new System.Windows.Forms.TableLayoutPanel();
@@ -533,12 +530,9 @@
             this.banner.BorderRadius = 20;
             this.banner.Controls.Add(this.lblhora);
             this.banner.Controls.Add(this.lblfecha);
-            this.banner.Controls.Add(this.label11);
-            this.banner.Controls.Add(this.label9);
             this.banner.Controls.Add(this.label3);
             this.banner.Controls.Add(this.label2);
             this.banner.Controls.Add(this.lblnombre);
-            this.banner.Controls.Add(this.label1);
             this.banner.Controls.Add(this.guna2Panel2);
             this.banner.FillColor = System.Drawing.Color.White;
             this.banner.Location = new System.Drawing.Point(44, 12);
@@ -550,45 +544,25 @@
             this.banner.Size = new System.Drawing.Size(1128, 202);
             this.banner.TabIndex = 1;
             // 
-            // label11
+            // lblhora
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(23, 162);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 19);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Hora: ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(23, 142);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 19);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Fecha de ingreso: ";
+            this.lblhora.AutoSize = true;
+            this.lblhora.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.Location = new System.Drawing.Point(24, 160);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(64, 17);
+            this.lblhora.TabIndex = 7;
+            this.lblhora.Text = "00:00:00";
             // 
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
             this.lblfecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.Location = new System.Drawing.Point(157, 143);
+            this.lblfecha.Location = new System.Drawing.Point(24, 143);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(80, 17);
             this.lblfecha.TabIndex = 8;
             this.lblfecha.Text = "00/00/0000";
-            // 
-            // lblhora
-            // 
-            this.lblhora.AutoSize = true;
-            this.lblhora.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.Location = new System.Drawing.Point(67, 164);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(64, 17);
-            this.lblhora.TabIndex = 7;
-            this.lblhora.Text = "00:00:00";
             // 
             // label3
             // 
@@ -614,21 +588,11 @@
             // 
             this.lblnombre.AutoSize = true;
             this.lblnombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.lblnombre.Location = new System.Drawing.Point(145, 37);
+            this.lblnombre.Location = new System.Drawing.Point(23, 37);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(168, 23);
             this.lblnombre.TabIndex = 2;
             this.lblnombre.Text = "nombre apellido";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenido";
             // 
             // guna2Panel2
             // 
@@ -1006,6 +970,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
@@ -1085,12 +1050,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblnombre;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Label lblhora;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
     }
 }

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NCategoria.cs" />
+    <Compile Include="NMarca.cs" />
     <Compile Include="NNivelAcceso.cs" />
     <Compile Include="NTallas.cs" />
     <Compile Include="NUsuarios.cs" />
