@@ -43,9 +43,14 @@
   <ItemGroup>
     <Compile Include="NCategoria.cs" />
     <Compile Include="NMarca.cs" />
+    <Compile Include="NNegocio.cs" />
     <Compile Include="NNivelAcceso.cs" />
+    <Compile Include="NProducto.cs" />
+    <Compile Include="NProveedores.cs" />
+    <Compile Include="NReportes.cs" />
     <Compile Include="NTallas.cs" />
     <Compile Include="NUsuarios.cs" />
+    <Compile Include="NVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -16,6 +16,7 @@ namespace Entidad
         public string descripcion { get; set; }
         public Categoria oCategorias { get; set; }
         public Tallas oTallasropa { get; set; }
+        public Marcas oMarcas { get; set; }
         public int stock { get; set; }
         public string colores { get; set; }
         public decimal precioventa { get; set; }

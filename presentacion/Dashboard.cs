@@ -13,7 +13,7 @@ namespace presentacion
 {
     public partial class Dashboard : Form
     {
-        private static Entidad.Usuarios usuarioActual;
+        private static Usuarios usuarioActual;
         public Dashboard(Entidad.Usuarios objusuario = null)
         {
             InitializeComponent();
@@ -65,11 +65,6 @@ namespace presentacion
             formularioAbierto(new frmUsuarios());
         }
 
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            formularioAbierto(new frmProductos());
-        }
-
         private void btnTallas_Click(object sender, EventArgs e)
         {
             formularioAbierto(new frmTallas());
@@ -82,7 +77,7 @@ namespace presentacion
 
         private void btnventas_Click(object sender, EventArgs e)
         {
-            formularioAbierto(new frmVentas());
+            formularioAbierto(new frmVentas(usuarioActual));
         }
 
         private void btnreportespdf_Click(object sender, EventArgs e)
@@ -111,5 +106,16 @@ namespace presentacion
             login.Show();
             this.Hide();
         }
+
+        private void btnlistaproductos_Click(object sender, EventArgs e)
+        {
+            formularioAbierto(new Form_listaproductos());
+        }
+
+        private void btnagregarproducto_Click(object sender, EventArgs e)
+        {
+            formularioAbierto(new frmProductos());
+        }
+
     }
 }

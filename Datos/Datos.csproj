@@ -45,9 +45,14 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="DCategoria.cs" />
     <Compile Include="DMarca.cs" />
+    <Compile Include="DNegocio.cs" />
     <Compile Include="DNivelAcceso.cs" />
+    <Compile Include="DProductos.cs" />
+    <Compile Include="DProveedores.cs" />
+    <Compile Include="DReportes.cs" />
     <Compile Include="DTallas.cs" />
     <Compile Include="DUsuarios.cs" />
+    <Compile Include="DVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

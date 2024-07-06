@@ -42,18 +42,17 @@ go
 select idnivelacceso, nombreacceso from nivelacceso
 go
 
-CREATE TABLE proveedores(
+create TABLE proveedores(
 	idproveedor int PRIMARY KEY IDENTITY,
-	ruc VARCHAR(21)not null,
-	ubiego VARCHAR(60),
-	nombreprov VARCHAR(225),
-	direccion VARCHAR(50),
-	correo VARCHAR(50),
-	telefono VARCHAR(50),
-	estado varchar(60),
-	fecharegistro datetime default getdate()
+	nombreproveedor varchar(225),
+	documento varchar(50),
+	direccion varchar(50), -- direccion
+	correo varchar(50),
+	telefono varchar(50),
+	fecharegistro date default getdate()
 )
 go
+select idproveedor, nombreproveedor, documento, direccion, correo, telefono, fecharegistro from proveedores
 
 create table categorias(
 	idcategoria int primary key identity,
@@ -197,7 +196,7 @@ go
 select v.idventa, u.nombreusuario, v.documentocliente, v.nombrecliente, v.tipodocumento,
 v.numerodocumento, v.montopago, v.montocambio, v.montototal, convert(char(10), v.fecharegistro, 103)[FechaRegistro] from ventas v
 inner join usuarios u on u.idusuario = v.idusuario
-where v.numerodocumento = '00003'
+where v.numerodocumento = '00001'
 /*
 select p.nombre + ' ' + p.descripcion + ' ' + p.colores + ' ' + tr.nombretalla as productos, p.descuento, dv.precioventa, dv.cantidad, dv.subtotal from detalle_venta dv
 inner join productos p on p.idproducto = dv.idproducto

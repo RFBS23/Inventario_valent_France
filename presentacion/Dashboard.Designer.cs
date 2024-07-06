@@ -31,17 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnconfiguracion = new Guna.UI2.WinForms.Guna2Button();
-            this.btnreportespdf = new Guna.UI2.WinForms.Guna2Button();
-            this.btnventas = new Guna.UI2.WinForms.Guna2Button();
-            this.btnProductos = new Guna.UI2.WinForms.Guna2Button();
-            this.btnProveedor = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTallas = new Guna.UI2.WinForms.Guna2Button();
-            this.btninformacion = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCategoria = new Guna.UI2.WinForms.Guna2Button();
-            this.btnInicio = new Guna.UI2.WinForms.Guna2Button();
-            this.btnlogo = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panelFormularios = new Guna.UI2.WinForms.Guna2Panel();
             this.banner = new Guna.UI2.WinForms.Guna2Panel();
@@ -51,53 +40,65 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tablacards = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnopreporte = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblcantproductos = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblcantusuarios = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnagregarproducto = new Guna.UI2.WinForms.Guna2Button();
+            this.btnlistaproductos = new Guna.UI2.WinForms.Guna2Button();
+            this.btnconfiguracion = new Guna.UI2.WinForms.Guna2Button();
+            this.btnreportespdf = new Guna.UI2.WinForms.Guna2Button();
+            this.btnventas = new Guna.UI2.WinForms.Guna2Button();
+            this.btnProveedor = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTallas = new Guna.UI2.WinForms.Guna2Button();
+            this.btninformacion = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCategoria = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInicio = new Guna.UI2.WinForms.Guna2Button();
+            this.btnlogo = new Guna.UI2.WinForms.Guna2Button();
             this.panelMenu.SuspendLayout();
             this.panelFormularios.SuspendLayout();
             this.banner.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.tablacards.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,11 +107,12 @@
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.White;
             this.panelMenu.BorderRadius = 20;
+            this.panelMenu.Controls.Add(this.btnlistaproductos);
+            this.panelMenu.Controls.Add(this.btnagregarproducto);
             this.panelMenu.Controls.Add(this.label8);
             this.panelMenu.Controls.Add(this.btnconfiguracion);
             this.panelMenu.Controls.Add(this.btnreportespdf);
             this.panelMenu.Controls.Add(this.btnventas);
-            this.panelMenu.Controls.Add(this.btnProductos);
             this.panelMenu.Controls.Add(this.btnProveedor);
             this.panelMenu.Controls.Add(this.btnTallas);
             this.panelMenu.Controls.Add(this.btninformacion);
@@ -129,389 +131,19 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(119, 1026);
+            this.label8.Location = new System.Drawing.Point(174, 1044);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 16);
             this.label8.TabIndex = 18;
             this.label8.Text = "  ";
             // 
-            // btnconfiguracion
-            // 
-            this.btnconfiguracion.Animated = true;
-            this.btnconfiguracion.BackColor = System.Drawing.Color.Transparent;
-            this.btnconfiguracion.BorderRadius = 10;
-            this.btnconfiguracion.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnconfiguracion.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnconfiguracion.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnconfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnconfiguracion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnconfiguracion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnconfiguracion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnconfiguracion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnconfiguracion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnconfiguracion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnconfiguracion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconfiguracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnconfiguracion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnconfiguracion.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnconfiguracion.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnconfiguracion.Image = global::presentacion.Properties.Resources.archivo_de_configuracion;
-            this.btnconfiguracion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnconfiguracion.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnconfiguracion.IndicateFocus = true;
-            this.btnconfiguracion.Location = new System.Drawing.Point(29, 849);
-            this.btnconfiguracion.Name = "btnconfiguracion";
-            this.btnconfiguracion.PressedColor = System.Drawing.Color.Transparent;
-            this.btnconfiguracion.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnconfiguracion.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnconfiguracion.Size = new System.Drawing.Size(232, 71);
-            this.btnconfiguracion.TabIndex = 17;
-            this.btnconfiguracion.Text = "           Configuración";
-            this.btnconfiguracion.Click += new System.EventHandler(this.btnconfiguracion_Click);
-            // 
-            // btnreportespdf
-            // 
-            this.btnreportespdf.Animated = true;
-            this.btnreportespdf.BackColor = System.Drawing.Color.Transparent;
-            this.btnreportespdf.BorderRadius = 10;
-            this.btnreportespdf.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnreportespdf.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnreportespdf.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnreportespdf.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnreportespdf.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnreportespdf.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnreportespdf.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnreportespdf.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnreportespdf.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnreportespdf.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnreportespdf.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreportespdf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnreportespdf.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnreportespdf.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnreportespdf.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnreportespdf.Image = global::presentacion.Properties.Resources.grafico;
-            this.btnreportespdf.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnreportespdf.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnreportespdf.IndicateFocus = true;
-            this.btnreportespdf.Location = new System.Drawing.Point(29, 762);
-            this.btnreportespdf.Name = "btnreportespdf";
-            this.btnreportespdf.PressedColor = System.Drawing.Color.Transparent;
-            this.btnreportespdf.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnreportespdf.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnreportespdf.Size = new System.Drawing.Size(232, 71);
-            this.btnreportespdf.TabIndex = 16;
-            this.btnreportespdf.Text = "    Reportes";
-            this.btnreportespdf.Click += new System.EventHandler(this.btnreportespdf_Click);
-            // 
-            // btnventas
-            // 
-            this.btnventas.Animated = true;
-            this.btnventas.BackColor = System.Drawing.Color.Transparent;
-            this.btnventas.BorderRadius = 10;
-            this.btnventas.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnventas.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnventas.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnventas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnventas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnventas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnventas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnventas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnventas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnventas.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnventas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnventas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnventas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnventas.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnventas.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnventas.Image = global::presentacion.Properties.Resources.cantventas;
-            this.btnventas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnventas.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnventas.IndicateFocus = true;
-            this.btnventas.Location = new System.Drawing.Point(29, 674);
-            this.btnventas.Name = "btnventas";
-            this.btnventas.PressedColor = System.Drawing.Color.Transparent;
-            this.btnventas.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnventas.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnventas.Size = new System.Drawing.Size(232, 71);
-            this.btnventas.TabIndex = 15;
-            this.btnventas.Text = " Ventas";
-            this.btnventas.Click += new System.EventHandler(this.btnventas_Click);
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.Animated = true;
-            this.btnProductos.BackColor = System.Drawing.Color.Transparent;
-            this.btnProductos.BorderRadius = 10;
-            this.btnProductos.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnProductos.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnProductos.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProductos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnProductos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnProductos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnProductos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnProductos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnProductos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnProductos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnProductos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnProductos.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnProductos.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnProductos.Image = global::presentacion.Properties.Resources.paquete_o_empaquetar;
-            this.btnProductos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnProductos.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnProductos.IndicateFocus = true;
-            this.btnProductos.Location = new System.Drawing.Point(29, 413);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.PressedColor = System.Drawing.Color.Transparent;
-            this.btnProductos.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnProductos.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnProductos.Size = new System.Drawing.Size(232, 71);
-            this.btnProductos.TabIndex = 14;
-            this.btnProductos.Text = "       Productos";
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
-            // 
-            // btnProveedor
-            // 
-            this.btnProveedor.Animated = true;
-            this.btnProveedor.BackColor = System.Drawing.Color.Transparent;
-            this.btnProveedor.BorderRadius = 10;
-            this.btnProveedor.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnProveedor.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnProveedor.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProveedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnProveedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnProveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnProveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnProveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnProveedor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnProveedor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnProveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnProveedor.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnProveedor.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnProveedor.Image = global::presentacion.Properties.Resources.proveedor;
-            this.btnProveedor.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnProveedor.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnProveedor.IndicateFocus = true;
-            this.btnProveedor.Location = new System.Drawing.Point(29, 588);
-            this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.PressedColor = System.Drawing.Color.Transparent;
-            this.btnProveedor.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnProveedor.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnProveedor.Size = new System.Drawing.Size(232, 71);
-            this.btnProveedor.TabIndex = 13;
-            this.btnProveedor.Text = "       Proveedor";
-            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
-            // 
-            // btnTallas
-            // 
-            this.btnTallas.Animated = true;
-            this.btnTallas.BackColor = System.Drawing.Color.Transparent;
-            this.btnTallas.BorderRadius = 10;
-            this.btnTallas.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnTallas.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTallas.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnTallas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTallas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTallas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTallas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTallas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTallas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnTallas.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnTallas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTallas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnTallas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnTallas.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTallas.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnTallas.Image = global::presentacion.Properties.Resources.medicion;
-            this.btnTallas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTallas.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnTallas.IndicateFocus = true;
-            this.btnTallas.Location = new System.Drawing.Point(29, 501);
-            this.btnTallas.Name = "btnTallas";
-            this.btnTallas.PressedColor = System.Drawing.Color.Transparent;
-            this.btnTallas.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnTallas.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnTallas.Size = new System.Drawing.Size(232, 71);
-            this.btnTallas.TabIndex = 12;
-            this.btnTallas.Text = "  Tallas";
-            this.btnTallas.Click += new System.EventHandler(this.btnTallas_Click);
-            // 
-            // btninformacion
-            // 
-            this.btninformacion.Animated = true;
-            this.btninformacion.BackColor = System.Drawing.Color.Transparent;
-            this.btninformacion.BorderRadius = 10;
-            this.btninformacion.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btninformacion.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btninformacion.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btninformacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btninformacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btninformacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btninformacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btninformacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btninformacion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btninformacion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btninformacion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btninformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btninformacion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btninformacion.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btninformacion.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btninformacion.Image = ((System.Drawing.Image)(resources.GetObject("btninformacion.Image")));
-            this.btninformacion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btninformacion.ImageSize = new System.Drawing.Size(50, 50);
-            this.btninformacion.IndicateFocus = true;
-            this.btninformacion.Location = new System.Drawing.Point(29, 938);
-            this.btninformacion.Name = "btninformacion";
-            this.btninformacion.PressedColor = System.Drawing.Color.Transparent;
-            this.btninformacion.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btninformacion.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btninformacion.Size = new System.Drawing.Size(232, 71);
-            this.btninformacion.TabIndex = 10;
-            this.btninformacion.Text = "         Información";
-            this.btninformacion.Click += new System.EventHandler(this.btninformacion_Click);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.Animated = true;
-            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.BorderRadius = 10;
-            this.btnUsuarios.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnUsuarios.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnUsuarios.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUsuarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUsuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnUsuarios.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnUsuarios.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnUsuarios.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnUsuarios.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
-            this.btnUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUsuarios.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnUsuarios.IndicateFocus = true;
-            this.btnUsuarios.Location = new System.Drawing.Point(29, 325);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.PressedColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnUsuarios.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnUsuarios.Size = new System.Drawing.Size(232, 71);
-            this.btnUsuarios.TabIndex = 9;
-            this.btnUsuarios.Text = "       Usuarios";
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
-            // btnCategoria
-            // 
-            this.btnCategoria.Animated = true;
-            this.btnCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.btnCategoria.BorderRadius = 10;
-            this.btnCategoria.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnCategoria.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCategoria.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCategoria.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCategoria.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCategoria.DisabledState.FillColor = System.Drawing.Color.Black;
-            this.btnCategoria.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCategoria.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnCategoria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnCategoria.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnCategoria.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnCategoria.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCategoria.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
-            this.btnCategoria.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCategoria.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnCategoria.IndicateFocus = true;
-            this.btnCategoria.Location = new System.Drawing.Point(29, 239);
-            this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.PressedColor = System.Drawing.Color.Transparent;
-            this.btnCategoria.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnCategoria.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnCategoria.Size = new System.Drawing.Size(232, 71);
-            this.btnCategoria.TabIndex = 8;
-            this.btnCategoria.Text = "         Categorias";
-            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.Animated = true;
-            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
-            this.btnInicio.BorderRadius = 10;
-            this.btnInicio.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnInicio.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnInicio.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInicio.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInicio.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInicio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInicio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInicio.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnInicio.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnInicio.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnInicio.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnInicio.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnInicio.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
-            this.btnInicio.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInicio.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnInicio.IndicateFocus = true;
-            this.btnInicio.Location = new System.Drawing.Point(29, 154);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.PressedColor = System.Drawing.Color.Transparent;
-            this.btnInicio.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnInicio.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnInicio.Size = new System.Drawing.Size(232, 71);
-            this.btnInicio.TabIndex = 7;
-            this.btnInicio.Text = "      Inicio";
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // btnlogo
-            // 
-            this.btnlogo.Animated = true;
-            this.btnlogo.BorderColor = System.Drawing.Color.Transparent;
-            this.btnlogo.BorderRadius = 10;
-            this.btnlogo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnlogo.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnlogo.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnlogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlogo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnlogo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnlogo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnlogo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnlogo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnlogo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnlogo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnlogo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnlogo.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnlogo.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnlogo.Image = ((System.Drawing.Image)(resources.GetObject("btnlogo.Image")));
-            this.btnlogo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnlogo.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnlogo.Location = new System.Drawing.Point(29, 24);
-            this.btnlogo.Name = "btnlogo";
-            this.btnlogo.PressedColor = System.Drawing.Color.Transparent;
-            this.btnlogo.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnlogo.Size = new System.Drawing.Size(232, 71);
-            this.btnlogo.TabIndex = 6;
-            this.btnlogo.Text = "         Sistema Ventas";
-            // 
             // guna2Separator1
             // 
+            this.guna2Separator1.BackColor = System.Drawing.Color.Black;
             this.guna2Separator1.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator1.Location = new System.Drawing.Point(10, 115);
+            this.guna2Separator1.Location = new System.Drawing.Point(10, 100);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(267, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(267, 1);
             this.guna2Separator1.TabIndex = 5;
             // 
             // panelFormularios
@@ -603,22 +235,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(282, 202);
             this.guna2Panel2.TabIndex = 0;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 20;
-            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.ErrorImage")));
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(282, 202);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // tablacards
             // 
             this.tablacards.BackColor = System.Drawing.Color.Transparent;
@@ -694,19 +310,6 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Realizar reporte por rango de fechas";
             // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.BorderRadius = 10;
-            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(22, 15);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(90, 90);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox5.TabIndex = 1;
-            this.guna2PictureBox5.TabStop = false;
-            this.guna2PictureBox5.UseTransparentBackground = true;
-            // 
             // guna2Panel16
             // 
             this.guna2Panel16.Dock = System.Windows.Forms.DockStyle.Right;
@@ -768,22 +371,9 @@
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(142, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 23);
+            this.label5.Size = new System.Drawing.Size(179, 23);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Cantidad de Usuarios";
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.BorderRadius = 10;
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(22, 15);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(90, 90);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox4.TabIndex = 1;
-            this.guna2PictureBox4.TabStop = false;
-            this.guna2PictureBox4.UseTransparentBackground = true;
+            this.label5.Text = "Cantidad de ventas";
             // 
             // guna2Panel13
             // 
@@ -850,19 +440,6 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Cantidad de Productos";
             // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BorderRadius = 10;
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(22, 15);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(90, 90);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 1;
-            this.guna2PictureBox3.TabStop = false;
-            this.guna2PictureBox3.UseTransparentBackground = true;
-            // 
             // guna2Panel10
             // 
             this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Right;
@@ -928,19 +505,6 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Cantidad de Usuarios";
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BorderRadius = 10;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(22, 15);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(90, 90);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.UseTransparentBackground = true;
-            // 
             // guna2Panel9
             // 
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Right;
@@ -956,6 +520,479 @@
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(38, 240);
             this.guna2Panel8.TabIndex = 1;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BorderRadius = 20;
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.ErrorImage")));
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(282, 202);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.BorderRadius = 10;
+            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(22, 15);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(90, 90);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox5.TabIndex = 1;
+            this.guna2PictureBox5.TabStop = false;
+            this.guna2PictureBox5.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BorderRadius = 10;
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(22, 15);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(90, 90);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 1;
+            this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BorderRadius = 10;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(22, 15);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(90, 90);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 1;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BorderRadius = 10;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(22, 15);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(90, 90);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
+            // btnagregarproducto
+            // 
+            this.btnagregarproducto.Animated = true;
+            this.btnagregarproducto.BackColor = System.Drawing.Color.Transparent;
+            this.btnagregarproducto.BorderRadius = 10;
+            this.btnagregarproducto.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnagregarproducto.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnagregarproducto.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnagregarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnagregarproducto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnagregarproducto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnagregarproducto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnagregarproducto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnagregarproducto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnagregarproducto.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnagregarproducto.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregarproducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnagregarproducto.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnagregarproducto.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnagregarproducto.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnagregarproducto.Image = global::presentacion.Properties.Resources.paquete_o_empaquetar;
+            this.btnagregarproducto.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnagregarproducto.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnagregarproducto.IndicateFocus = true;
+            this.btnagregarproducto.Location = new System.Drawing.Point(29, 388);
+            this.btnagregarproducto.Name = "btnagregarproducto";
+            this.btnagregarproducto.PressedColor = System.Drawing.Color.Transparent;
+            this.btnagregarproducto.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnagregarproducto.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnagregarproducto.Size = new System.Drawing.Size(232, 56);
+            this.btnagregarproducto.TabIndex = 20;
+            this.btnagregarproducto.Text = "       Productos";
+            this.btnagregarproducto.Click += new System.EventHandler(this.btnagregarproducto_Click);
+            // 
+            // btnlistaproductos
+            // 
+            this.btnlistaproductos.Animated = true;
+            this.btnlistaproductos.BackColor = System.Drawing.Color.Transparent;
+            this.btnlistaproductos.BorderRadius = 10;
+            this.btnlistaproductos.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnlistaproductos.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnlistaproductos.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnlistaproductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlistaproductos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnlistaproductos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnlistaproductos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnlistaproductos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnlistaproductos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnlistaproductos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnlistaproductos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlistaproductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnlistaproductos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnlistaproductos.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnlistaproductos.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnlistaproductos.Image = global::presentacion.Properties.Resources.clasificar;
+            this.btnlistaproductos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnlistaproductos.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnlistaproductos.IndicateFocus = true;
+            this.btnlistaproductos.Location = new System.Drawing.Point(29, 468);
+            this.btnlistaproductos.Name = "btnlistaproductos";
+            this.btnlistaproductos.PressedColor = System.Drawing.Color.Transparent;
+            this.btnlistaproductos.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnlistaproductos.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnlistaproductos.Size = new System.Drawing.Size(232, 56);
+            this.btnlistaproductos.TabIndex = 19;
+            this.btnlistaproductos.Text = "     Lista Productos";
+            this.btnlistaproductos.Click += new System.EventHandler(this.btnlistaproductos_Click);
+            // 
+            // btnconfiguracion
+            // 
+            this.btnconfiguracion.Animated = true;
+            this.btnconfiguracion.BackColor = System.Drawing.Color.Transparent;
+            this.btnconfiguracion.BorderRadius = 10;
+            this.btnconfiguracion.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnconfiguracion.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnconfiguracion.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnconfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnconfiguracion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnconfiguracion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnconfiguracion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnconfiguracion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnconfiguracion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnconfiguracion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnconfiguracion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconfiguracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnconfiguracion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnconfiguracion.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnconfiguracion.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnconfiguracion.Image = global::presentacion.Properties.Resources.archivo_de_configuracion;
+            this.btnconfiguracion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnconfiguracion.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnconfiguracion.IndicateFocus = true;
+            this.btnconfiguracion.Location = new System.Drawing.Point(29, 896);
+            this.btnconfiguracion.Name = "btnconfiguracion";
+            this.btnconfiguracion.PressedColor = System.Drawing.Color.Transparent;
+            this.btnconfiguracion.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnconfiguracion.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnconfiguracion.Size = new System.Drawing.Size(232, 56);
+            this.btnconfiguracion.TabIndex = 17;
+            this.btnconfiguracion.Text = "           Configuración";
+            this.btnconfiguracion.Click += new System.EventHandler(this.btnconfiguracion_Click);
+            // 
+            // btnreportespdf
+            // 
+            this.btnreportespdf.Animated = true;
+            this.btnreportespdf.BackColor = System.Drawing.Color.Transparent;
+            this.btnreportespdf.BorderRadius = 10;
+            this.btnreportespdf.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnreportespdf.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnreportespdf.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnreportespdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnreportespdf.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnreportespdf.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnreportespdf.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnreportespdf.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnreportespdf.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnreportespdf.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnreportespdf.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreportespdf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnreportespdf.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnreportespdf.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnreportespdf.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnreportespdf.Image = global::presentacion.Properties.Resources.grafico;
+            this.btnreportespdf.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnreportespdf.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnreportespdf.IndicateFocus = true;
+            this.btnreportespdf.Location = new System.Drawing.Point(29, 809);
+            this.btnreportespdf.Name = "btnreportespdf";
+            this.btnreportespdf.PressedColor = System.Drawing.Color.Transparent;
+            this.btnreportespdf.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnreportespdf.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnreportespdf.Size = new System.Drawing.Size(232, 56);
+            this.btnreportespdf.TabIndex = 16;
+            this.btnreportespdf.Text = "    Reportes";
+            this.btnreportespdf.Click += new System.EventHandler(this.btnreportespdf_Click);
+            // 
+            // btnventas
+            // 
+            this.btnventas.Animated = true;
+            this.btnventas.BackColor = System.Drawing.Color.Transparent;
+            this.btnventas.BorderRadius = 10;
+            this.btnventas.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnventas.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnventas.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnventas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnventas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnventas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnventas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnventas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnventas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnventas.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnventas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnventas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnventas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnventas.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnventas.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnventas.Image = global::presentacion.Properties.Resources.cantventas;
+            this.btnventas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnventas.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnventas.IndicateFocus = true;
+            this.btnventas.Location = new System.Drawing.Point(29, 721);
+            this.btnventas.Name = "btnventas";
+            this.btnventas.PressedColor = System.Drawing.Color.Transparent;
+            this.btnventas.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnventas.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnventas.Size = new System.Drawing.Size(232, 56);
+            this.btnventas.TabIndex = 15;
+            this.btnventas.Text = " Ventas";
+            this.btnventas.Click += new System.EventHandler(this.btnventas_Click);
+            // 
+            // btnProveedor
+            // 
+            this.btnProveedor.Animated = true;
+            this.btnProveedor.BackColor = System.Drawing.Color.Transparent;
+            this.btnProveedor.BorderRadius = 10;
+            this.btnProveedor.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnProveedor.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnProveedor.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProveedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProveedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnProveedor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnProveedor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnProveedor.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnProveedor.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnProveedor.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnProveedor.Image = global::presentacion.Properties.Resources.proveedor;
+            this.btnProveedor.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProveedor.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnProveedor.IndicateFocus = true;
+            this.btnProveedor.Location = new System.Drawing.Point(29, 635);
+            this.btnProveedor.Name = "btnProveedor";
+            this.btnProveedor.PressedColor = System.Drawing.Color.Transparent;
+            this.btnProveedor.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnProveedor.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnProveedor.Size = new System.Drawing.Size(232, 56);
+            this.btnProveedor.TabIndex = 13;
+            this.btnProveedor.Text = "       Proveedor";
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
+            // 
+            // btnTallas
+            // 
+            this.btnTallas.Animated = true;
+            this.btnTallas.BackColor = System.Drawing.Color.Transparent;
+            this.btnTallas.BorderRadius = 10;
+            this.btnTallas.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnTallas.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTallas.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnTallas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTallas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTallas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTallas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTallas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTallas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnTallas.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnTallas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTallas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnTallas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnTallas.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTallas.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnTallas.Image = global::presentacion.Properties.Resources.medicion;
+            this.btnTallas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTallas.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnTallas.IndicateFocus = true;
+            this.btnTallas.Location = new System.Drawing.Point(29, 548);
+            this.btnTallas.Name = "btnTallas";
+            this.btnTallas.PressedColor = System.Drawing.Color.Transparent;
+            this.btnTallas.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnTallas.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnTallas.Size = new System.Drawing.Size(232, 56);
+            this.btnTallas.TabIndex = 12;
+            this.btnTallas.Text = "  Tallas";
+            this.btnTallas.Click += new System.EventHandler(this.btnTallas_Click);
+            // 
+            // btninformacion
+            // 
+            this.btninformacion.Animated = true;
+            this.btninformacion.BackColor = System.Drawing.Color.Transparent;
+            this.btninformacion.BorderRadius = 10;
+            this.btninformacion.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btninformacion.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btninformacion.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btninformacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btninformacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btninformacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btninformacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btninformacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btninformacion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btninformacion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btninformacion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btninformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btninformacion.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btninformacion.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btninformacion.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btninformacion.Image = ((System.Drawing.Image)(resources.GetObject("btninformacion.Image")));
+            this.btninformacion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btninformacion.ImageSize = new System.Drawing.Size(50, 50);
+            this.btninformacion.IndicateFocus = true;
+            this.btninformacion.Location = new System.Drawing.Point(29, 985);
+            this.btninformacion.Name = "btninformacion";
+            this.btninformacion.PressedColor = System.Drawing.Color.Transparent;
+            this.btninformacion.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btninformacion.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btninformacion.Size = new System.Drawing.Size(232, 56);
+            this.btninformacion.TabIndex = 10;
+            this.btninformacion.Text = "         Información";
+            this.btninformacion.Click += new System.EventHandler(this.btninformacion_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Animated = true;
+            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.BorderRadius = 10;
+            this.btnUsuarios.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnUsuarios.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUsuarios.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUsuarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUsuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnUsuarios.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnUsuarios.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnUsuarios.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUsuarios.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
+            this.btnUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsuarios.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnUsuarios.IndicateFocus = true;
+            this.btnUsuarios.Location = new System.Drawing.Point(29, 306);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.PressedColor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnUsuarios.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnUsuarios.Size = new System.Drawing.Size(232, 56);
+            this.btnUsuarios.TabIndex = 9;
+            this.btnUsuarios.Text = "       Usuarios";
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnCategoria
+            // 
+            this.btnCategoria.Animated = true;
+            this.btnCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.btnCategoria.BorderRadius = 10;
+            this.btnCategoria.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnCategoria.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCategoria.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCategoria.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCategoria.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCategoria.DisabledState.FillColor = System.Drawing.Color.Black;
+            this.btnCategoria.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCategoria.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnCategoria.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnCategoria.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnCategoria.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnCategoria.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCategoria.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
+            this.btnCategoria.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCategoria.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnCategoria.IndicateFocus = true;
+            this.btnCategoria.Location = new System.Drawing.Point(29, 220);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.PressedColor = System.Drawing.Color.Transparent;
+            this.btnCategoria.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnCategoria.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnCategoria.Size = new System.Drawing.Size(232, 56);
+            this.btnCategoria.TabIndex = 8;
+            this.btnCategoria.Text = "         Categorias";
+            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Animated = true;
+            this.btnInicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnInicio.BorderRadius = 10;
+            this.btnInicio.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnInicio.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnInicio.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicio.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInicio.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInicio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInicio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInicio.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnInicio.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnInicio.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnInicio.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnInicio.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnInicio.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInicio.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnInicio.IndicateFocus = true;
+            this.btnInicio.Location = new System.Drawing.Point(29, 135);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.PressedColor = System.Drawing.Color.Transparent;
+            this.btnInicio.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnInicio.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnInicio.Size = new System.Drawing.Size(232, 56);
+            this.btnInicio.TabIndex = 7;
+            this.btnInicio.Text = "      Inicio";
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
+            // btnlogo
+            // 
+            this.btnlogo.Animated = true;
+            this.btnlogo.BorderColor = System.Drawing.Color.Transparent;
+            this.btnlogo.BorderRadius = 10;
+            this.btnlogo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnlogo.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnlogo.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnlogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlogo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnlogo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnlogo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnlogo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnlogo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnlogo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnlogo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnlogo.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnlogo.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnlogo.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnlogo.Image = ((System.Drawing.Image)(resources.GetObject("btnlogo.Image")));
+            this.btnlogo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnlogo.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnlogo.Location = new System.Drawing.Point(29, 12);
+            this.btnlogo.Name = "btnlogo";
+            this.btnlogo.PressedColor = System.Drawing.Color.Transparent;
+            this.btnlogo.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnlogo.Size = new System.Drawing.Size(232, 56);
+            this.btnlogo.TabIndex = 6;
+            this.btnlogo.Text = "         Sistema Ventas";
             // 
             // Dashboard
             // 
@@ -978,23 +1015,23 @@
             this.banner.ResumeLayout(false);
             this.banner.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.tablacards.ResumeLayout(false);
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel18.ResumeLayout(false);
             this.guna2Panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel15.ResumeLayout(false);
             this.guna2Panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel12.ResumeLayout(false);
             this.guna2Panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -1011,7 +1048,6 @@
         private Guna.UI2.WinForms.Guna2Button btnInicio;
         private Guna.UI2.WinForms.Guna2Button btnProveedor;
         private Guna.UI2.WinForms.Guna2Button btnTallas;
-        private Guna.UI2.WinForms.Guna2Button btnProductos;
         private Guna.UI2.WinForms.Guna2Button btnventas;
         private Guna.UI2.WinForms.Guna2Button btnconfiguracion;
         private Guna.UI2.WinForms.Guna2Button btnreportespdf;
@@ -1054,5 +1090,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Label lblhora;
+        private Guna.UI2.WinForms.Guna2Button btnlistaproductos;
+        private Guna.UI2.WinForms.Guna2Button btnagregarproducto;
     }
 }
