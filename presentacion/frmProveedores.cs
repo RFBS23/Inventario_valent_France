@@ -48,13 +48,13 @@ namespace presentacion
                         }
                         else
                         {
-                            MessageBox.Show($"No se ha podido encontrar el dni buscado..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show($"No se ha podido encontrar el ruc buscado..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error al obtener la información del DNI: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Error al obtener la información del RUC: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

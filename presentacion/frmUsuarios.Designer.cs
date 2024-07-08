@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnlimpiarbuscador = new Guna.UI2.WinForms.Guna2Button();
@@ -70,16 +70,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtddocumento = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtapellidos = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtnombres = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablausuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.label10);
             this.guna2Panel2.Controls.Add(this.btnEliminar);
             this.guna2Panel2.Controls.Add(this.btnlimpiarbuscador);
             this.guna2Panel2.Controls.Add(this.btnLimpiar);
@@ -106,7 +109,6 @@
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.txtddocumento);
             this.guna2Panel2.Controls.Add(this.txtapellidos);
             this.guna2Panel2.Controls.Add(this.txtnombres);
@@ -505,20 +507,20 @@
             // 
             this.tablausuarios.AllowUserToAddRows = false;
             this.tablausuarios.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tablausuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tablausuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.tablausuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablausuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablausuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.tablausuarios.ColumnHeadersHeight = 37;
             this.tablausuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tablausuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -535,14 +537,14 @@
             this.valorestado,
             this.estado});
             this.tablausuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablausuarios.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablausuarios.DefaultCellStyle = dataGridViewCellStyle6;
             this.tablausuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tablausuarios.Location = new System.Drawing.Point(12, 297);
             this.tablausuarios.MultiSelect = false;
@@ -764,16 +766,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Nombres";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Agregar Nuevo Usuario";
-            // 
             // txtddocumento
             // 
             this.txtddocumento.Animated = true;
@@ -841,6 +833,28 @@
             this.txtnombres.Size = new System.Drawing.Size(229, 48);
             this.txtnombres.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(172)))), ((int)(((byte)(184)))));
+            this.label1.Location = new System.Drawing.Point(12, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 24);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "utiliza los niveles de acceso";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(106)))), ((int)(((byte)(127)))));
+            this.label10.Location = new System.Drawing.Point(12, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(227, 29);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Agrega a tus usuarios";
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -864,7 +878,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtddocumento;
         private Guna.UI2.WinForms.Guna2TextBox txtapellidos;
         private Guna.UI2.WinForms.Guna2TextBox txtnombres;
@@ -902,5 +915,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn valorestado;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label10;
     }
 }

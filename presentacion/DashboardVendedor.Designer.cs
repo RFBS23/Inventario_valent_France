@@ -988,9 +988,13 @@
             this.ClientSize = new System.Drawing.Size(1519, 723);
             this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1537, 770);
             this.Name = "DashboardVendedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DashboardVendedor_FormClosing);
             this.panelFormularios.ResumeLayout(false);
             this.banner.ResumeLayout(false);
             this.banner.PerformLayout();

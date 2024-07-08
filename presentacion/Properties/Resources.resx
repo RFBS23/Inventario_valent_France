@@ -121,6 +121,9 @@
   <data name="eliminar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eliminar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="clasificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clasificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,9 +175,6 @@
   <data name="codbarras64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\codbarras64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="prodalmacen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\prodalmacen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="success" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\success.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,14 +208,17 @@
   <data name="perdio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\perdio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="medicion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medicion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="prodalmacen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prodalmacen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="limpiar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\limpiar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terminal-de-punto-de-venta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\terminal-de-punto-de-venta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cantventas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cantventas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,6 +232,9 @@
   <data name="boton-de-inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boton-de-inicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="medicion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medicion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="archivo-de-configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\archivo-de-configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,7 +247,13 @@
   <data name="grafico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grafico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clasificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clasificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="factura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\factura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boleto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boleto.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Facturas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Facturas.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

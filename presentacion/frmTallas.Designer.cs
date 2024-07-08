@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.paneltallas = new Guna.UI2.WinForms.Guna2Panel();
             this.lblfechamodificada = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,6 +38,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombretalla = new Guna.UI2.WinForms.Guna2TextBox();
             this.tablatallas = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.idtallaropa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrecategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombretalla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecharegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechamodificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnlimpiarbuscador = new Guna.UI2.WinForms.Guna2Button();
             this.listabuscar = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -46,17 +53,10 @@
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblfecha = new System.Windows.Forms.Label();
             this.txtid = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtindice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idtallaropa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrecategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombretalla = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecharegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechamodificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
             this.paneltallas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablatallas)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,7 @@
             // paneltallas
             // 
             this.paneltallas.BackColor = System.Drawing.SystemColors.Control;
+            this.paneltallas.Controls.Add(this.label10);
             this.paneltallas.Controls.Add(this.lblfechamodificada);
             this.paneltallas.Controls.Add(this.label3);
             this.paneltallas.Controls.Add(this.cbcategoria);
@@ -78,7 +79,6 @@
             this.paneltallas.Controls.Add(this.btnEliminar);
             this.paneltallas.Controls.Add(this.btnLimpiar);
             this.paneltallas.Controls.Add(this.btnAgregar);
-            this.paneltallas.Controls.Add(this.label1);
             this.paneltallas.Controls.Add(this.lblfecha);
             this.paneltallas.Controls.Add(this.txtid);
             this.paneltallas.Controls.Add(this.txtindice);
@@ -164,20 +164,20 @@
             // 
             this.tablatallas.AllowUserToAddRows = false;
             this.tablatallas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tablatallas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tablatallas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tablatallas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablatallas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablatallas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tablatallas.ColumnHeadersHeight = 37;
             this.tablatallas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tablatallas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -189,14 +189,14 @@
             this.fecharegistro,
             this.fechamodificacion});
             this.tablatallas.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablatallas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablatallas.DefaultCellStyle = dataGridViewCellStyle3;
             this.tablatallas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tablatallas.Location = new System.Drawing.Point(12, 297);
             this.tablatallas.MultiSelect = false;
@@ -230,6 +230,57 @@
             this.tablatallas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tablatallas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablatallas_CellContentClick);
             this.tablatallas.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.tablatallas_CellPainting);
+            // 
+            // btnseleccionar
+            // 
+            this.btnseleccionar.HeaderText = "Seleccionar";
+            this.btnseleccionar.MinimumWidth = 6;
+            this.btnseleccionar.Name = "btnseleccionar";
+            this.btnseleccionar.ReadOnly = true;
+            // 
+            // idtallaropa
+            // 
+            this.idtallaropa.HeaderText = "idtallaropa";
+            this.idtallaropa.MinimumWidth = 6;
+            this.idtallaropa.Name = "idtallaropa";
+            this.idtallaropa.ReadOnly = true;
+            this.idtallaropa.Visible = false;
+            // 
+            // idcategoria
+            // 
+            this.idcategoria.HeaderText = "idcategoria";
+            this.idcategoria.MinimumWidth = 6;
+            this.idcategoria.Name = "idcategoria";
+            this.idcategoria.ReadOnly = true;
+            this.idcategoria.Visible = false;
+            // 
+            // nombrecategoria
+            // 
+            this.nombrecategoria.HeaderText = "Nombre de categoria";
+            this.nombrecategoria.MinimumWidth = 6;
+            this.nombrecategoria.Name = "nombrecategoria";
+            this.nombrecategoria.ReadOnly = true;
+            // 
+            // nombretalla
+            // 
+            this.nombretalla.HeaderText = "Tallas";
+            this.nombretalla.MinimumWidth = 6;
+            this.nombretalla.Name = "nombretalla";
+            this.nombretalla.ReadOnly = true;
+            // 
+            // fecharegistro
+            // 
+            this.fecharegistro.HeaderText = "Fecha Registrada";
+            this.fecharegistro.MinimumWidth = 6;
+            this.fecharegistro.Name = "fecharegistro";
+            this.fecharegistro.ReadOnly = true;
+            // 
+            // fechamodificacion
+            // 
+            this.fechamodificacion.HeaderText = "Fecha Modificada";
+            this.fechamodificacion.MinimumWidth = 6;
+            this.fechamodificacion.Name = "fechamodificacion";
+            this.fechamodificacion.ReadOnly = true;
             // 
             // btnlimpiarbuscador
             // 
@@ -449,16 +500,6 @@
             this.btnAgregar.Text = "    Agregar";
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 28);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Agregar Nueva Talla";
-            // 
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
@@ -513,56 +554,16 @@
             this.txtindice.TabIndex = 33;
             this.txtindice.Visible = false;
             // 
-            // btnseleccionar
+            // label10
             // 
-            this.btnseleccionar.HeaderText = "Seleccionar";
-            this.btnseleccionar.MinimumWidth = 6;
-            this.btnseleccionar.Name = "btnseleccionar";
-            this.btnseleccionar.ReadOnly = true;
-            // 
-            // idtallaropa
-            // 
-            this.idtallaropa.HeaderText = "idtallaropa";
-            this.idtallaropa.MinimumWidth = 6;
-            this.idtallaropa.Name = "idtallaropa";
-            this.idtallaropa.ReadOnly = true;
-            this.idtallaropa.Visible = false;
-            // 
-            // idcategoria
-            // 
-            this.idcategoria.HeaderText = "idcategoria";
-            this.idcategoria.MinimumWidth = 6;
-            this.idcategoria.Name = "idcategoria";
-            this.idcategoria.ReadOnly = true;
-            this.idcategoria.Visible = false;
-            // 
-            // nombrecategoria
-            // 
-            this.nombrecategoria.HeaderText = "Nombre de categoria";
-            this.nombrecategoria.MinimumWidth = 6;
-            this.nombrecategoria.Name = "nombrecategoria";
-            this.nombrecategoria.ReadOnly = true;
-            // 
-            // nombretalla
-            // 
-            this.nombretalla.HeaderText = "Tallas";
-            this.nombretalla.MinimumWidth = 6;
-            this.nombretalla.Name = "nombretalla";
-            this.nombretalla.ReadOnly = true;
-            // 
-            // fecharegistro
-            // 
-            this.fecharegistro.HeaderText = "Fecha Registrada";
-            this.fecharegistro.MinimumWidth = 6;
-            this.fecharegistro.Name = "fecharegistro";
-            this.fecharegistro.ReadOnly = true;
-            // 
-            // fechamodificacion
-            // 
-            this.fechamodificacion.HeaderText = "Fecha Modificada";
-            this.fechamodificacion.MinimumWidth = 6;
-            this.fechamodificacion.Name = "fechamodificacion";
-            this.fechamodificacion.ReadOnly = true;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(106)))), ((int)(((byte)(127)))));
+            this.label10.Location = new System.Drawing.Point(12, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(180, 29);
+            this.label10.TabIndex = 56;
+            this.label10.Text = "Agrega tus tallas";
             // 
             // frmTallas
             // 
@@ -594,7 +595,6 @@
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
         private Guna.UI2.WinForms.Guna2Button btnLimpiar;
         private Guna.UI2.WinForms.Guna2Button btnAgregar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblfecha;
         private Guna.UI2.WinForms.Guna2TextBox txtid;
         private Guna.UI2.WinForms.Guna2TextBox txtindice;
@@ -609,5 +609,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombretalla;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecharegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechamodificacion;
+        private System.Windows.Forms.Label label10;
     }
 }

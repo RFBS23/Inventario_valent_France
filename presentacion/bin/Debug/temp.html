@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .header, .footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            .header img {
+                max-width: 150px;
+            }
+
+        .details {
+            margin-bottom: 20px;
+        }
+
+            .details th, .details td {
+                text-align: left;
+                padding: 5px;
+            }
+
+        .items {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+            .items th, .items td {
+                border: 1px solid #ddd;
+                padding: 10px;
+                text-align: left;
+            }
+
+        .total {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .notes {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Logo de la empresa">
+            <h1>BOLETA</h1>
+        </div>
+
+        <div class="details">
+            <table>
+                <tr>
+                    <th>Factura No:</th>
+                    <td>00001</td>
+                </tr>
+                <tr>
+                    <th>Fecha de emisión:</th>
+                    <td>07/07/2024</td>
+                </tr>
+                <tr>
+                    <th>Vendedor:</th>
+                    <td>PEPE</td>
+                </tr>
+                <tr>
+                    <th>Comprador:</th>
+                    <td>@nombrecliente</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="items">
+            <table style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Descuento</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>polo t-shirt amarillo M   </td><td>2</td><td>40.00</td><td>10</td><td>72.00</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total">
+            <p><strong>Total a pagar:</strong> S/.72.00</p>
+            <p><strong>Pago con:</strong> S/.80.00</p>
+            <p><strong>Vuelto:</strong> S/.8.00</p>
+        </div>
+
+        <div class="notes">
+            <p><strong>Notas:</strong> Gracias por su compra.</p>
+        </div>
+
+        <div class="footer">
+            <p>VALIANT COMPANY | por ahi | Teléfono: +51 933-103-242</p>
+        </div>
+    </div>
+</body>
+</html>

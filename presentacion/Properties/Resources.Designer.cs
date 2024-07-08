@@ -91,6 +91,34 @@ namespace presentacion.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        ///    &lt;title&gt;Ticket&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            font-family: Arial, sans-serif;
+        ///            margin: 0;
+        ///            padding: 20px;
+        ///        }
+        ///        .container {
+        ///            width: 300px;
+        ///            margin: 0 auto;
+        ///            border: 1px solid #ddd;
+        ///            padding: 10px;
+        ///        }
+        ///        .header, .footer {
+        ///            text-al [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string boleto {
+            get {
+                return ResourceManager.GetString("boleto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap boton_de_inicio {
@@ -237,6 +265,45 @@ namespace presentacion.Properties {
             get {
                 object obj = ResourceManager.GetObject("excel16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap factura {
+            get {
+                object obj = ResourceManager.GetObject("factura", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        ///    &lt;title&gt;Factura&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            font-family: Arial, sans-serif;
+        ///            margin: 0;
+        ///            padding: 20px;
+        ///        }
+        ///        .container {
+        ///            width: 80%;
+        ///            margin: 0 auto;
+        ///        }
+        ///        .header, .footer {
+        ///            text-align: center;
+        ///            margin-bottom: 20px;
+        ///        }
+        ///        [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Facturas {
+            get {
+                return ResourceManager.GetString("Facturas", resourceCulture);
             }
         }
         
@@ -456,6 +523,16 @@ namespace presentacion.Properties {
         internal static System.Drawing.Bitmap tamano {
             get {
                 object obj = ResourceManager.GetObject("tamano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap terminal_de_punto_de_venta {
+            get {
+                object obj = ResourceManager.GetObject("terminal-de-punto-de-venta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -19,5 +19,12 @@ namespace presentacion
             InitializeComponent();
             usuarioActual = objusuario;
         }
+
+        private void DashboardVendedor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

@@ -1,6 +1,8 @@
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\presentacion.exe.config
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\presentacion.exe
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\presentacion.pdb
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Inventario - Valent France.exe.config
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Inventario - Valent France.exe.manifest
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Inventario - Valent France.application
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Inventario - Valent France.exe
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Inventario - Valent France.pdb
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\ClosedXML.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Entidad.dll
@@ -48,12 +50,14 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Dashboard.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.DashboardAlmacen.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.DashboardVendedor.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmDetalleVentas.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\CustomAlertBoxDemo.Form_Alert.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Form_listaproductos.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmCategorias.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmConfiguracion.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmProductos.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmProveedores.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmReportes.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmTallas.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmUsuarios.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmVentas.resources
@@ -62,7 +66,13 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Utilidades.modales.mdProductos.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.csproj.GenerateResource.cache
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.csproj.CoreCompileInputs.cache
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\Inventario - Valent France.exe.manifest
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\Inventario - Valent France.application
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presenta.D2D8CCE5.Up2Date
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.exe
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.pdb
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmReportes.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\Inventario - Valent France.exe
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\Inventario - Valent France.pdb
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\itextsharp.dll
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\itextsharp.xml

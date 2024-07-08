@@ -40,9 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tablaproductos = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnlimpiarbuscador = new Guna.UI2.WinForms.Guna2Button();
-            this.btnbuscarlista = new Guna.UI2.WinForms.Guna2Button();
-            this.btnexportarexcel = new Guna.UI2.WinForms.Guna2Button();
             this.btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +60,9 @@
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecharegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnlimpiarbuscador = new Guna.UI2.WinForms.Guna2Button();
+            this.btnbuscarlista = new Guna.UI2.WinForms.Guna2Button();
+            this.btnexportarexcel = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaproductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,6 +128,7 @@
             this.lblfecha.Size = new System.Drawing.Size(40, 16);
             this.lblfecha.TabIndex = 58;
             this.lblfecha.Text = "fecha";
+            this.lblfecha.Visible = false;
             // 
             // txtid
             // 
@@ -279,102 +280,6 @@
             this.tablaproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaproductosAlmacen_CellContentClick);
             this.tablaproductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.tablaproductos_CellFormatting);
             this.tablaproductos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.tablaproductosAlmacen_CellPainting);
-            // 
-            // btnlimpiarbuscador
-            // 
-            this.btnlimpiarbuscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnlimpiarbuscador.Animated = true;
-            this.btnlimpiarbuscador.BackColor = System.Drawing.Color.Transparent;
-            this.btnlimpiarbuscador.BorderRadius = 10;
-            this.btnlimpiarbuscador.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnlimpiarbuscador.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnlimpiarbuscador.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnlimpiarbuscador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlimpiarbuscador.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnlimpiarbuscador.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnlimpiarbuscador.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnlimpiarbuscador.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnlimpiarbuscador.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnlimpiarbuscador.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnlimpiarbuscador.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.btnlimpiarbuscador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnlimpiarbuscador.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnlimpiarbuscador.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnlimpiarbuscador.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnlimpiarbuscador.Image = global::presentacion.Properties.Resources.escoba;
-            this.btnlimpiarbuscador.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnlimpiarbuscador.Location = new System.Drawing.Point(1408, 12);
-            this.btnlimpiarbuscador.Name = "btnlimpiarbuscador";
-            this.btnlimpiarbuscador.PressedColor = System.Drawing.Color.Transparent;
-            this.btnlimpiarbuscador.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnlimpiarbuscador.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnlimpiarbuscador.Size = new System.Drawing.Size(59, 48);
-            this.btnlimpiarbuscador.TabIndex = 57;
-            this.btnlimpiarbuscador.Click += new System.EventHandler(this.btnlimpiarbuscador_Click);
-            // 
-            // btnbuscarlista
-            // 
-            this.btnbuscarlista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnbuscarlista.Animated = true;
-            this.btnbuscarlista.BackColor = System.Drawing.Color.Transparent;
-            this.btnbuscarlista.BorderRadius = 10;
-            this.btnbuscarlista.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnbuscarlista.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnbuscarlista.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnbuscarlista.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnbuscarlista.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnbuscarlista.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnbuscarlista.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnbuscarlista.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnbuscarlista.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnbuscarlista.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
-            this.btnbuscarlista.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.btnbuscarlista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.btnbuscarlista.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnbuscarlista.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnbuscarlista.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnbuscarlista.Image = global::presentacion.Properties.Resources.buscar;
-            this.btnbuscarlista.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnbuscarlista.Location = new System.Drawing.Point(1339, 9);
-            this.btnbuscarlista.Name = "btnbuscarlista";
-            this.btnbuscarlista.PressedColor = System.Drawing.Color.Transparent;
-            this.btnbuscarlista.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnbuscarlista.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnbuscarlista.Size = new System.Drawing.Size(59, 48);
-            this.btnbuscarlista.TabIndex = 55;
-            this.btnbuscarlista.Click += new System.EventHandler(this.btnbuscarlista_Click);
-            // 
-            // btnexportarexcel
-            // 
-            this.btnexportarexcel.Animated = true;
-            this.btnexportarexcel.BackColor = System.Drawing.Color.Transparent;
-            this.btnexportarexcel.BorderRadius = 10;
-            this.btnexportarexcel.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnexportarexcel.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnexportarexcel.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
-            this.btnexportarexcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnexportarexcel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnexportarexcel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnexportarexcel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnexportarexcel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnexportarexcel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(223)))));
-            this.btnexportarexcel.FocusedColor = System.Drawing.Color.Transparent;
-            this.btnexportarexcel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexportarexcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(221)))), ((int)(((byte)(55)))));
-            this.btnexportarexcel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(223)))));
-            this.btnexportarexcel.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnexportarexcel.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(221)))), ((int)(((byte)(55)))));
-            this.btnexportarexcel.Image = global::presentacion.Properties.Resources.sobresalir;
-            this.btnexportarexcel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnexportarexcel.Location = new System.Drawing.Point(836, 77);
-            this.btnexportarexcel.Name = "btnexportarexcel";
-            this.btnexportarexcel.PressedColor = System.Drawing.Color.Transparent;
-            this.btnexportarexcel.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.btnexportarexcel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.btnexportarexcel.Size = new System.Drawing.Size(159, 55);
-            this.btnexportarexcel.TabIndex = 65;
-            this.btnexportarexcel.Text = "  EXCEL";
-            this.btnexportarexcel.Click += new System.EventHandler(this.btnexportarexcel_Click);
             // 
             // btnseleccionar
             // 
@@ -565,6 +470,102 @@
             this.fecharegistro.Name = "fecharegistro";
             this.fecharegistro.ReadOnly = true;
             this.fecharegistro.Width = 173;
+            // 
+            // btnlimpiarbuscador
+            // 
+            this.btnlimpiarbuscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnlimpiarbuscador.Animated = true;
+            this.btnlimpiarbuscador.BackColor = System.Drawing.Color.Transparent;
+            this.btnlimpiarbuscador.BorderRadius = 10;
+            this.btnlimpiarbuscador.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnlimpiarbuscador.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnlimpiarbuscador.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnlimpiarbuscador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiarbuscador.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnlimpiarbuscador.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnlimpiarbuscador.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnlimpiarbuscador.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnlimpiarbuscador.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnlimpiarbuscador.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnlimpiarbuscador.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.btnlimpiarbuscador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnlimpiarbuscador.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnlimpiarbuscador.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnlimpiarbuscador.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnlimpiarbuscador.Image = global::presentacion.Properties.Resources.escoba;
+            this.btnlimpiarbuscador.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnlimpiarbuscador.Location = new System.Drawing.Point(1408, 12);
+            this.btnlimpiarbuscador.Name = "btnlimpiarbuscador";
+            this.btnlimpiarbuscador.PressedColor = System.Drawing.Color.Transparent;
+            this.btnlimpiarbuscador.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnlimpiarbuscador.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnlimpiarbuscador.Size = new System.Drawing.Size(59, 48);
+            this.btnlimpiarbuscador.TabIndex = 57;
+            this.btnlimpiarbuscador.Click += new System.EventHandler(this.btnlimpiarbuscador_Click);
+            // 
+            // btnbuscarlista
+            // 
+            this.btnbuscarlista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnbuscarlista.Animated = true;
+            this.btnbuscarlista.BackColor = System.Drawing.Color.Transparent;
+            this.btnbuscarlista.BorderRadius = 10;
+            this.btnbuscarlista.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnbuscarlista.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnbuscarlista.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnbuscarlista.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnbuscarlista.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnbuscarlista.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnbuscarlista.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnbuscarlista.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnbuscarlista.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnbuscarlista.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnbuscarlista.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.btnbuscarlista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnbuscarlista.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnbuscarlista.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnbuscarlista.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnbuscarlista.Image = global::presentacion.Properties.Resources.buscar;
+            this.btnbuscarlista.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnbuscarlista.Location = new System.Drawing.Point(1339, 9);
+            this.btnbuscarlista.Name = "btnbuscarlista";
+            this.btnbuscarlista.PressedColor = System.Drawing.Color.Transparent;
+            this.btnbuscarlista.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnbuscarlista.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnbuscarlista.Size = new System.Drawing.Size(59, 48);
+            this.btnbuscarlista.TabIndex = 55;
+            this.btnbuscarlista.Click += new System.EventHandler(this.btnbuscarlista_Click);
+            // 
+            // btnexportarexcel
+            // 
+            this.btnexportarexcel.Animated = true;
+            this.btnexportarexcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnexportarexcel.BorderRadius = 10;
+            this.btnexportarexcel.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnexportarexcel.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnexportarexcel.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnexportarexcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnexportarexcel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnexportarexcel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnexportarexcel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnexportarexcel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnexportarexcel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(223)))));
+            this.btnexportarexcel.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnexportarexcel.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnexportarexcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(221)))), ((int)(((byte)(55)))));
+            this.btnexportarexcel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(250)))), ((int)(((byte)(223)))));
+            this.btnexportarexcel.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnexportarexcel.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(221)))), ((int)(((byte)(55)))));
+            this.btnexportarexcel.Image = global::presentacion.Properties.Resources.sobresalir;
+            this.btnexportarexcel.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnexportarexcel.Location = new System.Drawing.Point(836, 77);
+            this.btnexportarexcel.Name = "btnexportarexcel";
+            this.btnexportarexcel.PressedColor = System.Drawing.Color.Transparent;
+            this.btnexportarexcel.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnexportarexcel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnexportarexcel.Size = new System.Drawing.Size(159, 55);
+            this.btnexportarexcel.TabIndex = 65;
+            this.btnexportarexcel.Text = "  EXCEL";
+            this.btnexportarexcel.Click += new System.EventHandler(this.btnexportarexcel_Click);
             // 
             // Form_listaproductos
             // 

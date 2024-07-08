@@ -117,5 +117,9 @@ namespace presentacion
             formularioAbierto(new frmProductos());
         }
 
+        private void btnDetVentas_Click(object sender, EventArgs e)
+        {
+            formularioAbierto(new frmDetalleVentas());
+        }
     }
 }

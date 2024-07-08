@@ -988,9 +988,14 @@
             this.ClientSize = new System.Drawing.Size(1519, 723);
             this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1537, 770);
             this.Name = "DashboardAlmacen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Almacen";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DashboardAlmacen_FormClosing);
+            this.Load += new System.EventHandler(this.DashboardAlmacen_Load);
             this.panelFormularios.ResumeLayout(false);
             this.banner.ResumeLayout(false);
             this.banner.PerformLayout();

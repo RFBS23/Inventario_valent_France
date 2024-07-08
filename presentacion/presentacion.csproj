@@ -7,11 +7,27 @@
     <ProjectGuid>{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>presentacion</RootNamespace>
-    <AssemblyName>presentacion</AssemblyName>
+    <AssemblyName>Inventario - Valent France</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\fabri\Documents\Programacion\C-Sharp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +48,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8C387B750F2F4C6B1EF260E9414F1E97ACE0009E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>presentacion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="ClosedXML, Version=0.102.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.102.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
     </Reference>
@@ -47,6 +78,12 @@
     </Reference>
     <Reference Include="Irony, Version=1.1.11.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Irony.NetCore.1.1.11\lib\netstandard2.0\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.4\lib\net461\itextsharp.xmlworker.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -173,6 +210,12 @@
     <Compile Include="DashboardVendedor.Designer.cs">
       <DependentUpon>DashboardVendedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDetalleVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalleVentas.Designer.cs">
+      <DependentUpon>frmDetalleVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +306,9 @@
     <EmbeddedResource Include="DashboardVendedor.resx">
       <DependentUpon>DashboardVendedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalleVentas.resx">
+      <DependentUpon>frmDetalleVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +387,7 @@
     <None Include="Resources\warning.png" />
     <None Include="Resources\archivo-de-configuracion.png" />
     <None Include="Resources\agregar-usuario.png" />
+    <None Include="Resources\boleto.html" />
     <Content Include="Resources\boleto.png" />
     <None Include="Resources\boton-de-inicio.png" />
     <Content Include="Resources\boton-eliminar.png" />
@@ -369,6 +416,8 @@
     <None Include="Resources\info.png" />
     <None Include="Resources\flecha-arriba.png" />
     <None Include="Resources\flecha_bajo.png" />
+    <None Include="Resources\factura.png" />
+    <None Include="Resources\Facturas.html" />
     <Content Include="Resources\inicio.png" />
     <Content Include="Resources\limpiar.png" />
     <Content Include="Resources\login.png" />
@@ -390,12 +439,25 @@
     <Content Include="Resources\subirimg.png" />
     <None Include="Resources\tamano.png" />
     <None Include="Resources\success.png" />
+    <None Include="Resources\terminal-de-punto-de-venta.png" />
     <Content Include="Resources\usuario.png" />
     <None Include="Resources\analitica.png" />
     <None Include="Resources\pedido.png" />
     <None Include="Resources\paquete-o-empaquetar.png" />
     <None Include="Resources\perfil.png" />
     <None Include="Resources\perdio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
