@@ -20,6 +20,7 @@ namespace Entidad
         public int stock { get; set; }
         public string colores { get; set; }
         public decimal precioventa { get; set; }
+        public decimal preciocompra {  get; set; }
         public string numcaja { get; set; }
         public string temporada { get; set; }
         public int descuento { get; set; }

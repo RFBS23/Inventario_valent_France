@@ -3,12 +3,15 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Inventario - Valent France.application
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Inventario - Valent France.exe
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Inventario - Valent France.pdb
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\BouncyCastle.Cryptography.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\ClosedXML.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Entidad.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\ExcelNumberFormat.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Guna.UI2.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Irony.dll
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\itextsharp.dll
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\itextsharp.xmlworker.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Negocio.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Newtonsoft.Json.dll
@@ -28,9 +31,11 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Datos.dll
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Entidad.pdb
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Negocio.pdb
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\BouncyCastle.Cryptography.xml
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\ClosedXML.xml
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\ExcelNumberFormat.xml
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\itextsharp.xml
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Newtonsoft.Json.xml
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\RestSharp.xml
@@ -50,6 +55,9 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Dashboard.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.DashboardAlmacen.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.DashboardVendedor.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmcompra.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmDetalleCompras.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmDetalles.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmDetalleVentas.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\CustomAlertBoxDemo.Form_Alert.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Form_listaproductos.resources
@@ -58,10 +66,13 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmProductos.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmProveedores.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmReportes.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmreportescompras.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmreportesventas.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmTallas.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmUsuarios.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmVentas.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Login.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Modales.frmmodProveedores.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Properties.Resources.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Utilidades.modales.mdProductos.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.csproj.GenerateResource.cache
@@ -71,8 +82,3 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presenta.D2D8CCE5.Up2Date
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\Inventario - Valent France.exe
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\Inventario - Valent France.pdb
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\BouncyCastle.Cryptography.dll
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\itextsharp.dll
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\itextsharp.xmlworker.dll
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\BouncyCastle.Cryptography.xml
-C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\itextsharp.xml

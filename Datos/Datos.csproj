@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="DCategoria.cs" />
+    <Compile Include="DCompras.cs" />
     <Compile Include="DMarca.cs" />
     <Compile Include="DNegocio.cs" />
     <Compile Include="DNivelAcceso.cs" />

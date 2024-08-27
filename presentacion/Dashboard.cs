@@ -119,7 +119,12 @@ namespace presentacion
 
         private void btnDetVentas_Click(object sender, EventArgs e)
         {
-            formularioAbierto(new frmDetalleVentas());
+            formularioAbierto(new frmDetalles());
+        }
+
+        private void btncompras_Click(object sender, EventArgs e)
+        {
+            formularioAbierto(new frmcompra(usuarioActual));
         }
     }
 }

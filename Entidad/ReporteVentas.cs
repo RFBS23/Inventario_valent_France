@@ -17,6 +17,7 @@ namespace Entidad
         public string nombrecliente { get; set; }
         public string CodigoProducto { get; set; }
         public string NombreProducto { get; set; }
+        public string Tallas { get; set; }
         public string Descuento { get; set; }
         public string Categoria { get; set; }
         public string precioventa { get; set; }

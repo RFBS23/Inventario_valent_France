@@ -16,5 +16,11 @@ namespace Negocio
         {
             return objd_reporte.Ventas(fechainicio, fechafin);
         }
+
+        public List<ReporteCompra> Compra(string fechainicio, string fechafin, int idproveedor)
+        {
+            return objd_reporte.Compra(fechainicio, fechafin, idproveedor);
+        }
+
     }
 }

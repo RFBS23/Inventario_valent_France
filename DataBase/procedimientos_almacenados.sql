@@ -270,7 +270,7 @@ begin
     IF NOT EXISTS (SELECT 1 FROM marca WHERE nombremarca = @nombremarca AND idmarca != @idmarca)
     BEGIN
         -- Verificar si la marca estu relacionada a algun producto
-        IF (EXISTS (SELECT 1 FROM productosropa WHERE idmarca = @idmarca))
+        IF (EXISTS (SELECT 1 FROM productos WHERE idmarca = @idmarca))
         BEGIN
             SET @resultado = 0
             SET @mensaje = 'No se puede cambiar el estado de la marca porque esta relacionada a productos.'
@@ -302,7 +302,7 @@ as
 begin
 	SET @resultado = 1
     -- Verificar si la marca esta relacionada a algun producto
-    IF EXISTS (SELECT 1 FROM productosropa WHERE idmarca = @idmarca)
+    IF EXISTS (SELECT 1 FROM productos WHERE idmarca = @idmarca)
     BEGIN
         SET @resultado = 0
         SET @mensaje = 'La marca esta relacionada con productos y no se puede eliminar.'
@@ -543,6 +543,76 @@ BEGIN
     END CATCH
 END
 GO
+
+create type [dbo].[EDetalle_Compra] as TABLE(
+    [idproducto] int null,
+    [preciocompra] DECIMAL(18,2) NULL,
+    [precioventa] DECIMAL(18,2) NULL,
+    [cantidad] int NULL,
+    [montototal] decimal(18,2) NULL
+)
+go
+
+create procedure spu_registrocompra(
+    @idusuario int,
+    @idproveedor INT,
+    @tipodocumento varchar(500),
+    @numerodocumento varchar(500),
+    @montototal decimal(18,2),
+    @detallecompra [EDetalle_Compra] READONLY,
+    @resultado bit OUTPUT,
+    @mensaje varchar(500) OUTPUT
+)
+as
+BEGIN
+    BEGIN TRY
+        DECLARE @idcompra int = 0
+        set @resultado = 1
+        set @mensaje = ''
+        begin transaction registro
+        insert into compra(idusuario, idproveedor, tipodocumento, numerodocumento, montototal)
+        values (@idusuario, @idproveedor, @tipodocumento, @numerodocumento, @montototal)
+        set @idcompra = SCOPE_IDENTITY()
+        INSERT into detallecompra(idcompra, idproducto, preciocompra, precioventa, cantidad, montototal)
+        select @idcompra, idproducto, preciocompra, precioventa, cantidad, montototal from @detallecompra
+        update p set p.stock = p.stock + dc.cantidad,
+        p.preciocompra = dc.preciocompra,
+        p.precioventa = dc.precioventa
+        from productos p
+        inner join @detallecompra dc on dc.idproducto = p.idproducto
+        commit transaction registro
+    end try
+    begin catch
+        set @resultado = 0
+        set @mensaje = ERROR_MESSAGE()
+        rollback transaction registro
+    end catch
+end
+go
+
+create procedure spu_reporte_compras(
+    @fechainicio varchar(10),
+	@fechafin varchar(10),
+    @idproveedor int
+)
+as
+begin
+set dateformat dmy;
+select
+convert(char(10), c.fecharegistro,103)[FechaRegistro], c.tipodocumento, c.numerodocumento, c.montototal,
+u.nombreusuario[UsuarioRegistro],
+pr.documento[docproveedor], pr.nombreproveedor[razonsocial],
+p.codigo[CodigoProducto], p.nombre[NombreProducto], p.descuento[Descuento], ca.nombrecategoria[Categoria], dc.preciocompra, dc.precioventa, dc.cantidad, dc.montototal[subtotal]
+from compra c
+inner join usuarios u on u.idusuario = c.idusuario
+inner join proveedores pr on pr.idproveedor = c.idproveedor
+inner join detallecompra dc on dc.idcompra = c.idcompra
+inner join productos p on p.idproducto = dc.idproducto
+inner join categorias ca on ca.idcategoria = p.idcategoria
+where convert(date, c.fecharegistro) between @fechainicio and @fechafin
+and pr.idproveedor = iif(@idproveedor=0, pr.idproveedor, @idproveedor)
+end
+go
 
 create procedure spu_reporte_venta(
 	@fechainicio varchar(10),

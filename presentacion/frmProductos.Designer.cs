@@ -580,7 +580,7 @@
             this.panelproducto2.ShadowDecoration.Depth = 20;
             this.panelproducto2.ShadowDecoration.Enabled = true;
             this.panelproducto2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 6);
-            this.panelproducto2.Size = new System.Drawing.Size(507, 366);
+            this.panelproducto2.Size = new System.Drawing.Size(486, 366);
             this.panelproducto2.TabIndex = 2;
             // 
             // txtdescuento
@@ -855,7 +855,7 @@
             this.panelproducto3.ShadowDecoration.Depth = 20;
             this.panelproducto3.ShadowDecoration.Enabled = true;
             this.panelproducto3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 6);
-            this.panelproducto3.Size = new System.Drawing.Size(507, 362);
+            this.panelproducto3.Size = new System.Drawing.Size(486, 362);
             this.panelproducto3.TabIndex = 41;
             // 
             // label12
@@ -927,7 +927,7 @@
             this.tablaproductos.RowHeadersVisible = false;
             this.tablaproductos.RowHeadersWidth = 51;
             this.tablaproductos.RowTemplate.Height = 30;
-            this.tablaproductos.Size = new System.Drawing.Size(379, 1366);
+            this.tablaproductos.Size = new System.Drawing.Size(358, 1549);
             this.tablaproductos.TabIndex = 64;
             this.tablaproductos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tablaproductos.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

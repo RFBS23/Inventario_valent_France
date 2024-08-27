@@ -81,7 +81,6 @@ namespace presentacion
                 filas += "<td>" + row.Cells["precioventa"].Value.ToString() + "</td>";                
                 filas += "<td>" + row.Cells["stock"].Value.ToString() + "</td>";
                 filas += "<td>" + row.Cells["descuento"].Value.ToString() + "</td>";
-                filas += "<td>" + row.Cells["subtotal"].Value.ToString() + "</td>";
                 filas += "</tr>";
             }
             Factura_Html = Factura_Html.Replace("@filas", filas);
@@ -146,7 +145,6 @@ namespace presentacion
             Ticket_Html = Ticket_Html.Replace("@nombrecliente", txtnombrecliente.Text.ToUpper());
             Ticket_Html = Ticket_Html.Replace("@doccliente", txtdocumento.Text.ToUpper());
 
-
             string filas = string.Empty;
             foreach (DataGridViewRow row in tabladetallesventas.Rows)
             {
@@ -155,7 +153,6 @@ namespace presentacion
                 filas += "<th>" + row.Cells["descuento"].Value.ToString() + "</th>";
                 filas += "<th>" + row.Cells["precioventa"].Value.ToString() + "</th>";
                 filas += "<th>" + row.Cells["stock"].Value.ToString() + "</th>";
-                filas += "<th>" + row.Cells["subtotal"].Value.ToString() + "</th>";
                 filas += "</tr>";
             }
             Ticket_Html = Ticket_Html.Replace("@filas", filas);
@@ -200,6 +197,11 @@ namespace presentacion
                     System.Diagnostics.Process.Start(savefile.FileName);
                 }
             }
+        }
+
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

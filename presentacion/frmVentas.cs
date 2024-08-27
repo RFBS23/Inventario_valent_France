@@ -299,7 +299,7 @@ namespace presentacion
         {
             if (txttotalpagar.Text.Trim() == "")
             {
-                // MessageBox.Show("No existen productos en la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("No existen productos en la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             decimal pagacon;
@@ -393,5 +393,6 @@ namespace presentacion
             else
                 MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
+
     }
 }

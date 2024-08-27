@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.btncompras = new Guna.UI2.WinForms.Guna2Button();
             this.btnDetVentas = new Guna.UI2.WinForms.Guna2Button();
             this.btnlistaproductos = new Guna.UI2.WinForms.Guna2Button();
             this.btnagregarproducto = new Guna.UI2.WinForms.Guna2Button();
@@ -108,6 +109,7 @@
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.White;
             this.panelMenu.BorderRadius = 20;
+            this.panelMenu.Controls.Add(this.btncompras);
             this.panelMenu.Controls.Add(this.btnDetVentas);
             this.panelMenu.Controls.Add(this.btnlistaproductos);
             this.panelMenu.Controls.Add(this.btnagregarproducto);
@@ -129,6 +131,40 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(306, 723);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btncompras
+            // 
+            this.btncompras.Animated = true;
+            this.btncompras.BackColor = System.Drawing.Color.Transparent;
+            this.btncompras.BorderRadius = 10;
+            this.btncompras.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btncompras.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btncompras.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btncompras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncompras.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btncompras.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btncompras.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btncompras.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btncompras.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btncompras.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btncompras.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btncompras.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btncompras.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btncompras.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btncompras.Image = global::presentacion.Properties.Resources.las_compras_en_linea;
+            this.btncompras.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btncompras.ImageSize = new System.Drawing.Size(50, 50);
+            this.btncompras.IndicateFocus = true;
+            this.btncompras.Location = new System.Drawing.Point(29, 804);
+            this.btncompras.Name = "btncompras";
+            this.btncompras.PressedColor = System.Drawing.Color.Transparent;
+            this.btncompras.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btncompras.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btncompras.Size = new System.Drawing.Size(232, 56);
+            this.btncompras.TabIndex = 22;
+            this.btncompras.Text = "Compras";
+            this.btncompras.Click += new System.EventHandler(this.btncompras_Click);
             // 
             // btnDetVentas
             // 
@@ -154,7 +190,7 @@
             this.btnDetVentas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDetVentas.ImageSize = new System.Drawing.Size(50, 50);
             this.btnDetVentas.IndicateFocus = true;
-            this.btnDetVentas.Location = new System.Drawing.Point(29, 883);
+            this.btnDetVentas.Location = new System.Drawing.Point(29, 966);
             this.btnDetVentas.Name = "btnDetVentas";
             this.btnDetVentas.PressedColor = System.Drawing.Color.Transparent;
             this.btnDetVentas.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -235,7 +271,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(177, 1134);
+            this.label8.Location = new System.Drawing.Point(177, 1217);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 16);
             this.label8.TabIndex = 18;
@@ -265,7 +301,7 @@
             this.btnconfiguracion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnconfiguracion.ImageSize = new System.Drawing.Size(50, 50);
             this.btnconfiguracion.IndicateFocus = true;
-            this.btnconfiguracion.Location = new System.Drawing.Point(29, 982);
+            this.btnconfiguracion.Location = new System.Drawing.Point(29, 1065);
             this.btnconfiguracion.Name = "btnconfiguracion";
             this.btnconfiguracion.PressedColor = System.Drawing.Color.Transparent;
             this.btnconfiguracion.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -299,7 +335,7 @@
             this.btnreportespdf.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnreportespdf.ImageSize = new System.Drawing.Size(50, 50);
             this.btnreportespdf.IndicateFocus = true;
-            this.btnreportespdf.Location = new System.Drawing.Point(29, 802);
+            this.btnreportespdf.Location = new System.Drawing.Point(29, 885);
             this.btnreportespdf.Name = "btnreportespdf";
             this.btnreportespdf.PressedColor = System.Drawing.Color.Transparent;
             this.btnreportespdf.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -435,7 +471,7 @@
             this.btninformacion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btninformacion.ImageSize = new System.Drawing.Size(50, 50);
             this.btninformacion.IndicateFocus = true;
-            this.btninformacion.Location = new System.Drawing.Point(29, 1061);
+            this.btninformacion.Location = new System.Drawing.Point(29, 1144);
             this.btninformacion.Name = "btninformacion";
             this.btninformacion.PressedColor = System.Drawing.Color.Transparent;
             this.btninformacion.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -1039,7 +1075,6 @@
             this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1537, 770);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
@@ -1130,5 +1165,6 @@
         private Guna.UI2.WinForms.Guna2Button btnlistaproductos;
         private Guna.UI2.WinForms.Guna2Button btnagregarproducto;
         private Guna.UI2.WinForms.Guna2Button btnDetVentas;
+        private Guna.UI2.WinForms.Guna2Button btncompras;
     }
 }

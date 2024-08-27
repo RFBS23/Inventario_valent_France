@@ -60,6 +60,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
@@ -91,8 +94,10 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp, Version=111.3.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.111.3.0\lib\net471\RestSharp.dll</HintPath>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RestSharp, Version=111.4.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.111.4.0\lib\net471\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
       <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
@@ -161,8 +166,8 @@
     <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=8.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Json.8.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
@@ -209,6 +214,24 @@
     </Compile>
     <Compile Include="DashboardVendedor.Designer.cs">
       <DependentUpon>DashboardVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmcompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcompra.Designer.cs">
+      <DependentUpon>frmcompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetalleCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalleCompras.Designer.cs">
+      <DependentUpon>frmDetalleCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalles.Designer.cs">
+      <DependentUpon>frmDetalles.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDetalleVentas.cs">
       <SubType>Form</SubType>
@@ -264,6 +287,18 @@
     <Compile Include="frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmreportescompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreportescompras.Designer.cs">
+      <DependentUpon>frmreportescompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmreportesventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreportesventas.Designer.cs">
+      <DependentUpon>frmreportesventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTallas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +323,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modales\frmmodProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\frmmodProveedores.Designer.cs">
+      <DependentUpon>frmmodProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\modales\mdProductos.cs">
@@ -305,6 +346,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardVendedor.resx">
       <DependentUpon>DashboardVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcompra.resx">
+      <DependentUpon>frmcompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalleCompras.resx">
+      <DependentUpon>frmDetalleCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalles.resx">
+      <DependentUpon>frmDetalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDetalleVentas.resx">
       <DependentUpon>frmDetalleVentas.cs</DependentUpon>
@@ -330,6 +380,12 @@
     <EmbeddedResource Include="frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmreportescompras.resx">
+      <DependentUpon>frmreportescompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreportesventas.resx">
+      <DependentUpon>frmreportesventas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTallas.resx">
       <DependentUpon>frmTallas.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\frmmodProveedores.resx">
+      <DependentUpon>frmmodProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -383,13 +442,16 @@
     <Content Include="Assets\illustration-john.png" />
     <Content Include="Assets\registro de venta.png" />
     <Content Include="Assets\solicitud32.png" />
+    <Content Include="icono.ico" />
     <Content Include="Resources\agregar-producto.png" />
+    <None Include="Resources\ventas.png" />
     <None Include="Resources\warning.png" />
     <None Include="Resources\archivo-de-configuracion.png" />
     <None Include="Resources\agregar-usuario.png" />
     <None Include="Resources\boleto.html" />
     <Content Include="Resources\boleto.png" />
     <None Include="Resources\boton-de-inicio.png" />
+    <None Include="Resources\boletocompra.html" />
     <Content Include="Resources\boton-eliminar.png" />
     <Content Include="Resources\buscar.png" />
     <None Include="Resources\buscar1.png" />
@@ -418,7 +480,10 @@
     <None Include="Resources\flecha_bajo.png" />
     <None Include="Resources\factura.png" />
     <None Include="Resources\Facturas.html" />
+    <None Include="Resources\grafico-de-barras.png" />
+    <None Include="Resources\Facturascompras.html" />
     <Content Include="Resources\inicio.png" />
+    <None Include="Resources\las-compras-en-linea.png" />
     <Content Include="Resources\limpiar.png" />
     <Content Include="Resources\login.png" />
     <Content Include="Resources\logo1.png" />

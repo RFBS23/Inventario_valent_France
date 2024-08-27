@@ -1,8 +1,19 @@
-CREATE DATABASE inventariovalentfrance
+﻿CREATE DATABASE inventariovalentfrance
 go
 
 use inventariovalentfrance
 go
+
+/* eliminamos datos de las siguientes tablas
+DELETE FROM detalle_venta
+WHERE iddetalleventa BETWEEN 1 AND 4;
+
+DELETE FROM productos
+WHERE idproducto BETWEEN 1 and 600;
+
+select * from detalle_venta
+select * from productos
+*/
 
 create table nivelacceso(
 	idnivelacceso int primary key identity,
@@ -15,6 +26,10 @@ insert into nivelacceso (nombreacceso) values
 	('almacen'),
 	('vendedor')
 select * from nivelacceso
+go
+insert into nivelacceso (nombreacceso) values
+	('maquinista'),
+	('logistica')
 go
 
 create table usuarios(
@@ -130,6 +145,11 @@ create table productos(
 	fecharegistro datetime default getdate()
 )
 GO
+alter table productos add preciocompra decimal(10,2) default 0;
+
+alter table productos add nombreimagen2 varchar(100) null;
+alter table productos add nombreimagen3 varchar(100) null;
+alter table productos add nombreimagen4 varchar(100) null;
 
 select * from productos
 go
@@ -177,6 +197,31 @@ go
 select * from detalle_venta
 go
 
+create table compra(
+	idcompra int primary key identity,
+	idusuario int references usuarios(idusuario),
+	idproveedor int references proveedores(idproveedor),
+	tipodocumento varchar(50),
+	numerodocumento varchar(50),
+	montototal decimal(10,2),
+	fecharegistro datetime default getdate()
+)
+go
+select * from compra
+go
+
+create table detallecompra(
+	iddetallecompra int primary key identity,
+	idcompra int references compra(idcompra),
+	idproducto int references productos(idproducto),
+	preciocompra decimal(10,2) default 0,
+	precioventa decimal(10,2) default 0,
+	cantidad int,
+	montototal decimal(10,2),
+	fecharegistro datetime default getdate()
+)
+go
+
 create table negocios(
 	idnegocio int primary key,
 	nombre varchar(60),
@@ -197,113 +242,20 @@ select v.idventa, u.nombreusuario, v.documentocliente, v.nombrecliente, v.tipodo
 v.numerodocumento, v.montopago, v.montocambio, v.montototal, convert(char(10), v.fecharegistro, 103)[FechaRegistro] from ventas v
 inner join usuarios u on u.idusuario = v.idusuario
 where v.numerodocumento = '00001'
-/*
+
+SELECT cp.idcompra, u.nombreusuario, p.documento, p.nombreproveedor, cp.tipodocumento, cp.numerodocumento, cp.montototal, CONVERT(CHAR(10), cp.fecharegistro, 103) AS [FechaRegistro] FROM compra cp
+INNER JOIN usuarios u ON u.idusuario = cp.idusuario
+INNER JOIN proveedores p ON p.idproveedor = cp.idproveedor
+WHERE cp.numerodocumento = '00005'
+
+select p.nombre + ' ' + p.descripcion + ' ' + p.colores + ' ' + tr.nombretalla as productos, dc.preciocompra, dc.cantidad, dc.montototal from detallecompra dc
+inner join productos p on p.idproducto = dc.idproducto
+inner join tallasropa tr on tr.idtallaropa = p.idtallaropa
+where dc.idcompra = '00005'
+
 select p.nombre + ' ' + p.descripcion + ' ' + p.colores + ' ' + tr.nombretalla as productos, p.descuento, dv.precioventa, dv.cantidad, dv.subtotal from detalle_venta dv
 inner join productos p on p.idproducto = dv.idproducto
 inner join tallasropa tr on tr.idtallaropa = p.idtallaropa
-where dv.idventa = '00003'
-*/
- -- falta las tablas web
-/*tablas web*/
-create table usuariosweb(
-	idusuarioweb int primary key identity,
-	rutaimagen varchar(100) null,
-    nombreimagen varchar(100) null,
-	documento varchar(50) unique not null,
-	nombres varchar(150) null,
-	apellidos varchar(150) null,
-	nombreusuario varchar(50) not null,
-	correo varchar(100) not null,
-	clave varchar(250) not null,
-	reestablecer bit default 1,
-	estado bit not null default 1,
-	fecharegistro datetime default getdate()
-)
-go
-select idusuarioweb, rutaimagen, nombreimagen, documento, nombres, apellidos, nombreusuario, correo, clave, reestablecer, estado from usuariosweb
-go
-insert into usuariosweb(documento, nombres, apellidos, nombreusuario, correo, clave, reestablecer) values 
-('71447422', 'rodrifo','fabrizio','fabrizio', 'fabriziobarrios22@gmail.com', '12345', 0)
-GO
+where dv.idventa = '00001'
 
-create table clientes(
-	idcliente int primary key identity,
-	documento varchar(50) unique,
-	nombres varchar(50) not null,
-	apellidos varchar(50) not null,
-	correo varchar(100),
-	clave varchar(150),
-	telefono char(9) unique,
-	reestablecer bit default 1,	
-	fecharegistro date default getdate()
-)
-select idcliente, documento, nombres, apellidos, telefono, correo, clave, reestablecer from clientes
-insert into clientes (documento, nombres, apellidos, correo, clave, telefono) values
-	('12345678', 'pedro', 'sierra', 'pedrito@gmail.com', '12334', '987654321')
-go
-
-create table carrito(
-	idcarrito int primary key identity,
-	idcliente int references clientes(idcliente),
-	idproducto int references productos(idproducto),
-	cantidad int
-)
-go
-select * from carrito
-
-create table ventasweb(
-	idventaweb int primary key identity,
-	idcliente int references clientes(idcliente),
-	totalProducto int,
-	montototal decimal(10,2),
-	contacto varchar(50),
-	iddistrito varchar(30),
-	telefono varchar(9),
-	direccion varchar(500),
-	idtransaccion varchar(60),
-	fecharegistro datetime default getdate()
-)
-go
-
-create table detalle_ventaweb(
-	iddetalleventaweb int primary key identity,
-	idventaweb int references ventasweb(idventaweb),
-	idproducto int references productos(idproducto),
-	cantidad int,
-	total decimal(10,2),
-	fecharegistro datetime default getdate()
-)
-go
-
-create table departamento(
-	iddepartamento varchar(290) not null,
-	descripcion varchar(500) not null
-)
-go
-
-create table provincia (
-	idprovincia varchar(290) not null,
-	descripcion varchar(500) not null,
-	iddepartamento varchar(500) not null
-)
-go
-
-create table distrito(
-	iddistrito varchar(2906) not null,
-	nombredistrito varchar(500) not null,
-	idprovincia varchar(500) not null,
-	iddepartamento varchar(500) not null
-)
-go
-
-/*filtros
-select idmarca, nombremarca, estado from marca where estado = 1
-
-declare @idcategoria int = 1
-select distinct t.idtallaropa, t.nombretalla from productosropa p
-inner join categorias c on c.idcategoria = p.idcategoria
-inner join tallasropa t on t.idtallaropa = p.idtallaropa and t.estado = 1
-where c.idcategoria = iif(@idcategoria = 0, c.idcategoria, @idcategoria)
-
-select idtallaropa, c.idcategoria, c.nombrecategoria, nombretalla, tr.estado from tallasropa tr
-inner join categorias c on c.idcategoria = tr.idcategoria*/
+create table cupon

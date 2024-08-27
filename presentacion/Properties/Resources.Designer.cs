@@ -92,29 +92,63 @@ namespace presentacion.Properties {
         
         /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
-        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;html&gt;
         ///&lt;head&gt;
-        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
-        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-        ///    &lt;title&gt;Ticket&lt;/title&gt;
+        ///    &lt;title&gt;Recibo&lt;/title&gt;
         ///    &lt;style&gt;
         ///        body {
         ///            font-family: Arial, sans-serif;
-        ///            margin: 0;
-        ///            padding: 20px;
+        ///            font-size: 10px; /* Ajusta el tamaño de fuente general */
         ///        }
-        ///        .container {
-        ///            width: 300px;
-        ///            margin: 0 auto;
+        ///
+        ///        table {
+        ///            width: 100%;
+        ///            border-collapse: collapse;
+        ///        }
+        ///
+        ///        th, td {
+        ///            padding: 6px; /* Ajusta el espacio interno de las celdas de la tabla */
+        ///            text-align: left;
         ///            border: 1px solid #ddd;
-        ///            padding: 10px;
         ///        }
-        ///        .header, .footer {
-        ///            text-al [resto de la cadena truncado]&quot;;.
+        ///
+        ///        th {
+        /// [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string boleto {
             get {
                 return ResourceManager.GetString("boleto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///    &lt;title&gt;Recibo&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            font-family: Arial, sans-serif;
+        ///            font-size: 10px; /* Ajusta el tamaño de fuente general */
+        ///        }
+        ///
+        ///        table {
+        ///            width: 100%;
+        ///            border-collapse: collapse;
+        ///        }
+        ///
+        ///        th, td {
+        ///            padding: 6px; /* Ajusta el espacio interno de las celdas de la tabla */
+        ///            text-align: left;
+        ///            border: 1px solid #ddd;
+        ///        }
+        ///
+        ///        th {
+        /// [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string boletocompra {
+            get {
+                return ResourceManager.GetString("boletocompra", resourceCulture);
             }
         }
         
@@ -280,30 +314,65 @@ namespace presentacion.Properties {
         
         /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
-        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;html&gt;
         ///&lt;head&gt;
-        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
-        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-        ///    &lt;title&gt;Factura&lt;/title&gt;
+        ///    &lt;title&gt;Web Page Design&lt;/title&gt;
         ///    &lt;style&gt;
-        ///        body {
-        ///            font-family: Arial, sans-serif;
-        ///            margin: 0;
-        ///            padding: 20px;
+        ///        table.border {
+        ///            border-collapse: collapse;
         ///        }
-        ///        .container {
-        ///            width: 80%;
-        ///            margin: 0 auto;
-        ///        }
-        ///        .header, .footer {
-        ///            text-align: center;
-        ///            margin-bottom: 20px;
-        ///        }
-        ///        [resto de la cadena truncado]&quot;;.
+        ///
+        ///            table.border th {
+        ///                text-align: center;
+        ///                padding: 5px;
+        ///                border: 1px solid black;
+        ///            }
+        ///
+        ///            table.border td {
+        ///                text-align: center;
+        ///                padding: 5px;
+        ///                border: 1px solid black;
+        ///            }
+        ///    &lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///    &lt;tab [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string Facturas {
             get {
                 return ResourceManager.GetString("Facturas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///    &lt;title&gt;Web Page Design&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        table.border {
+        ///            border-collapse: collapse;
+        ///        }
+        ///
+        ///            table.border th {
+        ///                text-align: center;
+        ///                padding: 5px;
+        ///                border: 1px solid black;
+        ///            }
+        ///
+        ///            table.border td {
+        ///                text-align: center;
+        ///                padding: 5px;
+        ///                border: 1px solid black;
+        ///            }
+        ///    &lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///    &lt;tab [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Facturascompras {
+            get {
+                return ResourceManager.GetString("Facturascompras", resourceCulture);
             }
         }
         
@@ -350,6 +419,16 @@ namespace presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap grafico_de_barras {
+            get {
+                object obj = ResourceManager.GetObject("grafico-de-barras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cancel_25px {
             get {
                 object obj = ResourceManager.GetObject("icons8_cancel_25px", resourceCulture);
@@ -383,6 +462,16 @@ namespace presentacion.Properties {
         internal static System.Drawing.Bitmap informacion {
             get {
                 object obj = ResourceManager.GetObject("informacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap las_compras_en_linea {
+            get {
+                object obj = ResourceManager.GetObject("las-compras-en-linea", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -543,6 +632,16 @@ namespace presentacion.Properties {
         internal static System.Drawing.Bitmap usuario {
             get {
                 object obj = ResourceManager.GetObject("usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ventas {
+            get {
+                object obj = ResourceManager.GetObject("ventas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
