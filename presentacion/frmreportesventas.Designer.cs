@@ -61,6 +61,7 @@
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montototal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2.SuspendLayout();
@@ -125,6 +126,7 @@
             this.categoria,
             this.precioventa,
             this.cantidad,
+            this.descuento,
             this.subtotal,
             this.montototal});
             this.tablareportes.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -184,7 +186,7 @@
             this.label3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1048, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 20);
+            this.label3.Size = new System.Drawing.Size(144, 17);
             this.label3.TabIndex = 67;
             this.label3.Text = "Exportar en Excel";
             // 
@@ -226,7 +228,7 @@
             this.label2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(425, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.Size = new System.Drawing.Size(88, 17);
             this.label2.TabIndex = 43;
             this.label2.Text = "Fecha Fin:";
             // 
@@ -269,7 +271,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(172)))), ((int)(((byte)(184)))));
             this.label1.Location = new System.Drawing.Point(11, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 24);
+            this.label1.Size = new System.Drawing.Size(182, 19);
             this.label1.TabIndex = 40;
             this.label1.Text = "filtra tus ventas por fecha";
             // 
@@ -280,7 +282,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(106)))), ((int)(((byte)(127)))));
             this.label10.Location = new System.Drawing.Point(11, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(201, 29);
+            this.label10.Size = new System.Drawing.Size(161, 23);
             this.label10.TabIndex = 39;
             this.label10.Text = "Reportes de ventas";
             // 
@@ -342,7 +344,7 @@
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(713, 28);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 28);
+            this.label9.Size = new System.Drawing.Size(64, 23);
             this.label9.TabIndex = 31;
             this.label9.Text = "Buscar:";
             // 
@@ -438,7 +440,7 @@
             this.lbldni.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldni.Location = new System.Drawing.Point(12, 102);
             this.lbldni.Name = "lbldni";
-            this.lbldni.Size = new System.Drawing.Size(126, 20);
+            this.lbldni.Size = new System.Drawing.Size(112, 17);
             this.lbldni.TabIndex = 7;
             this.lbldni.Text = "Fecha Inicio:";
             // 
@@ -449,7 +451,7 @@
             this.FechaRegistro.MinimumWidth = 6;
             this.FechaRegistro.Name = "FechaRegistro";
             this.FechaRegistro.ReadOnly = true;
-            this.FechaRegistro.Width = 164;
+            this.FechaRegistro.Width = 141;
             // 
             // tipodocumento
             // 
@@ -457,7 +459,7 @@
             this.tipodocumento.MinimumWidth = 6;
             this.tipodocumento.Name = "tipodocumento";
             this.tipodocumento.ReadOnly = true;
-            this.tipodocumento.Width = 173;
+            this.tipodocumento.Width = 149;
             // 
             // numerodocumento
             // 
@@ -465,7 +467,7 @@
             this.numerodocumento.MinimumWidth = 6;
             this.numerodocumento.Name = "numerodocumento";
             this.numerodocumento.ReadOnly = true;
-            this.numerodocumento.Width = 181;
+            this.numerodocumento.Width = 157;
             // 
             // usuarioregistro
             // 
@@ -473,7 +475,7 @@
             this.usuarioregistro.MinimumWidth = 6;
             this.usuarioregistro.Name = "usuarioregistro";
             this.usuarioregistro.ReadOnly = true;
-            this.usuarioregistro.Width = 101;
+            this.usuarioregistro.Width = 87;
             // 
             // documento
             // 
@@ -481,7 +483,7 @@
             this.documento.MinimumWidth = 6;
             this.documento.Name = "documento";
             this.documento.ReadOnly = true;
-            this.documento.Width = 224;
+            this.documento.Width = 192;
             // 
             // nombrecliente
             // 
@@ -490,7 +492,7 @@
             this.nombrecliente.MinimumWidth = 6;
             this.nombrecliente.Name = "nombrecliente";
             this.nombrecliente.ReadOnly = true;
-            this.nombrecliente.Width = 194;
+            this.nombrecliente.Width = 167;
             // 
             // codigoproducto
             // 
@@ -498,7 +500,7 @@
             this.codigoproducto.MinimumWidth = 6;
             this.codigoproducto.Name = "codigoproducto";
             this.codigoproducto.ReadOnly = true;
-            this.codigoproducto.Width = 175;
+            this.codigoproducto.Width = 151;
             // 
             // nombreproducto
             // 
@@ -507,7 +509,7 @@
             this.nombreproducto.MinimumWidth = 6;
             this.nombreproducto.Name = "nombreproducto";
             this.nombreproducto.ReadOnly = true;
-            this.nombreproducto.Width = 213;
+            this.nombreproducto.Width = 184;
             // 
             // talla
             // 
@@ -515,7 +517,7 @@
             this.talla.MinimumWidth = 6;
             this.talla.Name = "talla";
             this.talla.ReadOnly = true;
-            this.talla.Width = 77;
+            this.talla.Width = 67;
             // 
             // categoria
             // 
@@ -525,7 +527,7 @@
             this.categoria.MinimumWidth = 6;
             this.categoria.Name = "categoria";
             this.categoria.ReadOnly = true;
-            this.categoria.Width = 117;
+            this.categoria.Width = 101;
             // 
             // precioventa
             // 
@@ -536,7 +538,7 @@
             this.precioventa.ReadOnly = true;
             this.precioventa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.precioventa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.precioventa.Width = 147;
+            this.precioventa.Width = 128;
             // 
             // cantidad
             // 
@@ -544,7 +546,14 @@
             this.cantidad.MinimumWidth = 6;
             this.cantidad.Name = "cantidad";
             this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 110;
+            this.cantidad.Width = 95;
+            // 
+            // descuento
+            // 
+            this.descuento.HeaderText = "Descuento";
+            this.descuento.Name = "descuento";
+            this.descuento.ReadOnly = true;
+            this.descuento.Width = 108;
             // 
             // subtotal
             // 
@@ -552,7 +561,7 @@
             this.subtotal.MinimumWidth = 6;
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
-            this.subtotal.Width = 116;
+            this.subtotal.Width = 101;
             // 
             // montototal
             // 
@@ -562,7 +571,7 @@
             this.montototal.MinimumWidth = 6;
             this.montototal.Name = "montototal";
             this.montototal.ReadOnly = true;
-            this.montototal.Width = 135;
+            this.montototal.Width = 117;
             // 
             // frmreportesventas
             // 
@@ -610,6 +619,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioventa;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn montototal;
     }

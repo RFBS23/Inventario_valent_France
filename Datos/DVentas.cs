@@ -34,7 +34,7 @@ namespace Datos
             return idcorrelativo;
         }
 
-        public bool RestarStock(int idproducto, int cantidad)
+        public bool RestarStock(int idproductotienda, int cantidad)
         {
             bool respuesta = true;
 
@@ -43,15 +43,15 @@ namespace Datos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("update productos set stock = stock - @cantidad where idproducto = @idproducto");
+                    query.AppendLine("UPDATE productos_tienda SET stock = stock - @cantidad WHERE idproductotienda = @idproductotienda");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.Parameters.AddWithValue("@cantidad", cantidad);
-                    cmd.Parameters.AddWithValue("@idproducto", idproducto);
+                    cmd.Parameters.AddWithValue("@idproductotienda", idproductotienda);
                     cmd.CommandType = CommandType.Text;
                     oconexion.Open();
 
-                    respuesta = cmd.ExecuteNonQuery() > 0 ? true : false;
+                    respuesta = cmd.ExecuteNonQuery() > 0;
                 }
                 catch (Exception ex)
                 {
@@ -59,11 +59,10 @@ namespace Datos
                 }
             }
             return respuesta;
-
         }
 
 
-        public bool SumarStock(int idproducto, int cantidad)
+        public bool SumarStock(int idproductotienda, int cantidad)
         {
             bool respuesta = true;
 
@@ -72,14 +71,15 @@ namespace Datos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("update productos set stock = stock + @cantidad where idproducto = @idproducto");
+                    query.AppendLine("UPDATE productos_tienda SET stock = stock + @cantidad WHERE idproductotienda = @idproductotienda");
+
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.Parameters.AddWithValue("@cantidad", cantidad);
-                    cmd.Parameters.AddWithValue("@idproducto", idproducto);
+                    cmd.Parameters.AddWithValue("@idproductotienda", idproductotienda);
                     cmd.CommandType = CommandType.Text;
                     oconexion.Open();
 
-                    respuesta = cmd.ExecuteNonQuery() > 0 ? true : false;
+                    respuesta = cmd.ExecuteNonQuery() > 0;
                 }
                 catch (Exception ex)
                 {
@@ -87,7 +87,6 @@ namespace Datos
                 }
             }
             return respuesta;
-
         }
 
         public bool registrar(Ventas obj, DataTable detalleventa, out string Mensaje)
@@ -184,7 +183,7 @@ namespace Datos
                     oconexion.Open();
                     StringBuilder query = new StringBuilder();
                     query.AppendLine("select p.nombre + ' ' + p.descripcion + ' ' + p.colores + ' ' + tr.nombretalla as productos, p.descuento, dv.precioventa, dv.cantidad, dv.subtotal from detalle_venta dv");
-                    query.AppendLine("inner join productos p on p.idproducto = dv.idproducto");
+                    query.AppendLine("inner join productos_tienda p on p.idproductotienda = dv.idproductotienda");
                     query.AppendLine("inner join tallasropa tr on tr.idtallaropa = p.idtallaropa");
                     query.AppendLine("where dv.idventa = @idventa");
 

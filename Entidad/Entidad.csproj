@@ -49,6 +49,7 @@
     <Compile Include="Negocios.cs" />
     <Compile Include="NivelAcceso.cs" />
     <Compile Include="Productos.cs" />
+    <Compile Include="Productos_tienda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor.cs" />
     <Compile Include="ReporteCompra.cs" />

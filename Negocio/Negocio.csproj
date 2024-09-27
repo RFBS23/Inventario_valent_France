@@ -50,6 +50,7 @@
     <Compile Include="NProveedores.cs" />
     <Compile Include="NReportes.cs" />
     <Compile Include="NTallas.cs" />
+    <Compile Include="NTienda.cs" />
     <Compile Include="NUsuarios.cs" />
     <Compile Include="NVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

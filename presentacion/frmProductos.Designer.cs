@@ -34,6 +34,7 @@
             this.panelproducto1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnbuscarlista = new Guna.UI2.WinForms.Guna2Button();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
+            this.lblfecha = new System.Windows.Forms.Label();
             this.btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.cbubicacion = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -63,7 +64,6 @@
             this.txtprecioventa = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblfecha = new System.Windows.Forms.Label();
             this.txtid = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtindice = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbcategoria = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -107,6 +107,7 @@
             this.panelproducto1.BorderRadius = 20;
             this.panelproducto1.Controls.Add(this.btnbuscarlista);
             this.panelproducto1.Controls.Add(this.btnEliminar);
+            this.panelproducto1.Controls.Add(this.lblfecha);
             this.panelproducto1.Controls.Add(this.btnLimpiar);
             this.panelproducto1.Controls.Add(this.btnAgregar);
             this.panelproducto1.Controls.Add(this.cbubicacion);
@@ -127,13 +128,13 @@
             this.panelproducto1.Controls.Add(this.label5);
             this.panelproducto1.Controls.Add(this.label3);
             this.panelproducto1.FillColor = System.Drawing.Color.White;
-            this.panelproducto1.Location = new System.Drawing.Point(17, 103);
+            this.panelproducto1.Location = new System.Drawing.Point(10, 95);
             this.panelproducto1.Name = "panelproducto1";
             this.panelproducto1.ShadowDecoration.BorderRadius = 20;
             this.panelproducto1.ShadowDecoration.Depth = 20;
             this.panelproducto1.ShadowDecoration.Enabled = true;
             this.panelproducto1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 6);
-            this.panelproducto1.Size = new System.Drawing.Size(787, 756);
+            this.panelproducto1.Size = new System.Drawing.Size(792, 766);
             this.panelproducto1.TabIndex = 1;
             // 
             // btnbuscarlista
@@ -200,6 +201,16 @@
             this.btnEliminar.TabIndex = 55;
             this.btnEliminar.Text = "    Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lblfecha
+            // 
+            this.lblfecha.AutoSize = true;
+            this.lblfecha.Location = new System.Drawing.Point(562, 23);
+            this.lblfecha.Name = "lblfecha";
+            this.lblfecha.Size = new System.Drawing.Size(40, 16);
+            this.lblfecha.TabIndex = 41;
+            this.lblfecha.Text = "fecha";
+            this.lblfecha.Visible = false;
             // 
             // btnLimpiar
             // 
@@ -282,12 +293,11 @@
             this.cbubicacion.ItemHeight = 30;
             this.cbubicacion.Items.AddRange(new object[] {
             "Seleccione la ubicación",
-            "Almacen",
-            "Tienda"});
+            "Almacen"});
             this.cbubicacion.Location = new System.Drawing.Point(29, 570);
             this.cbubicacion.Name = "cbubicacion";
             this.cbubicacion.Size = new System.Drawing.Size(339, 36);
-            this.cbubicacion.StartIndex = 0;
+            this.cbubicacion.StartIndex = 1;
             this.cbubicacion.TabIndex = 68;
             this.cbubicacion.Tag = "";
             // 
@@ -543,7 +553,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(106)))), ((int)(((byte)(127)))));
-            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Location = new System.Drawing.Point(15, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(252, 29);
             this.label1.TabIndex = 37;
@@ -554,7 +564,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(172)))), ((int)(((byte)(184)))));
-            this.label2.Location = new System.Drawing.Point(12, 50);
+            this.label2.Location = new System.Drawing.Point(15, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(260, 24);
             this.label2.TabIndex = 38;
@@ -562,8 +572,6 @@
             // 
             // panelproducto2
             // 
-            this.panelproducto2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelproducto2.BackColor = System.Drawing.Color.Transparent;
             this.panelproducto2.BorderRadius = 20;
             this.panelproducto2.Controls.Add(this.txtdescuento);
@@ -574,13 +582,13 @@
             this.panelproducto2.Controls.Add(this.label13);
             this.panelproducto2.Controls.Add(this.label4);
             this.panelproducto2.FillColor = System.Drawing.Color.White;
-            this.panelproducto2.Location = new System.Drawing.Point(874, 103);
+            this.panelproducto2.Location = new System.Drawing.Point(857, 95);
             this.panelproducto2.Name = "panelproducto2";
             this.panelproducto2.ShadowDecoration.BorderRadius = 20;
             this.panelproducto2.ShadowDecoration.Depth = 20;
             this.panelproducto2.ShadowDecoration.Enabled = true;
             this.panelproducto2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 6);
-            this.panelproducto2.Size = new System.Drawing.Size(486, 366);
+            this.panelproducto2.Size = new System.Drawing.Size(541, 364);
             this.panelproducto2.TabIndex = 2;
             // 
             // txtdescuento
@@ -596,7 +604,7 @@
             this.txtdescuento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
             this.txtdescuento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.txtdescuento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(205)))), ((int)(((byte)(212)))));
-            this.txtdescuento.Location = new System.Drawing.Point(17, 228);
+            this.txtdescuento.Location = new System.Drawing.Point(17, 194);
             this.txtdescuento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtdescuento.Name = "txtdescuento";
             this.txtdescuento.PasswordChar = '\0';
@@ -609,7 +617,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(13, 204);
+            this.label14.Location = new System.Drawing.Point(13, 170);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 20);
             this.label14.TabIndex = 57;
@@ -629,7 +637,7 @@
             this.txttotaldinero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
             this.txttotaldinero.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.txttotaldinero.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(205)))), ((int)(((byte)(212)))));
-            this.txttotaldinero.Location = new System.Drawing.Point(406, 176);
+            this.txttotaldinero.Location = new System.Drawing.Point(17, 287);
             this.txttotaldinero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txttotaldinero.Name = "txttotaldinero";
             this.txttotaldinero.PasswordChar = '\0';
@@ -642,7 +650,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(402, 152);
+            this.label18.Location = new System.Drawing.Point(13, 263);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(54, 20);
             this.label18.TabIndex = 63;
@@ -661,7 +669,7 @@
             this.txtprecioventa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
             this.txtprecioventa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.txtprecioventa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(205)))), ((int)(((byte)(212)))));
-            this.txtprecioventa.Location = new System.Drawing.Point(17, 125);
+            this.txtprecioventa.Location = new System.Drawing.Point(17, 91);
             this.txtprecioventa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtprecioventa.Name = "txtprecioventa";
             this.txtprecioventa.PasswordChar = '\0';
@@ -677,7 +685,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 101);
+            this.label13.Location = new System.Drawing.Point(13, 67);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(63, 20);
             this.label13.TabIndex = 55;
@@ -688,21 +696,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 23);
+            this.label4.Location = new System.Drawing.Point(205, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 29);
             this.label4.TabIndex = 40;
             this.label4.Text = "Precio";
-            // 
-            // lblfecha
-            // 
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.Location = new System.Drawing.Point(413, 21);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(40, 16);
-            this.lblfecha.TabIndex = 41;
-            this.lblfecha.Text = "fecha";
-            this.lblfecha.Visible = false;
             // 
             // txtid
             // 
@@ -716,13 +714,13 @@
             this.txtid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtid.Location = new System.Drawing.Point(356, 18);
+            this.txtid.Location = new System.Drawing.Point(321, 13);
             this.txtid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtid.Name = "txtid";
             this.txtid.PasswordChar = '\0';
             this.txtid.PlaceholderText = "";
             this.txtid.SelectedText = "";
-            this.txtid.Size = new System.Drawing.Size(30, 29);
+            this.txtid.Size = new System.Drawing.Size(37, 26);
             this.txtid.TabIndex = 40;
             this.txtid.Visible = false;
             // 
@@ -736,15 +734,15 @@
             this.txtindice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtindice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtindice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtindice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtindice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtindice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtindice.Location = new System.Drawing.Point(307, 18);
+            this.txtindice.Location = new System.Drawing.Point(274, 13);
             this.txtindice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtindice.Name = "txtindice";
             this.txtindice.PasswordChar = '\0';
             this.txtindice.PlaceholderText = "";
             this.txtindice.SelectedText = "";
-            this.txtindice.Size = new System.Drawing.Size(41, 29);
+            this.txtindice.Size = new System.Drawing.Size(39, 26);
             this.txtindice.TabIndex = 39;
             this.txtindice.Visible = false;
             // 
@@ -837,8 +835,6 @@
             // 
             // panelproducto3
             // 
-            this.panelproducto3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelproducto3.BackColor = System.Drawing.Color.Transparent;
             this.panelproducto3.BorderRadius = 20;
             this.panelproducto3.Controls.Add(this.cbtallas);
@@ -849,13 +845,13 @@
             this.panelproducto3.Controls.Add(this.label8);
             this.panelproducto3.Controls.Add(this.label12);
             this.panelproducto3.FillColor = System.Drawing.Color.White;
-            this.panelproducto3.Location = new System.Drawing.Point(874, 497);
+            this.panelproducto3.Location = new System.Drawing.Point(857, 480);
             this.panelproducto3.Name = "panelproducto3";
             this.panelproducto3.ShadowDecoration.BorderRadius = 20;
             this.panelproducto3.ShadowDecoration.Depth = 20;
             this.panelproducto3.ShadowDecoration.Enabled = true;
             this.panelproducto3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 6);
-            this.panelproducto3.Size = new System.Drawing.Size(486, 362);
+            this.panelproducto3.Size = new System.Drawing.Size(541, 381);
             this.panelproducto3.TabIndex = 41;
             // 
             // label12
@@ -920,14 +916,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tablaproductos.DefaultCellStyle = dataGridViewCellStyle3;
             this.tablaproductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tablaproductos.Location = new System.Drawing.Point(210, 170);
+            this.tablaproductos.Location = new System.Drawing.Point(499, 425);
             this.tablaproductos.MultiSelect = false;
             this.tablaproductos.Name = "tablaproductos";
             this.tablaproductos.ReadOnly = true;
             this.tablaproductos.RowHeadersVisible = false;
             this.tablaproductos.RowHeadersWidth = 51;
             this.tablaproductos.RowTemplate.Height = 30;
-            this.tablaproductos.Size = new System.Drawing.Size(358, 1549);
+            this.tablaproductos.Size = new System.Drawing.Size(23, 849);
             this.tablaproductos.TabIndex = 64;
             this.tablaproductos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tablaproductos.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1145,10 +1141,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1584, 676);
+            this.ClientSize = new System.Drawing.Size(1477, 676);
             this.Controls.Add(this.panelproducto2);
             this.Controls.Add(this.panelproducto3);
-            this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txtindice);
             this.Controls.Add(this.label2);

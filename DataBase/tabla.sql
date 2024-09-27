@@ -27,10 +27,6 @@ insert into nivelacceso (nombreacceso) values
 	('vendedor')
 select * from nivelacceso
 go
-insert into nivelacceso (nombreacceso) values
-	('maquinista'),
-	('logistica')
-go
 
 create table usuarios(
 	idusuario int primary key identity,
@@ -46,6 +42,8 @@ create table usuarios(
 )
 select * from usuarios
 go
+ALTER TABLE usuarios ADD descuento DECIMAL(5,2) DEFAULT 0;
+
 insert into usuarios (documento, nombres, apellidos, nombreusuario, correo, clave, idnivelacceso) values
 	('12345678', 'peruba', 'pepopn', 'pepe', 'pepe@hotmail.pe', '12345', 1),
 	('12345688', 'mundo', 'hola', 'pedro', 'pedro@gmail.com', '12345', 2),
@@ -68,6 +66,8 @@ create TABLE proveedores(
 )
 go
 select idproveedor, nombreproveedor, documento, direccion, correo, telefono, fecharegistro from proveedores
+insert into proveedores (nombreproveedor, documento, direccion, correo, telefono) values('sin razon social', 'sin ruc', 'n/n', 'sin correo', '---')
+go
 
 create table categorias(
 	idcategoria int primary key identity,
@@ -127,6 +127,12 @@ create table productos(
 	idproducto INT PRIMARY KEY IDENTITY,
 	rutaimagen varchar(100) null,
     nombreimagen varchar(100) null,
+	rutaimagen2 varchar(100) null, -- agregado recien
+	nombreimagen2 varchar(100) null, -- agregado recien
+	rutaimagen3 varchar(100) null, -- agregado recien
+	nombreimagen3 varchar(100) null, -- agregado recien
+	rutaimagen4 varchar(100) null, -- agregado recien
+	nombreimagen4 varchar(100) null, -- agregado recien
 	codigo varchar(50) not null,
 	nombre varchar(50) not null,
 	descripcion varchar(50) not null,
@@ -144,12 +150,22 @@ create table productos(
 	estado bit not null default 1,
 	fecharegistro datetime default getdate()
 )
-GO
+go
+
+/*agregados
 alter table productos add preciocompra decimal(10,2) default 0;
+
+EXEC sp_rename 'productos.rutaimagen2', 'rutaimagendos', 'COLUMN';
+EXEC sp_rename 'productos.nombreimagen2', 'nombreimagendos', 'COLUMN';
+
+alter table productos add rutaimagen2 varchar(100) null;
+alter table productos add rutaimagen3 varchar(100) null;
+alter table productos add rutaimagen4 varchar(100) null;
 
 alter table productos add nombreimagen2 varchar(100) null;
 alter table productos add nombreimagen3 varchar(100) null;
-alter table productos add nombreimagen4 varchar(100) null;
+alter table productos add nombreimagen4 varchar(100) null;*/
+/*fin agregados*/
 
 select * from productos
 go
@@ -168,6 +184,38 @@ go
 update productos set stock = stock - @cantidad where idproducto = @idproducto;
 go
 
+/*tienda*/
+create table productos_tienda(
+	idproductotienda INT PRIMARY KEY IDENTITY,
+	codigo varchar(50) not null,
+	nombre varchar(50) not null,
+	descripcion varchar(50) not null,
+	idcategoria int references categorias(idcategoria) not null,
+	idtallaropa int references tallasropa(idtallaropa) not null,
+	idmarca int REFERENCES marca(idmarca) not NULL,
+	stock int default 0 not null,
+	colores varchar(40) not null,
+	numcaja varchar(50) not null,
+	precioventa decimal(10,2) default 0 not null,
+	preciocompra decimal(10,2) default 0 not null,
+	temporada varchar(60) not null,
+	descuento int default 0,
+	total decimal(10,2) default 0 not null,
+	estado bit not null default 1,
+	promo2x1 bit not null default 0, -- agregado
+	fecharegistro datetime default getdate()
+)
+go
+select idproductotienda, codigo, nombre, descripcion, c.idcategoria, c.nombrecategoria, tr.idtallaropa, tr.nombretalla, m.idmarca, m.nombremarca, stock, colores, numcaja, precioventa, temporada, promo2x1, descuento, total,  CONVERT(VARCHAR(10), p.fecharegistro, 120)AS fecharegistro_producto from productos_tienda p
+inner join categorias c on c.idcategoria = p.idcategoria
+inner join tallasropa tr on tr.idtallaropa = p.idtallaropa
+inner join marca m on m.idmarca = p.idmarca
+select * from productos_tienda
+go
+
+alter table productos_tienda add promo2x1 bit not null default 0;
+/*fin tienda*/
+
 create table ventas(
 	idventa int primary key identity,
 	idusuario int references usuarios(idusuario),
@@ -181,13 +229,13 @@ create table ventas(
 	fecharegistro datetime default getdate()
 )
 go
-select * from ventas where numerodocumento = '00002'
+select * from ventas where numerodocumento = '00014'
 go
 
 create table detalle_venta(
 	iddetalleventa int primary key identity,
 	idventa int references ventas(idventa),
-	idproducto int references productos(idproducto),
+	idproductotienda INT REFERENCES productos_tienda(idproductotienda),
 	precioventa decimal(10,2),
 	cantidad int,
 	subtotal decimal(10,2),
@@ -220,6 +268,8 @@ create table detallecompra(
 	montototal decimal(10,2),
 	fecharegistro datetime default getdate()
 )
+go
+select * from detallecompra
 go
 
 create table negocios(
@@ -258,4 +308,13 @@ inner join productos p on p.idproducto = dv.idproducto
 inner join tallasropa tr on tr.idtallaropa = p.idtallaropa
 where dv.idventa = '00001'
 
-create table cupon
+create table trabajadores(
+	idtrabajador int primary key identity,
+	documento varchar(20) not null,
+	nombre varchar(255) not null,
+	apellidos varchar(255) not null,
+	descuento int default 0,
+	estado bit not null default 1,
+	fecharegistro datetime default getdate()
+)
+go

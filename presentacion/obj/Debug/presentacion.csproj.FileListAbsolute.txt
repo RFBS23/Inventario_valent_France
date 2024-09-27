@@ -55,6 +55,7 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Dashboard.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.DashboardAlmacen.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.DashboardVendedor.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmAlmacenes.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmcompra.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmDetalleCompras.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmDetalles.resources
@@ -63,12 +64,15 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Form_listaproductos.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmCategorias.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmConfiguracion.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmfromularioAlmacenes.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmProductos.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmproductos_tienda.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmProveedores.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmReportes.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmreportescompras.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmreportesventas.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmTallas.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmTienda.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmUsuarios.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmVentas.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.Login.resources

@@ -66,7 +66,7 @@ namespace presentacion
             Factura_Html = Factura_Html.Replace("@nombrenegocio", odatos.nombre.ToUpper());
             Factura_Html = Factura_Html.Replace("@direcnegocio", odatos.direccion);
 
-            Factura_Html = Factura_Html.Replace("@tipodocumento", txtcomprobante.Text.ToUpper());
+            //Factura_Html = Factura_Html.Replace("@tipodocumento", txtcomprobante.Text.ToUpper());
             Factura_Html = Factura_Html.Replace("@numerodocumento", txtnumerocomprobante.Text.ToUpper());
             Factura_Html = Factura_Html.Replace("@fecharegistro", txtfecha.Text);
             Factura_Html = Factura_Html.Replace("@usuarioregistro", txtusuario.Text.ToUpper());
@@ -96,7 +96,7 @@ namespace presentacion
             {
                 using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
                 {
-                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                    Document pdfDoc = new Document(PageSize.A7, 5, 5, 5, 5);
                     PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
                     pdfDoc.Open();
                     bool obtenido = true;
@@ -105,9 +105,9 @@ namespace presentacion
                     if (obtenido)
                     {
                         iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(byteImage);
-                        img.ScaleToFit(60, 60);
+                        img.ScaleToFit(30, 30);
                         img.Alignment = iTextSharp.text.Image.UNDERLYING;
-                        img.SetAbsolutePosition(pdfDoc.Left, pdfDoc.GetTop(51));
+                        img.SetAbsolutePosition(pdfDoc.Left, pdfDoc.GetTop(20));
                         pdfDoc.Add(img);
                     }
 
@@ -167,7 +167,7 @@ namespace presentacion
             Ticket_Html = Ticket_Html.Replace("@urlCodigoQR", urlServicioQR);
 
             SaveFileDialog savefile = new SaveFileDialog();
-            savefile.FileName = string.Format("Venta_{0}_Boleto.pdf", txtcomprobante.Text);
+            savefile.FileName = string.Format("Venta_{0}_Boleto.pdf", txtnumerocomprobante.Text);
             savefile.Filter = "Pdf Files|*.pdf";
 
             if (savefile.ShowDialog() == DialogResult.OK)
@@ -184,7 +184,7 @@ namespace presentacion
                         iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(byteImage);
                         img.ScaleToFit(30, 30); // Ajusta el tamaño del logo en el PDF
                         img.Alignment = iTextSharp.text.Image.UNDERLYING;
-                        img.SetAbsolutePosition(pdfDoc.Left, pdfDoc.GetTop(41));
+                        img.SetAbsolutePosition(pdfDoc.Left, pdfDoc.GetTop(20));
                         pdfDoc.Add(img);
                     }
                     using (StringReader sr = new StringReader(Ticket_Html))
@@ -202,6 +202,29 @@ namespace presentacion
         private void btnlimpiarbuscador_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtbuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Ventas oVentas = new NVentas().ObtenerVentas(txtbuscar.Text);
+            if (oVentas.idventa != 0)
+            {
+                txtnumerocomprobante.Text = oVentas.numerodocumento;
+                txtfecha.Text = oVentas.fecharegistro;
+                txtcomprobante.Text = oVentas.tipodocumento;
+                txtusuario.Text = oVentas.oUsuarios.nombreusuario;
+
+                txtdocumento.Text = oVentas.documentocliente;
+                txtnombrecliente.Text = oVentas.nombrecliente;
+                tabladetallesventas.Rows.Clear();
+                foreach (DetallesVentas dv in oVentas.oDetalle_Venta)
+                {
+                    tabladetallesventas.Rows.Add(new object[] { dv.oProductos.nombre + " " + dv.oProductos.descripcion + " " + dv.oProductos.colores + " " + dv.oProductos.oTallasropa, dv.cantidad, dv.precioventa, dv.oProductos.descuento, dv.subtotal });
+                }
+                txtmontototal.Text = oVentas.montototal.ToString("0.00");
+                txtpagocon.Text = oVentas.montopago.ToString("0.00");
+                txtvuelto.Text = oVentas.montocambio.ToString("0.00");
+            }
         }
     }
 }

@@ -37,28 +37,45 @@ namespace presentacion
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            List<ReporteVentas> lista = new List<ReporteVentas>();
-            lista = new NReportes().Ventas(dtfechainicio.Value.ToString(), dtfechafin.Value.ToString());
-            tablareportes.Rows.Clear();
-            foreach (ReporteVentas rv in lista)
+            if (dtfechainicio.Value > dtfechafin.Value)
             {
-                tablareportes.Rows.Add(new object[]
+                MessageBox.Show("La fecha de inicio no puede ser mayor que la fecha de fin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            List<ReporteVentas> lista = new List<ReporteVentas>();
+            try
+            {
+                // Asegúrate de que las fechas estén en el formato correcto
+                lista = new NReportes().Ventas(dtfechainicio.Value.ToString("dd-MM-yyyy"), dtfechafin.Value.ToString("dd-MM-yyyy"));
+
+                MessageBox.Show($"Se encontraron {lista.Count} registros."); // Debugging line
+
+                tablareportes.Rows.Clear();
+                foreach (ReporteVentas rv in lista)
                 {
-                    rv.FechaRegistro,
-                    rv.tipodocumento,
-                    rv.numerodocumento,
-                    rv.UsuarioRegistro,
-                    rv.documentocliente,
-                    rv.nombrecliente,
-                    rv.CodigoProducto,
-                    rv.NombreProducto,
-                    rv.Tallas,
-                    rv.Categoria,
-                    rv.precioventa,
-                    rv.cantidad,
-                    rv.subtotal,
-                    rv.montototal,
-                });
+                    tablareportes.Rows.Add(new object[]
+                    {
+                        rv.FechaRegistro,
+                        rv.tipodocumento,
+                        rv.numerodocumento,
+                        rv.UsuarioRegistro,
+                        rv.documentocliente,
+                        rv.nombrecliente,
+                        rv.CodigoProducto,
+                        rv.NombreProducto,
+                        rv.Tallas,
+                        rv.Categoria,
+                        rv.precioventa,
+                        rv.cantidad,
+                        rv.Descuento,
+                        rv.subtotal,
+                        rv.montototal,
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -109,7 +126,8 @@ namespace presentacion
                             row.Cells[10].Value.ToString(),
                             row.Cells[11].Value.ToString(),
                             row.Cells[12].Value.ToString(),
-                            row.Cells[13].Value.ToString()
+                            row.Cells[13].Value.ToString(),
+                            row.Cells[14].Value.ToString()
                         });
                 }
                 SaveFileDialog savefile = new SaveFileDialog();

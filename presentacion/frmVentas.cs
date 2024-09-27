@@ -34,10 +34,8 @@ namespace presentacion
             cbbolfac.DisplayMember = "Texto";
             cbbolfac.ValueMember = "Valor";
             cbbolfac.SelectedIndex = 0;
-
             txtstock.Text = "0";
             txtprecio.Text = "0.00";
-
             txtidproducto.Text = "0";
             txtpagocon.Text = "0.00";
             txtcambio.Text = "0.00";
@@ -84,17 +82,21 @@ namespace presentacion
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            Productos oProductos = new NProducto().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+            Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
             if (oProductos != null)
             {
-                txtidproducto.Text = oProductos.idproducto.ToString();
+                txtidproducto.Text = oProductos.idproductotienda.ToString();
                 txtnombres.Text = oProductos.nombre;
                 txtstock.Text = oProductos.stock.ToString();
-                txtprecio.Text = oProductos.precioventa.ToString();
+                txtprecio.Text = oProductos.preciocompra.ToString();
                 txttalla.Text = oProductos.oTallasropa.nombretalla.ToString();
                 txtcolores.Text = oProductos.colores.ToString();
                 txtdescuento.Text = oProductos.descuento.ToString();
                 txtcantidadprod.Select();
+
+                promo2x1.Checked = oProductos.promo2x1;
+                promo2x1.Text = oProductos.promo2x1 ? "Promoción 2x1" : "Sin promoción";
+
             }
             else
             {
@@ -106,13 +108,29 @@ namespace presentacion
                 txtcolores.Text = "";
                 txtdescuento.Text = "0.00";
                 txtcantidadprod.Value = 1;
+
+                promo2x1.Checked = false;
+                promo2x1.Text = "Sin promoción";
             }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            decimal precio = 0;
-            bool producto_existe = false;
+            decimal cantidad;
+
+            if (!decimal.TryParse(txtcantidadprod.Text, out cantidad) || cantidad <= 0)
+            {
+                MessageBox.Show("Cantidad inválida", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtcantidadprod.Select();
+                return;
+            }
+
+            int stock = Convert.ToInt32(txtstock.Text);
+            if (cantidad > stock)
+            {
+                MessageBox.Show("La cantidad no puede ser mayor al stock disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             if (int.Parse(txtidproducto.Text) == 0)
             {
@@ -120,41 +138,30 @@ namespace presentacion
                 return;
             }
 
-            if (!decimal.TryParse(txtcantidadprod.Text, out precio))
-            {
-                MessageBox.Show("Cantidad - Formato incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtcantidadprod.Select();
-                return;
-            }
-
-            if (Convert.ToInt32(txtstock.Text) < Convert.ToInt32(txtcantidadprod.Value.ToString()))
-            {
-                MessageBox.Show("La cantidad no puede ser mayor al stock", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-
+            bool productoExiste = false;
             foreach (DataGridViewRow fila in tablaventas.Rows)
             {
                 if (fila.Cells["idproducto"].Value.ToString() == txtidproducto.Text)
                 {
-                    producto_existe = true;
+                    productoExiste = true;
                     break;
                 }
             }
 
-            if (!producto_existe)
+            if (!productoExiste)
             {
                 bool respuesta = new NVentas().RestarStock(
                     Convert.ToInt32(txtidproducto.Text),
-                    Convert.ToInt32(txtcantidadprod.Value.ToString()));
+                    Convert.ToInt32(cantidad));
 
                 if (respuesta)
                 {
-                    // Calcular el subtotal considerando el descuento
                     decimal precioProducto = Convert.ToDecimal(txtprecio.Text);
                     decimal descuento = Convert.ToDecimal(txtdescuento.Text);
                     decimal precioConDescuento = precioProducto - (precioProducto * (descuento / 100));
-                    decimal subtotal = precioConDescuento * txtcantidadprod.Value;
+
+                    decimal precioRedondeado = RedondearPrecio(precioConDescuento);
+                    decimal subtotal = precioRedondeado * cantidad;
 
                     tablaventas.Rows.Add(new object[]
                     {
@@ -166,7 +173,7 @@ namespace presentacion
                         txtcolores.Text,
                         txtprecio.Text,
                         txtdescuento.Text,
-                        txtcantidadprod.Value.ToString(),
+                        cantidad.ToString(),
                         subtotal.ToString("0.00")
                     });
                     calcularTotal();
@@ -176,14 +183,26 @@ namespace presentacion
                 }
                 else
                 {
-                    // Agregar una alerta si la respuesta es falsa
                     MessageBox.Show("Error al restar el stock.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                // Agregar una alerta si el producto ya existe en la tabla
                 MessageBox.Show("El producto ya existe en la tabla.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private decimal RedondearPrecio(decimal precio)
+        {
+            decimal parteDecimal = precio - Math.Floor(precio);
+
+            if (parteDecimal >= 0.50m)
+            {
+                return Math.Ceiling(precio);
+            }
+            else
+            {
+                return Math.Floor(precio);
             }
         }
 
@@ -194,14 +213,15 @@ namespace presentacion
             {
                 foreach (DataGridViewRow row in tablaventas.Rows)
                 {
-                    // Asegúrate de que la celda "subtotal" exista y tenga un valor válido antes de convertirlo.
                     if (row.Cells["subtotal"].Value != null && !string.IsNullOrEmpty(row.Cells["subtotal"].Value.ToString()))
                     {
                         total += Convert.ToDecimal(row.Cells["subtotal"].Value);
                     }
                 }
             }
-            txttotalpagar.Text = total.ToString("0.00");
+
+            decimal redondeadoTotal = Math.Round(total + 0.5m, MidpointRounding.AwayFromZero);
+            txttotalpagar.Text = redondeadoTotal.ToString("0.00");
         }
 
         private void RecalcularTotal()
@@ -211,7 +231,6 @@ namespace presentacion
             {
                 foreach (DataGridViewRow row in tablaventas.Rows)
                 {
-                    // Asegúrate de que la celda "subtotal" exista y tenga un valor válido antes de convertirlo.
                     if (row.Cells["subtotal"].Value != null && !string.IsNullOrEmpty(row.Cells["subtotal"].Value.ToString()))
                     {
                         total += Convert.ToDecimal(row.Cells["subtotal"].Value);
@@ -231,7 +250,6 @@ namespace presentacion
             txttalla.Text = "";
             txtcolores.Text = "";
             txtdescuento.Text = "";
-
             txtcantidadprod.Value = 1;
         }
 
@@ -247,7 +265,6 @@ namespace presentacion
                         Convert.ToInt32(tablaventas.Rows[index].Cells["stock"].Value.ToString()));
                     tablaventas.Rows.RemoveAt(index);
                     RecalcularTotal();
-                    limpiarProducto();
                 }
             }
         }
@@ -347,7 +364,6 @@ namespace presentacion
             detalle_venta.Columns.Add("precio", typeof(decimal));
             detalle_venta.Columns.Add("stock", typeof(int));
             detalle_venta.Columns.Add("subtotal", typeof(decimal));
-
             foreach (DataGridViewRow row in tablaventas.Rows)
             {
                 detalle_venta.Rows.Add(new object[]
@@ -358,10 +374,8 @@ namespace presentacion
                     row.Cells["subtotal"].Value.ToString(),
                 });
             }
-
             int idcorrelativo = new NVentas().obtenercorrelativo();
             string numeroDocumento = string.Format("{0:00000}", idcorrelativo);
-
             calcularcambio();
             Ventas oVentas = new Ventas()
             {
@@ -370,12 +384,10 @@ namespace presentacion
                 numerodocumento = numeroDocumento,
                 documentocliente = txtddocumento.Text,
                 nombrecliente = txtcliente.Text,
-
                 montopago = Convert.ToDecimal(txtpagocon.Text),
                 montocambio = Convert.ToDecimal(txtcambio.Text),
                 montototal = Convert.ToDecimal(txttotalpagar.Text),
             };
-
             string mensaje = string.Empty;
             bool respuesta = new NVentas().registrar(oVentas, detalle_venta, out mensaje);
             if (respuesta)
@@ -392,6 +404,96 @@ namespace presentacion
             }
             else
                 MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private int enterPressCount = 0;
+        private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                enterPressCount++;
+                e.Handled = true;
+
+                if (enterPressCount == 1)
+                {
+                    Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+                    if (oProductos != null)
+                    {
+                        txtidproducto.Text = oProductos.idproductotienda.ToString();
+                        txtnombres.Text = oProductos.nombre;
+                        txtstock.Text = oProductos.stock.ToString();
+                        txtprecio.Text = oProductos.preciocompra.ToString();
+                        txttalla.Text = oProductos.oTallasropa.nombretalla.ToString();
+                        txtcolores.Text = oProductos.colores.ToString();
+                        txtdescuento.Text = oProductos.descuento.ToString();
+                        txtcantidadprod.Select();
+                    }
+                    else
+                    {
+                        txtidproducto.Text = "0";
+                        txtnombres.Text = "";
+                        txtstock.Text = "0";
+                        txtprecio.Text = "";
+                        txttalla.Text = "";
+                        txtcolores.Text = "";
+                        txtdescuento.Text = "0.00";
+                        txtcantidadprod.Value = 1;
+                    }
+                }
+                else if (enterPressCount == 2)
+                {
+                    btnAgregar_Click(sender, e);
+                    enterPressCount = 0;
+                }
+            }
+            else
+            {
+                enterPressCount = 0;
+            }
+        }
+
+        private void txtcantidadprod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                enterPressCount++;
+                e.Handled = true;
+                if (enterPressCount == 1)
+                {
+                    Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+                    if (oProductos != null)
+                    {
+                        txtidproducto.Text = oProductos.idproductotienda.ToString();
+                        txtnombres.Text = oProductos.nombre;
+                        txtstock.Text = oProductos.stock.ToString();
+                        txtprecio.Text = oProductos.preciocompra.ToString();
+                        txttalla.Text = oProductos.oTallasropa.nombretalla.ToString();
+                        txtcolores.Text = oProductos.colores.ToString();
+                        txtdescuento.Text = oProductos.descuento.ToString();
+                        txtcantidadprod.Select();
+                    }
+                    else
+                    {
+                        txtidproducto.Text = "0";
+                        txtnombres.Text = "";
+                        txtstock.Text = "0";
+                        txtprecio.Text = "";
+                        txttalla.Text = "";
+                        txtcolores.Text = "";
+                        txtdescuento.Text = "0.00";
+                        txtcantidadprod.Value = 1;
+                    }
+                }
+                else if (enterPressCount == 2)
+                {
+                    btnAgregar_Click(sender, e);
+                    enterPressCount = 0;
+                }
+            }
+            else
+            {
+                enterPressCount = 0;
+            }
         }
 
     }

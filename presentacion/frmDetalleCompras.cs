@@ -161,7 +161,7 @@ namespace presentacion
             Ticket_Html = Ticket_Html.Replace("@urlCodigoQR", urlServicioQR);
 
             SaveFileDialog savefile = new SaveFileDialog();
-            savefile.FileName = string.Format("Venta_{0}_Boleto.pdf", txtcomprobante.Text);
+            savefile.FileName = string.Format("Venta_{0}_Boleto.pdf", txtnumerocomprobante.Text);
             savefile.Filter = "Pdf Files|*.pdf";
 
             if (savefile.ShowDialog() == DialogResult.OK)
@@ -191,6 +191,32 @@ namespace presentacion
                     System.Diagnostics.Process.Start(savefile.FileName);
                 }
             }
+        }
+
+        private void txtbuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Compra oCompras = new Ncompras().ObtenerCompra(txtbuscar.Text);
+            if (oCompras.idcompra != 0)
+            {
+                txtnumerocomprobante.Text = oCompras.numerodocumento;
+                txtfecha.Text = oCompras.fecharegistro;
+                txtcomprobante.Text = oCompras.tipodocumento;
+                txtusuario.Text = oCompras.oUsuarios.nombreusuario;
+
+                txtdocumento.Text = oCompras.oProveedor.documento;
+                txtnombreproveedor.Text = oCompras.oProveedor.nombreproveedor;
+                tabladetallescompras.Rows.Clear();
+                foreach (Detalle_compra dv in oCompras.oDetallescompra)
+                {
+                    tabladetallescompras.Rows.Add(new object[] { dv.oProductos.nombre + " " + dv.oProductos.descripcion + " " + dv.oProductos.colores + " " + dv.oProductos.oTallasropa, dv.preciocompra, dv.cantidad, dv.montototal });
+                }
+                txtmontototal.Text = oCompras.montototal.ToString("0.00");
+            }
+        }
+
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -231,7 +231,7 @@
             this.btnlistaproductos.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
             this.btnlistaproductos.Size = new System.Drawing.Size(232, 56);
             this.btnlistaproductos.TabIndex = 19;
-            this.btnlistaproductos.Text = "     Lista Productos";
+            this.btnlistaproductos.Text = "     Almacenes";
             this.btnlistaproductos.Click += new System.EventHandler(this.btnlistaproductos_Click);
             // 
             // btnagregarproducto

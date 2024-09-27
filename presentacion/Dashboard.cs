@@ -109,12 +109,12 @@ namespace presentacion
 
         private void btnlistaproductos_Click(object sender, EventArgs e)
         {
-            formularioAbierto(new Form_listaproductos());
+            formularioAbierto(new frmAlmacenes());
         }
 
         private void btnagregarproducto_Click(object sender, EventArgs e)
         {
-            formularioAbierto(new frmProductos());
+            formularioAbierto(new frmfromularioAlmacenes());
         }
 
         private void btnDetVentas_Click(object sender, EventArgs e)

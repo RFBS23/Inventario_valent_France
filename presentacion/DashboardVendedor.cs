@@ -60,7 +60,7 @@ namespace presentacion
 
         private void btnlistaproductos_Click(object sender, EventArgs e)
         {
-            formularioAbierto(new Form_listaproductos());
+            formularioAbierto(new frmproductos_tienda());
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)

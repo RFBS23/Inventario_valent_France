@@ -67,8 +67,8 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
-    <Reference Include="ClosedXML, Version=0.102.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
-      <HintPath>..\packages\ClosedXML.0.102.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    <Reference Include="ClosedXML, Version=0.102.3.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.102.3\lib\netstandard2.0\ClosedXML.dll</HintPath>
     </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
@@ -96,8 +96,8 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="RestSharp, Version=111.4.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.111.4.0\lib\net471\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=112.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.112.0.0\lib\net471\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
       <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
@@ -119,6 +119,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.IO.Packaging, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Packaging.8.0.0\lib\net462\System.IO.Packaging.dll</HintPath>
     </Reference>
@@ -215,6 +217,12 @@
     <Compile Include="DashboardVendedor.Designer.cs">
       <DependentUpon>DashboardVendedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAlmacenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlmacenes.Designer.cs">
+      <DependentUpon>frmAlmacenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmcompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +271,12 @@
     <Compile Include="frmConfiguracion.Designer.cs">
       <DependentUpon>frmConfiguracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmfromularioAlmacenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmfromularioAlmacenes.Designer.cs">
+      <DependentUpon>frmfromularioAlmacenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frminformacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +288,12 @@
     </Compile>
     <Compile Include="frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmproductos_tienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmproductos_tienda.Designer.cs">
+      <DependentUpon>frmproductos_tienda.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProveedores.cs">
       <SubType>Form</SubType>
@@ -304,6 +324,12 @@
     </Compile>
     <Compile Include="frmTallas.Designer.cs">
       <DependentUpon>frmTallas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTienda.Designer.cs">
+      <DependentUpon>frmTienda.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
@@ -347,6 +373,9 @@
     <EmbeddedResource Include="DashboardVendedor.resx">
       <DependentUpon>DashboardVendedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAlmacenes.resx">
+      <DependentUpon>frmAlmacenes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmcompra.resx">
       <DependentUpon>frmcompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,8 +400,14 @@
     <EmbeddedResource Include="frmConfiguracion.resx">
       <DependentUpon>frmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmfromularioAlmacenes.resx">
+      <DependentUpon>frmfromularioAlmacenes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmproductos_tienda.resx">
+      <DependentUpon>frmproductos_tienda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
@@ -388,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTallas.resx">
       <DependentUpon>frmTallas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTienda.resx">
+      <DependentUpon>frmTienda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>

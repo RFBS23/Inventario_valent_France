@@ -52,6 +52,7 @@
     <Compile Include="DProveedores.cs" />
     <Compile Include="DReportes.cs" />
     <Compile Include="DTallas.cs" />
+    <Compile Include="DTienda.cs" />
     <Compile Include="DUsuarios.cs" />
     <Compile Include="DVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

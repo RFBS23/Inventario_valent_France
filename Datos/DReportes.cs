@@ -40,7 +40,8 @@ namespace Datos
                                 nombrecliente = dr["nombrecliente"].ToString(),
                                 CodigoProducto = dr["CodigoProducto"].ToString(),
                                 NombreProducto = dr["NombreProducto"].ToString(),
-                                Tallas = dr["Talla"].ToString(),
+                                Descuento = dr["Descuento"].ToString(),
+                                Tallas = dr["Tallas"].ToString(),  // Corregido aquí
                                 Categoria = dr["Categoria"].ToString(),
                                 precioventa = dr["precioventa"].ToString(),
                                 cantidad = dr["cantidad"].ToString(),
@@ -64,12 +65,14 @@ namespace Datos
             {
                 try
                 {
-                    StringBuilder query = new StringBuilder();
                     SqlCommand cmd = new SqlCommand("spu_reporte_compras", oconexion);
-                    cmd.Parameters.AddWithValue("fechainicio", fechainicio);
-                    cmd.Parameters.AddWithValue("fechafin", fechafin);
-                    cmd.Parameters.AddWithValue("idproveedor", idproveedor);
                     cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Añadir parámetros
+                    cmd.Parameters.Add(new SqlParameter("@fechainicio", SqlDbType.VarChar) { Value = fechainicio });
+                    cmd.Parameters.Add(new SqlParameter("@fechafin", SqlDbType.VarChar) { Value = fechafin });
+                    cmd.Parameters.Add(new SqlParameter("@idproveedor", SqlDbType.Int) { Value = idproveedor });
+
                     oconexion.Open();
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
@@ -82,10 +85,11 @@ namespace Datos
                                 numerodocumento = dr["numerodocumento"].ToString(),
                                 montototal = dr["montototal"].ToString(),
                                 UsuarioRegistro = dr["UsuarioRegistro"].ToString(),
-                                documentocliente = dr["documentocliente"].ToString(),
-                                nombrecliente = dr["nombrecliente"].ToString(),
+                                documento = dr["docproveedor"].ToString(),
+                                nombreproveedor = dr["razonsocial"].ToString(),
                                 CodigoProducto = dr["CodigoProducto"].ToString(),
                                 NombreProducto = dr["NombreProducto"].ToString(),
+                                Tallas = dr["Tallas"].ToString(), 
                                 Categoria = dr["Categoria"].ToString(),
                                 preciocompra = dr["preciocompra"].ToString(),
                                 precioventa = dr["precioventa"].ToString(),
@@ -97,7 +101,9 @@ namespace Datos
                 }
                 catch (Exception ex)
                 {
-                    lista = new List<ReporteCompra>();
+                    // Log or handle the exception
+                    Console.WriteLine($"Error: {ex.Message}");
+                    lista = new List<ReporteCompra>(); // Reset the list on error
                 }
             }
             return lista;

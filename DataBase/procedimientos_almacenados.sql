@@ -337,13 +337,13 @@ create procedure spu_registrar_productoropa(
 as
 begin
 	set @resultado = 0
-	-- if not exists (select * from productosropa where codigo = @codigo)
+	if not exists (select * from productos where codigo = @codigo)
 	begin
 		insert into productos(codigo, nombre, descripcion, idcategoria, idtallaropa, idmarca, stock, colores, numcaja, precioventa, temporada, descuento, total, ubicacion) values
 		(@codigo, @nombre, @descripcion, @idcategoria, @idtallaropa, @idmarca, @stock, @colores, @numcaja, @precioventa, @temporada, @descuento, @total, @ubicacion)
 		set @resultado = SCOPE_IDENTITY()
 	end
-	--set @mensaje = 'El codigo ya se encuentra registrado en otra prenda'
+	set @mensaje = 'El codigo ya se encuentra registrado en otra prenda'
 end
 go
 
@@ -496,7 +496,7 @@ end
 go
 
 create type [dbo].[EDetalle_Venta] as table(
-	[idproducto] int null,
+	[idproductotienda] int null,
 	[precioventa] decimal(10,2) null,
 	[cantidad] int null,
 	[subtotal] decimal(10,2) null
@@ -504,42 +504,67 @@ create type [dbo].[EDetalle_Venta] as table(
 go
 
 create procedure spu_registrar_venta
-    @idusuario int,
-    @tipodocumento varchar(50),
-    @numerodocumento varchar(50),
-    @documentocliente varchar(50),
-    @nombrecliente varchar(100),
-    @montopago decimal(10,2),
-    @montocambio decimal(10,2),
-    @montototal decimal(10,2),
-    @detalleventa [EDetalle_Venta] readonly,
-    @resultado bit OUTPUT,
-    @mensaje varchar(100) OUTPUT
+    @idusuario INT,
+    @tipodocumento VARCHAR(50),
+    @numerodocumento VARCHAR(50),
+    @documentocliente VARCHAR(50),
+    @nombrecliente VARCHAR(100),
+    @montopago DECIMAL(10,2),
+    @montocambio DECIMAL(10,2),
+    @montototal DECIMAL(10,2),
+    @detalleventa [EDetalle_Venta] READONLY,
+    @resultado BIT OUTPUT,
+    @mensaje VARCHAR(100) OUTPUT
 AS
 BEGIN
     BEGIN TRY
-        DECLARE @idventa int = 0
-        SET @resultado = 1
-        SET @mensaje = ''
+        DECLARE @idventa INT = 0;
+        SET @resultado = 1;
+        SET @mensaje = '';
 
-        BEGIN TRANSACTION registro
+        BEGIN TRANSACTION registro;
 
         -- Insertar en la tabla ventas
         INSERT INTO ventas(idusuario, tipodocumento, numerodocumento, documentocliente, nombrecliente, montopago, montocambio, montototal)
-        VALUES (@idusuario, @tipodocumento, @numerodocumento, @documentocliente, @nombrecliente, @montopago, @montocambio, @montototal)
+        VALUES (@idusuario, @tipodocumento, @numerodocumento, @documentocliente, @nombrecliente, @montopago, @montocambio, @montototal);
 
-        SET @idventa = SCOPE_IDENTITY()
+        SET @idventa = SCOPE_IDENTITY();
+		
+        -- Insertar detalles de la venta en la tabla detalle_venta		
+        INSERT INTO detalle_venta(idventa, idproductotienda, precioventa, cantidad, subtotal)
+        SELECT @idventa,
+			   dv.idproductotienda,
+			   dv.precioventa,
+			   CASE 
+					WHEN pt.promo2x1 = 1 THEN 2  -- Si hay promoción, agregar 2
+					ELSE dv.cantidad  -- Si no hay, agregar la cantidad normal
+				END AS cantidad,
+				CASE 
+					WHEN pt.promo2x1 = 1 THEN dv.precioventa  -- Precio por 1 si hay promoción
+					ELSE dv.precioventa * dv.cantidad  -- Precio normal
+				END AS subtotal
+			   /*
+			   dv.cantidad, dv.subtotal*/
+        FROM @detalleventa dv
+        INNER JOIN productos_tienda pt ON dv.idproductotienda = pt.idproductotienda;
 
-        -- Insertar detalles de la venta en la tabla detalle_venta
-        INSERT INTO detalle_venta(idventa, idproducto, precioventa, cantidad, subtotal)
-        SELECT @idventa, idproducto, precioventa, cantidad, subtotal FROM @detalleventa
-
-		COMMIT TRANSACTION registro
+        -- Verificar si hay suficiente stock
+        IF EXISTS (SELECT 1 FROM productos_tienda pt
+                   INNER JOIN @detalleventa dv ON dv.idproductotienda = pt.idproductotienda
+                   WHERE pt.stock < dv.cantidad)
+        BEGIN
+            -- Si no hay suficiente stock, se lanza un error
+            SET @resultado = 0;
+            SET @mensaje = 'Stock insuficiente para uno o más productos';
+            ROLLBACK TRANSACTION registro;
+            RETURN;
+        END
+        COMMIT TRANSACTION registro;
     END TRY
     BEGIN CATCH
-        SET @resultado = 0
-        SET @mensaje = ERROR_MESSAGE()
-        ROLLBACK TRANSACTION registro
+        SET @resultado = 0;
+        SET @mensaje = ERROR_MESSAGE();
+        ROLLBACK TRANSACTION registro;
     END CATCH
 END
 GO
@@ -554,82 +579,181 @@ create type [dbo].[EDetalle_Compra] as TABLE(
 go
 
 create procedure spu_registrocompra(
-    @idusuario int,
+    @idusuario INT,
     @idproveedor INT,
-    @tipodocumento varchar(500),
-    @numerodocumento varchar(500),
-    @montototal decimal(18,2),
+    @tipodocumento VARCHAR(500),
+    @numerodocumento VARCHAR(500),
+    @montototal DECIMAL(18,2),
     @detallecompra [EDetalle_Compra] READONLY,
-    @resultado bit OUTPUT,
-    @mensaje varchar(500) OUTPUT
+    @resultado BIT OUTPUT,
+    @mensaje VARCHAR(500) OUTPUT
 )
-as
+AS
 BEGIN
     BEGIN TRY
-        DECLARE @idcompra int = 0
-        set @resultado = 1
-        set @mensaje = ''
-        begin transaction registro
-        insert into compra(idusuario, idproveedor, tipodocumento, numerodocumento, montototal)
-        values (@idusuario, @idproveedor, @tipodocumento, @numerodocumento, @montototal)
-        set @idcompra = SCOPE_IDENTITY()
-        INSERT into detallecompra(idcompra, idproducto, preciocompra, precioventa, cantidad, montototal)
-        select @idcompra, idproducto, preciocompra, precioventa, cantidad, montototal from @detallecompra
-        update p set p.stock = p.stock + dc.cantidad,
-        p.preciocompra = dc.preciocompra,
-        p.precioventa = dc.precioventa
-        from productos p
-        inner join @detallecompra dc on dc.idproducto = p.idproducto
-        commit transaction registro
-    end try
-    begin catch
-        set @resultado = 0
-        set @mensaje = ERROR_MESSAGE()
-        rollback transaction registro
-    end catch
-end
+        DECLARE @idcompra INT = 0;
+        SET @resultado = 1;
+        SET @mensaje = '';
+        
+        BEGIN TRANSACTION registro;
+
+        -- Insertar en la tabla compra
+        INSERT INTO compra (idusuario, idproveedor, tipodocumento, numerodocumento, montototal)
+        VALUES (@idusuario, @idproveedor, @tipodocumento, @numerodocumento, @montototal);
+        
+        SET @idcompra = SCOPE_IDENTITY();
+
+        -- Insertar en detallecompra
+        INSERT INTO detallecompra (idcompra, idproducto, preciocompra, precioventa, cantidad, montototal)
+        SELECT @idcompra, idproducto, preciocompra, precioventa, cantidad, montototal 
+        FROM @detallecompra;
+
+        -- Actualizar stock en productos
+        UPDATE p 
+        SET p.stock = p.stock - dc.cantidad -- Cambiado de + a -
+        FROM productos p
+        INNER JOIN @detallecompra dc ON dc.idproducto = p.idproducto
+        WHERE p.stock >= dc.cantidad; -- Asegúrate de que hay suficiente stock
+
+        -- Insertar o actualizar en productos_tienda
+        MERGE INTO productos_tienda AS target
+        USING (
+            SELECT DISTINCT 
+                p.codigo,
+                p.nombre,
+                p.descripcion,
+                p.idcategoria,
+                p.idtallaropa,
+                p.idmarca,
+                dc.cantidad AS stock,
+                p.colores,
+                p.numcaja,
+                dc.precioventa,
+                dc.preciocompra,
+                p.temporada,
+                p.descuento
+            FROM @detallecompra dc
+            INNER JOIN productos p ON p.idproducto = dc.idproducto
+        ) AS source
+        ON target.codigo = source.codigo
+        WHEN MATCHED THEN
+            UPDATE SET 
+                target.stock = target.stock + source.stock,
+                target.preciocompra = source.preciocompra,
+                target.precioventa = source.precioventa
+        WHEN NOT MATCHED THEN
+            INSERT (codigo, nombre, descripcion, idcategoria, idtallaropa, 
+                    idmarca, stock, colores, numcaja, precioventa, 
+                    preciocompra, temporada, descuento)
+            VALUES (source.codigo, source.nombre, source.descripcion, 
+                    source.idcategoria, source.idtallaropa, source.idmarca, 
+                    source.stock, source.colores, source.numcaja, 
+                    source.precioventa, source.preciocompra, 
+                    source.temporada, source.descuento);
+        
+        COMMIT TRANSACTION registro;
+    END TRY
+    BEGIN CATCH
+        SET @resultado = 0;
+        SET @mensaje = ERROR_MESSAGE();
+        ROLLBACK TRANSACTION registro;
+    END CATCH
+END
+GO
+
+CREATE PROCEDURE spu_reporte_compras (
+    @fechainicio VARCHAR(10),
+    @fechafin VARCHAR(10),
+    @idproveedor INT
+)
+AS
+BEGIN
+    SET DATEFORMAT dmy;
+
+    SELECT
+        CONVERT(CHAR(10), c.fecharegistro, 103) AS FechaRegistro,
+        c.tipodocumento,
+        c.numerodocumento,
+        c.montototal,
+        u.nombreusuario AS UsuarioRegistro,
+        pr.documento AS docproveedor,
+        pr.nombreproveedor AS razonsocial,
+        p.codigo AS CodigoProducto,
+        p.nombre AS NombreProducto,
+        p.descuento AS Descuento,
+        ca.nombrecategoria AS Categoria,
+		ta.nombretalla as Tallas,
+        dc.preciocompra,
+        dc.precioventa,
+        dc.cantidad,
+        dc.preciocompra * dc.cantidad AS subtotal -- Asegúrate de calcular correctamente el subtotal si es necesario
+    FROM compra c
+    INNER JOIN usuarios u ON u.idusuario = c.idusuario
+    INNER JOIN proveedores pr ON pr.idproveedor = c.idproveedor
+    INNER JOIN detallecompra dc ON dc.idcompra = c.idcompra
+    INNER JOIN productos p ON p.idproducto = dc.idproducto
+    INNER JOIN categorias ca ON ca.idcategoria = p.idcategoria
+	inner join tallasropa ta on ta.idtallaropa = p.idtallaropa
+    WHERE CONVERT(DATE, c.fecharegistro) BETWEEN CONVERT(DATE, @fechainicio, 103) AND CONVERT(DATE, @fechafin, 103)
+      AND (@idproveedor = 0 OR pr.idproveedor = @idproveedor)
+END
+GO
+
+CREATE PROCEDURE spu_reporte_venta(
+    @fechainicio VARCHAR(10),
+    @fechafin VARCHAR(10)
+)
+AS
+BEGIN
+    SET DATEFORMAT dmy;
+    SELECT
+        CONVERT(CHAR(10), v.fecharegistro, 103) AS FechaRegistro,
+        v.tipodocumento,
+        v.numerodocumento,
+        v.montototal,
+        u.nombreusuario AS UsuarioRegistro,
+        v.documentocliente,
+        v.nombrecliente,
+        p.codigo AS CodigoProducto,
+        p.nombre AS NombreProducto,
+        p.descuento AS Descuento,
+        ca.nombrecategoria AS Categoria,
+		ta.nombretalla as Tallas,
+        dv.precioventa,
+        dv.cantidad,
+        dv.subtotal
+    FROM ventas v
+    INNER JOIN usuarios u ON u.idusuario = v.idusuario
+    INNER JOIN detalle_venta dv ON dv.idventa = v.idventa
+    INNER JOIN productos_tienda p ON p.idproductotienda = dv.idproductotienda
+    INNER JOIN categorias ca ON ca.idcategoria = p.idcategoria
+	inner join tallasropa ta on ta.idtallaropa = p.idtallaropa
+    WHERE CONVERT(DATE, v.fecharegistro, 103) BETWEEN CONVERT(DATE, @fechainicio, 103) AND CONVERT(DATE, @fechafin, 103)
+END
+GO
+
+EXEC spu_reporte_venta '01/08/2024', '21/09/2024';
 go
 
-create procedure spu_reporte_compras(
-    @fechainicio varchar(10),
-	@fechafin varchar(10),
-    @idproveedor int
+create PROCEDURE spu_editar_productotienda (
+    @idproductotienda INT,
+	@descuento INT = 0,
+	@promo2x1 bit,
+    @resultado INT OUTPUT,
+    @mensaje VARCHAR(100) OUTPUT
 )
-as
-begin
-set dateformat dmy;
-select
-convert(char(10), c.fecharegistro,103)[FechaRegistro], c.tipodocumento, c.numerodocumento, c.montototal,
-u.nombreusuario[UsuarioRegistro],
-pr.documento[docproveedor], pr.nombreproveedor[razonsocial],
-p.codigo[CodigoProducto], p.nombre[NombreProducto], p.descuento[Descuento], ca.nombrecategoria[Categoria], dc.preciocompra, dc.precioventa, dc.cantidad, dc.montototal[subtotal]
-from compra c
-inner join usuarios u on u.idusuario = c.idusuario
-inner join proveedores pr on pr.idproveedor = c.idproveedor
-inner join detallecompra dc on dc.idcompra = c.idcompra
-inner join productos p on p.idproducto = dc.idproducto
-inner join categorias ca on ca.idcategoria = p.idcategoria
-where convert(date, c.fecharegistro) between @fechainicio and @fechafin
-and pr.idproveedor = iif(@idproveedor=0, pr.idproveedor, @idproveedor)
-end
-go
-
-create procedure spu_reporte_venta(
-	@fechainicio varchar(10),
-	@fechafin varchar(10)
-)
-as
-begin
-set dateformat dmy;
-select
-convert(char(10), v.fecharegistro, 103)[FechaRegistro], v.tipodocumento, v.numerodocumento, v.montototal,
-u.nombreusuario[UsuarioRegistro], v.documentocliente, v.nombrecliente,
-p.codigo[CodigoProducto], p.nombre[NombreProducto], p.descuento[Descuento], ca.nombrecategoria[Categoria], dv.precioventa, dv.cantidad, dv.subtotal
-from ventas v
-inner join usuarios u on u.idusuario = v.idusuario
-inner join detalle_venta dv on dv.idventa = v.idventa
-inner join productos p on p.idproducto = dv.idproducto
-inner join categorias ca on ca.idcategoria = p.idcategoria
-where convert(date, v.fecharegistro) between @fechainicio and @fechafin
-end
+AS
+BEGIN
+    SET @resultado = 1;
+    UPDATE productos_tienda
+    SET
+		descuento = @descuento,
+        promo2x1 = @promo2x1
+    WHERE idproductotienda = @idproductotienda;
+    IF @@ROWCOUNT = 0
+    BEGIN
+        SET @resultado = 0;
+        SET @mensaje = 'No se encontró el producto para actualizar.';
+    END
+END
 go

@@ -79,7 +79,7 @@ namespace presentacion
                 txtidproducto.Text = "0";
                 txtnombres.Text = "";
                 txtstock.Text = "0";
-                txtprecioventa.Text = "";
+                txtprecioventa.Text = "0.00";
                 txttalla.Text = "";
                 txtcolores.Text = "";
                 txtcantidadprod.Value = 1;
@@ -91,8 +91,8 @@ namespace presentacion
             txtidproducto.Text = "0";
             txtcodigo.Text = "";
             txtnombres.Text = "";
-            txtprecioventa.Text = "";
-            txtpreciocompra.Text = "";
+            txtprecioventa.Text = "0.00";
+            txtpreciocompra.Text = "0.00";
             txtstock.Text = "";
             txttalla.Text = "";
             txtcolores.Text = "";
@@ -147,7 +147,7 @@ namespace presentacion
             }
 
             if (!producto_existe)
-            {                
+            {
                 tablacompras.Rows.Add(new object[]
                 {
                     txtidproducto.Text,
@@ -316,6 +316,99 @@ namespace presentacion
             }
             else
                 MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private int enterPressCount = 0;
+        private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es Enter
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                enterPressCount++;
+                e.Handled = true; // Previene el procesamiento adicional del evento Enter
+
+                if (enterPressCount == 1)
+                {
+                    // Realiza la búsqueda del producto
+                    Productos oProductos = new NProducto().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+                    if (oProductos != null)
+                    {
+                        txtidproducto.Text = oProductos.idproducto.ToString();
+                        txtnombres.Text = oProductos.nombre;
+                        txtstock.Text = oProductos.stock.ToString();
+                        txtprecioventa.Text = oProductos.precioventa.ToString();
+                        txttalla.Text = oProductos.oTallasropa.nombretalla.ToString();
+                        txtcolores.Text = oProductos.colores.ToString();
+                        txtcantidadprod.Select();
+                    }
+                    else
+                    {
+                        txtidproducto.Text = "0";
+                        txtnombres.Text = "";
+                        txtstock.Text = "0";
+                        txtprecioventa.Text = "0.00";
+                        txttalla.Text = "";
+                        txtcolores.Text = "";
+                        txtcantidadprod.Value = 1;
+                    }
+                }
+                else if (enterPressCount == 2)
+                {
+                    // Agrega el producto al DataGridView
+                    btnAgregar_Click(sender, e); // Llama al método que agrega el producto
+                    enterPressCount = 0; // Reinicia el contador
+                }
+            }
+            else
+            {
+                enterPressCount = 0; // Reinicia el contador si se presiona otra tecla
+            }
+        }
+
+        private void txtcantidadprod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es Enter
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                enterPressCount++;
+                e.Handled = true; // Previene el procesamiento adicional del evento Enter
+
+                if (enterPressCount == 1)
+                {
+                    // Realiza la búsqueda del producto
+                    Productos oProductos = new NProducto().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+                    if (oProductos != null)
+                    {
+                        txtidproducto.Text = oProductos.idproducto.ToString();
+                        txtnombres.Text = oProductos.nombre;
+                        txtstock.Text = oProductos.stock.ToString();
+                        txtprecioventa.Text = oProductos.precioventa.ToString();
+                        txttalla.Text = oProductos.oTallasropa.nombretalla.ToString();
+                        txtcolores.Text = oProductos.colores.ToString();
+                        txtcantidadprod.Select();
+                    }
+                    else
+                    {
+                        txtidproducto.Text = "0";
+                        txtnombres.Text = "";
+                        txtstock.Text = "0";
+                        txtprecioventa.Text = "0.00";
+                        txttalla.Text = "";
+                        txtcolores.Text = "";
+                        txtcantidadprod.Value = 1;
+                    }
+                }
+                else if (enterPressCount == 2)
+                {
+                    // Agrega el producto al DataGridView
+                    btnAgregar_Click(sender, e); // Llama al método que agrega el producto
+                    enterPressCount = 0; // Reinicia el contador
+                }
+            }
+            else
+            {
+                enterPressCount = 0; // Reinicia el contador si se presiona otra tecla
+            }
         }
     }
 }

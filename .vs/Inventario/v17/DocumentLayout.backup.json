@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8FD7930-DD19-49DB-88B4-D2D35C4758C8}|Negocio\\Negocio.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\negocio\\nventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8FD7930-DD19-49DB-88B4-D2D35C4758C8}|Negocio\\Negocio.csproj|solutionrelative:negocio\\nventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25D75FF2-F7C3-4094-B584-701D0F18CB93}|Datos\\Datos.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\datos\\dventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25D75FF2-F7C3-4094-B584-701D0F18CB93}|Datos\\Datos.csproj|solutionrelative:datos\\dventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\presentacion\\frmventas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmventas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 278,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmVentas.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.Designer.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmVentas.Designer.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.Designer.cs",
+              "RelativeToolTip": "presentacion\\frmVentas.Designer.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAkwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T10:13:12.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NVentas.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Negocio\\NVentas.cs",
+              "RelativeDocumentMoniker": "Negocio\\NVentas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Negocio\\NVentas.cs*",
+              "RelativeToolTip": "Negocio\\NVentas.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwCAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T09:59:24.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DVentas.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Datos\\DVentas.cs",
+              "RelativeDocumentMoniker": "Datos\\DVentas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\Datos\\DVentas.cs*",
+              "RelativeToolTip": "Datos\\DVentas.cs*",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAAGAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T09:58:06.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmVentas.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmVentas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs*",
+              "RelativeToolTip": "presentacion\\frmVentas.cs*",
+              "ViewState": "AgIAAHcBAAAAAAAAAAAEwIcBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T08:10:35.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmVentas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "presentacion\\frmVentas.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:50:13.702Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
