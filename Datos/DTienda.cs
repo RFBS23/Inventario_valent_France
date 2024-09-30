@@ -19,7 +19,7 @@ namespace Datos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("select idproductotienda, codigo, nombre, descripcion, c.idcategoria, c.nombrecategoria, tr.idtallaropa, tr.nombretalla, m.idmarca, m.nombremarca, stock, colores, precioventa, preciocompra, temporada, promo2x1, descuento, total,  CONVERT(VARCHAR(10), p.fecharegistro, 120)AS fecharegistro_producto from productos_tienda p");
+                    query.AppendLine("select idproductotienda, codigo, nombre, descripcion, c.idcategoria, c.nombrecategoria, tr.idtallaropa, tr.nombretalla, m.idmarca, m.nombremarca, stock, colores, precioventa, preciocompra, temporada, descuento, total,  CONVERT(VARCHAR(10), p.fecharegistro, 120)AS fecharegistro_producto from productos_tienda p");
                     query.AppendLine("inner join categorias c on c.idcategoria = p.idcategoria");
                     query.AppendLine("inner join tallasropa tr on tr.idtallaropa = p.idtallaropa");
                     query.AppendLine("inner join marca m on m.idmarca = p.idmarca");
@@ -46,7 +46,6 @@ namespace Datos
                                 precioventa = Convert.ToDecimal(dr["precioventa"]),
                                 preciocompra = Convert.ToDecimal(dr["preciocompra"]),
                                 temporada = dr["temporada"].ToString(),
-                                promo2x1 = Convert.ToBoolean(dr["promo2x1"]),
                                 descuento = Convert.ToInt32(dr["descuento"]),
                                 total = Convert.ToDecimal(dr["total"]),
                                 fecharegistro = dr["fecharegistro_producto"].ToString()
@@ -60,37 +59,6 @@ namespace Datos
                 }
             }
             return lista;
-        }
-
-        public bool Editar(Productos_tienda obj, out string Mensaje)
-        {
-            bool respuesta = false;
-            Mensaje = string.Empty;
-            try
-            {
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
-                {
-                    SqlCommand cmd = new SqlCommand("spu_editar_productotienda", oconexion);
-                    cmd.Parameters.AddWithValue("idproductotienda", obj.idproductotienda);
-                    cmd.Parameters.AddWithValue("descuento", obj.descuento);
-                    cmd.Parameters.AddWithValue("promo2x1", obj.promo2x1);  // Asegúrate de que aquí se envíe un booleano
-
-                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    oconexion.Open();
-                    cmd.ExecuteNonQuery();
-                    respuesta = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
-                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                respuesta = false;
-                Mensaje = ex.Message;
-            }
-            return respuesta;
         }
 
     }

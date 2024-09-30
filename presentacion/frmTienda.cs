@@ -107,38 +107,6 @@ namespace presentacion
             if (btnAgregar.Text == "    Editar")
             {
                 // Lógica para editar productos
-                bool resultado = new NTienda().Editar(objproductos, out mensaje);
-                if (resultado)
-                {
-                    DataGridViewRow row = tablaproductos.Rows[Convert.ToInt32(txtindice.Text)];
-                    row.Cells["idproducto"].Value = txtid.Text;
-                    row.Cells["codigo"].Value = txtcodigo.Text;
-                    row.Cells["nombre"].Value = txtnombreproducto.Text;
-                    row.Cells["descripcion"].Value = txtdescripcion.Text;
-                    row.Cells["idcategoria"].Value = ((OpcionesComboBox)cbcategoria.SelectedItem).Valor.ToString();
-                    row.Cells["nombrecategoria"].Value = ((OpcionesComboBox)cbcategoria.SelectedItem).Texto.ToString();
-                    row.Cells["idtallaropa"].Value = ((OpcionesComboBox)cbtallas.SelectedItem).Valor.ToString();
-                    row.Cells["nombretalla"].Value = ((OpcionesComboBox)cbtallas.SelectedItem).Texto.ToString();
-                    row.Cells["idmarca"].Value = ((OpcionesComboBox)cbmarca.SelectedItem).Valor.ToString();
-                    row.Cells["nombremarca"].Value = ((OpcionesComboBox)cbmarca.SelectedItem).Texto.ToString();
-                    row.Cells["colores"].Value = txtcolores.Text;
-                    row.Cells["stock"].Value = txtstock.Text;
-                    row.Cells["temporada"].Value = cbtemporada.Text;
-                    row.Cells["descuento"].Value = txtdescuento.Text;
-                    row.Cells["valorpromo"].Value = promo.Checked ? 1 : 0;
-                    row.Cells["promocion"].Value = promo.Checked ? "Promoción 2x1" : "Sin promoción";
-                    row.Cells["precioventa"].Value = Convert.ToDecimal(txtprecioventa.Text).ToString("0.00");
-                    row.Cells["total"].Value = txttotaldinero.Text;
-
-                    Limpiar();
-                    this.Alert("Producto Editado", Form_Alert.enmType.Success);
-                }
-                else
-                {
-                    MessageBox.Show(mensaje);
-                    this.Alert("No se pudo editar", Form_Alert.enmType.Error);
-                }
-                btnAgregar.Text = "    Editar";
             }
         }
         private void Limpiar()

@@ -114,7 +114,7 @@ namespace presentacion
 
         private void btnagregarproducto_Click(object sender, EventArgs e)
         {
-            formularioAbierto(new frmfromularioAlmacenes());
+            formularioAbierto(new frmProductos());
         }
 
         private void btnDetVentas_Click(object sender, EventArgs e)

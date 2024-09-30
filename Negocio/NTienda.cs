@@ -15,20 +15,6 @@ namespace Negocio
         public List<Productos_tienda> Listar()
         {
             return objd_productotienda.Listar();
-        }
-
-        public bool Editar(Productos_tienda obj, out string Mensaje)
-        {
-            Mensaje = string.Empty;
-
-            if (Mensaje != string.Empty)
-            {
-                return false;
-            }
-            else
-            {
-                return objd_productotienda.Editar(obj, out Mensaje);
-            }
-        }
+        }        
     }
 }

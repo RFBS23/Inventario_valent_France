@@ -57,8 +57,6 @@
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temporada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorpromo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promocion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -133,8 +131,6 @@
             this.stock,
             this.colores,
             this.temporada,
-            this.valorpromo,
-            this.promocion,
             this.precioventa,
             this.descuento,
             this.total,
@@ -511,24 +507,6 @@
             this.temporada.ReadOnly = true;
             this.temporada.Width = 123;
             // 
-            // valorpromo
-            // 
-            this.valorpromo.HeaderText = "ValorPromo";
-            this.valorpromo.MinimumWidth = 6;
-            this.valorpromo.Name = "valorpromo";
-            this.valorpromo.ReadOnly = true;
-            this.valorpromo.Visible = false;
-            this.valorpromo.Width = 128;
-            // 
-            // promocion
-            // 
-            this.promocion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.promocion.HeaderText = "Promocion";
-            this.promocion.MinimumWidth = 6;
-            this.promocion.Name = "promocion";
-            this.promocion.ReadOnly = true;
-            this.promocion.Width = 121;
-            // 
             // precioventa
             // 
             this.precioventa.FillWeight = 60.96258F;
@@ -619,8 +597,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn colores;
         private System.Windows.Forms.DataGridViewTextBoxColumn temporada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorpromo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn promocion;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioventa;
         private System.Windows.Forms.DataGridViewTextBoxColumn descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;

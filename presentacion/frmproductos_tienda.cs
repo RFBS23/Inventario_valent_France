@@ -44,7 +44,7 @@ namespace presentacion
             List<Productos_tienda> listaProductos = new NTienda().Listar();
             foreach (Productos_tienda item in listaProductos)
             {
-                tablaproductostienda.Rows.Add(new object[] { "", item.idproductotienda, item.codigo, item.nombre, item.descripcion, item.oCategorias.idcategoria, item.oCategorias.nombrecategoria, item.oTallasropa.idtallaropa, item.oTallasropa.nombretalla, item.oMarcas.idmarca, item.oMarcas.nombremarca, item.stock, item.colores, item.temporada, item.promo2x1 == true ? 1 : 0, item.promo2x1 == true ? "Promoción 2x1" : "Sin promocion", item.preciocompra, item.descuento, item.total, item.fecharegistro });
+                tablaproductostienda.Rows.Add(new object[] { "", item.idproductotienda, item.codigo, item.nombre, item.descripcion, item.oCategorias.idcategoria, item.oCategorias.nombrecategoria, item.oTallasropa.idtallaropa, item.oTallasropa.nombretalla, item.oMarcas.idmarca, item.oMarcas.nombremarca, item.stock, item.colores, item.temporada, item.preciocompra, item.descuento, item.total, item.fecharegistro });
             }
         }
 
@@ -146,11 +146,10 @@ namespace presentacion
                             row.Cells[11].Value.ToString(),
                             row.Cells[12].Value.ToString(),
                             row.Cells[13].Value.ToString(),
+                            row.Cells[14].Value.ToString(),
                             row.Cells[15].Value.ToString(),
                             row.Cells[16].Value.ToString(),
                             row.Cells[17].Value.ToString(),
-                            row.Cells[18].Value.ToString(),
-                            row.Cells[19].Value.ToString(),
                         });
                 }
                 SaveFileDialog savefile = new SaveFileDialog();

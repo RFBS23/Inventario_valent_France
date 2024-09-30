@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn2x1 = new Guna.UI2.WinForms.Guna2Button();
             this.promo2x1 = new System.Windows.Forms.CheckBox();
             this.txtcliente = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -39,6 +40,9 @@
             this.txtddocumento = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelproducto2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -93,6 +97,7 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.btn2x1);
             this.guna2Panel2.Controls.Add(this.promo2x1);
             this.guna2Panel2.Controls.Add(this.txtcliente);
             this.guna2Panel2.Controls.Add(this.label11);
@@ -131,18 +136,50 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1479, 676);
             this.guna2Panel2.TabIndex = 2;
             // 
+            // btn2x1
+            // 
+            this.btn2x1.Animated = true;
+            this.btn2x1.BackColor = System.Drawing.Color.Transparent;
+            this.btn2x1.BorderRadius = 10;
+            this.btn2x1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn2x1.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btn2x1.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btn2x1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn2x1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn2x1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn2x1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn2x1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn2x1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btn2x1.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn2x1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2x1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(114)))), ((int)(((byte)(255)))));
+            this.btn2x1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(97)))), ((int)(((byte)(230)))));
+            this.btn2x1.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btn2x1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(254)))));
+            this.btn2x1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn2x1.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn2x1.Location = new System.Drawing.Point(684, 212);
+            this.btn2x1.Name = "btn2x1";
+            this.btn2x1.PressedColor = System.Drawing.Color.Transparent;
+            this.btn2x1.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btn2x1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btn2x1.Size = new System.Drawing.Size(162, 52);
+            this.btn2x1.TabIndex = 52;
+            this.btn2x1.Text = "Aplicar 2x1";
+            this.btn2x1.Click += new System.EventHandler(this.btn2x1_Click);
+            // 
             // promo2x1
             // 
             this.promo2x1.AutoSize = true;
             this.promo2x1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.promo2x1.Enabled = false;
             this.promo2x1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.promo2x1.Location = new System.Drawing.Point(491, 228);
+            this.promo2x1.Location = new System.Drawing.Point(289, 201);
             this.promo2x1.Name = "promo2x1";
             this.promo2x1.Size = new System.Drawing.Size(148, 24);
             this.promo2x1.TabIndex = 51;
             this.promo2x1.Text = "Promoción 2x1";
             this.promo2x1.UseVisualStyleBackColor = true;
+            this.promo2x1.CheckedChanged += new System.EventHandler(this.promo2x1_CheckedChanged);
             // 
             // txtcliente
             // 
@@ -255,8 +292,12 @@
             this.panelproducto2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelproducto2.AutoScroll = true;
             this.panelproducto2.BackColor = System.Drawing.Color.Transparent;
             this.panelproducto2.BorderRadius = 20;
+            this.panelproducto2.Controls.Add(this.label18);
+            this.panelproducto2.Controls.Add(this.label1);
+            this.panelproducto2.Controls.Add(this.label17);
             this.panelproducto2.Controls.Add(this.label6);
             this.panelproducto2.Controls.Add(this.label13);
             this.panelproducto2.Controls.Add(this.label14);
@@ -272,6 +313,39 @@
             this.panelproducto2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 5, 6);
             this.panelproducto2.Size = new System.Drawing.Size(394, 363);
             this.panelproducto2.TabIndex = 37;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(172)))), ((int)(((byte)(184)))));
+            this.label18.Location = new System.Drawing.Point(81, 370);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(248, 24);
+            this.label18.TabIndex = 55;
+            this.label18.Text = "Nota: Seleccionar la cantidad";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(172)))), ((int)(((byte)(184)))));
+            this.label1.Location = new System.Drawing.Point(120, 394);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 24);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "y click en el boton 2x1";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(172)))), ((int)(((byte)(184)))));
+            this.label17.Location = new System.Drawing.Point(70, 448);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(20, 24);
+            this.label17.TabIndex = 54;
+            this.label17.Text = "  ";
             // 
             // label6
             // 
@@ -410,20 +484,20 @@
             // 
             this.tablaventas.AllowUserToAddRows = false;
             this.tablaventas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tablaventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tablaventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaventas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tablaventas.ColumnHeadersHeight = 37;
             this.tablaventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.tablaventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -439,14 +513,14 @@
             this.subtotal,
             this.btneliminar});
             this.tablaventas.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaventas.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaventas.DefaultCellStyle = dataGridViewCellStyle3;
             this.tablaventas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tablaventas.Location = new System.Drawing.Point(3, 3);
             this.tablaventas.MultiSelect = false;
@@ -615,7 +689,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(681, 192);
+            this.label12.Location = new System.Drawing.Point(534, 192);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 20);
             this.label12.TabIndex = 45;
@@ -635,7 +709,7 @@
             this.txtdescuento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
             this.txtdescuento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.txtdescuento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(205)))), ((int)(((byte)(212)))));
-            this.txtdescuento.Location = new System.Drawing.Point(685, 216);
+            this.txtdescuento.Location = new System.Drawing.Point(538, 216);
             this.txtdescuento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtdescuento.Name = "txtdescuento";
             this.txtdescuento.PasswordChar = '\0';
@@ -741,7 +815,7 @@
             this.btnAgregar.Image = global::presentacion.Properties.Resources.agregar_usuario;
             this.btnAgregar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAgregar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAgregar.Location = new System.Drawing.Point(853, 216);
+            this.btnAgregar.Location = new System.Drawing.Point(1299, 229);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.PressedColor = System.Drawing.Color.Transparent;
             this.btnAgregar.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -1105,5 +1179,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         private System.Windows.Forms.DataGridViewButtonColumn btneliminar;
         private System.Windows.Forms.CheckBox promo2x1;
+        private Guna.UI2.WinForms.Guna2Button btn2x1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label17;
     }
 }

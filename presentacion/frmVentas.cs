@@ -41,6 +41,8 @@ namespace presentacion
             txtcambio.Text = "0.00";
             txttotalpagar.Text = "0.00";
             txtdescuento.Text = "0.00";
+
+            this.promo2x1.CheckedChanged += new System.EventHandler(this.promo2x1_CheckedChanged);
         }
 
         private async void btnbuscarcliente_Click(object sender, EventArgs e)
@@ -82,7 +84,7 @@ namespace presentacion
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+            Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo.ToUpper() == txtcodigo.Text.ToUpper()).FirstOrDefault();
             if (oProductos != null)
             {
                 txtidproducto.Text = oProductos.idproductotienda.ToString();
@@ -95,7 +97,7 @@ namespace presentacion
                 txtcantidadprod.Select();
 
                 promo2x1.Checked = oProductos.promo2x1;
-                promo2x1.Text = oProductos.promo2x1 ? "Promoción 2x1" : "Sin promoción";
+                promo2x1.Text = oProductos.promo2x1 ? "Promoción 2x1" : "Promoción 2x1";
 
             }
             else
@@ -110,7 +112,7 @@ namespace presentacion
                 txtcantidadprod.Value = 1;
 
                 promo2x1.Checked = false;
-                promo2x1.Text = "Sin promoción";
+                promo2x1.Text = "Promoción 2x1";
             }
         }
 
@@ -251,6 +253,7 @@ namespace presentacion
             txtcolores.Text = "";
             txtdescuento.Text = "";
             txtcantidadprod.Value = 1;
+            promo2x1.Checked = false;
         }
 
         private void tablaventas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -416,7 +419,7 @@ namespace presentacion
 
                 if (enterPressCount == 1)
                 {
-                    Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+                    Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo.ToUpper() == txtcodigo.Text.ToUpper()).FirstOrDefault();
                     if (oProductos != null)
                     {
                         txtidproducto.Text = oProductos.idproductotienda.ToString();
@@ -460,7 +463,7 @@ namespace presentacion
                 e.Handled = true;
                 if (enterPressCount == 1)
                 {
-                    Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+                    Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo.ToUpper() == txtcodigo.Text.ToUpper()).FirstOrDefault();
                     if (oProductos != null)
                     {
                         txtidproducto.Text = oProductos.idproductotienda.ToString();
@@ -496,5 +499,129 @@ namespace presentacion
             }
         }
 
+        private void calcularTotal2x1()
+        {
+            decimal total = 0;
+            if (tablaventas.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in tablaventas.Rows)
+                {
+                    if (row.Cells["subtotal"].Value != null && !string.IsNullOrEmpty(row.Cells["subtotal"].Value.ToString()))
+                    {
+                        total += Convert.ToDecimal(row.Cells["subtotal"].Value);
+                    }
+                }
+            }
+
+            // Eliminar el "+ 0.5m" para evitar el aumento no deseado
+            decimal redondeadoTotal = Math.Round(total, 2, MidpointRounding.AwayFromZero);
+            txttotalpagar.Text = redondeadoTotal.ToString("0.00");
+        }
+
+        private void btn2x1_Click(object sender, EventArgs e)
+        {
+            decimal cantidad;
+
+            // Validar la cantidad ingresada
+            if (!decimal.TryParse(txtcantidadprod.Text, out cantidad) || cantidad <= 0)
+            {
+                MessageBox.Show("Cantidad inválida", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtcantidadprod.Select();
+                return;
+            }
+
+            // Verificar el stock disponible
+            int stock = Convert.ToInt32(txtstock.Text);
+            if (cantidad > stock)
+            {
+                MessageBox.Show("La cantidad no puede ser mayor al stock disponible", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            // Verificar que un producto esté seleccionado
+            if (int.Parse(txtidproducto.Text) == 0)
+            {
+                MessageBox.Show("Debe seleccionar un producto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            // Verificar si el producto ya existe en la tabla de ventas
+            bool productoExiste = false;
+            foreach (DataGridViewRow fila in tablaventas.Rows)
+            {
+                if (fila.Cells["idproducto"].Value.ToString() == txtidproducto.Text)
+                {
+                    productoExiste = true;
+                    break;
+                }
+            }
+
+            if (!productoExiste)
+            {
+                // Restar stock
+                bool respuesta = new NVentas().RestarStock(
+                    Convert.ToInt32(txtidproducto.Text),
+                    Convert.ToInt32(cantidad));
+
+                if (respuesta)
+                {
+                    decimal precioProducto = Convert.ToDecimal(txtprecio.Text);
+                    decimal subtotal;
+
+                    // Si la promoción está activa, el subtotal será el precio de un producto
+                    if (promo2x1.Checked)
+                    {
+                        // Solo se sumará el precio de un producto
+                        subtotal = precioProducto; // Usar el precio de un solo producto
+                        cantidad = 2; // Establecer la cantidad a 2 por la promoción
+                    }
+                    else
+                    {
+                        subtotal = precioProducto * cantidad; // Calcular el subtotal normalmente
+                    }
+
+                    // Agregar el producto a la tabla de ventas
+                    tablaventas.Rows.Add(new object[]
+                    {
+                        txtidproducto.Text,
+                        txtddocumento.Text,
+                        txtcliente.Text,
+                        txtnombres.Text,
+                        txttalla.Text,
+                        txtcolores.Text,
+                        txtprecio.Text,
+                        txtdescuento.Text,
+                        cantidad.ToString(),
+                        subtotal.ToString("0.00")
+                    });
+
+                    calcularTotal2x1(); // Calcular el total con el nuevo subtotal
+                    limpiarProducto();
+                    txtcodigo.Select();
+                }
+                else
+                {
+                    MessageBox.Show("Error al restar el stock.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("El producto ya existe en la tabla.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void promo2x1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (promo2x1.Checked)
+            {
+                // Si está marcado, establecer la cantidad a 2
+                txtcantidadprod.Text = "2";
+            }
+            else
+            {
+                // Si está desmarcado, restablecer la cantidad a 1 (o cualquier valor que necesites)
+                txtcantidadprod.Text = "1";
+            }
+        }
     }
 }

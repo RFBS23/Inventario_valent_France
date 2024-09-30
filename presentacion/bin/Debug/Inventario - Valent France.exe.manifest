@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Datos.dll" size="41472">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Datos.dll" size="40960">
       <assemblyIdentity name="Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>S1nvNEoOPBvf2bnYudjJ+XBe9pAyrtrvbjjP8u2TEWo=</dsig:DigestValue>
+        <dsig:DigestValue>dx1wGRd2J1NV2slbzaSyEcbNwL52Fp3c0xGMdrg4uWU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Inventario - Valent France.exe" size="13076392">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Inventario - Valent France.exe" size="13077928">
       <assemblyIdentity name="Inventario - Valent France" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TMbAGI51ufpQbAYvliiFV7Wfn07vX+GUHQ6WC2X/UyQ=</dsig:DigestValue>
+        <dsig:DigestValue>cvyr1l4cOITdihECFKQNvjKH0cK3c/IUCI8ZB+cKQm4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -194,7 +194,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/dTu/kuvmcKeYs44uLyG1WJXvDs+OkiEQIAl+SF7eF0=</dsig:DigestValue>
+        <dsig:DigestValue>DfqbFlWcVHia22123zPZexouh+rz1txg0ZRx9IJFlK0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -408,7 +408,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>r8MhzQmiO9X10a9am820l0u3ubfURQ3gQAx3KsFGSbg=</dsig:DigestValue>
+      <dsig:DigestValue>P5IOMfwonSOfuwvcWtVlQaeQ3bMij7deE//hUf2Iacc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\agregar-producto.png" size="12333">
