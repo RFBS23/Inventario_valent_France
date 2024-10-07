@@ -18,6 +18,12 @@ namespace presentacion
         {
             InitializeComponent();
             usuarioActual = objusuario;
+
+            // Maximizar el formulario al iniciar
+            this.WindowState = FormWindowState.Maximized;
+
+            // Establecer redimensionamiento automático para el formulario
+            this.AutoScaleMode = AutoScaleMode.Font;
         }
 
         private Form activeForm = null;
@@ -58,6 +64,8 @@ namespace presentacion
             DateTime fechaActual = DateTime.Now;
             lblfecha.Text = $"Fecha ingreso: {fechaActual.Day}/{fechaActual.Month}/{fechaActual.Year}";
             lblhora.Text = "Hora: " + DateTime.Now.ToString("hh:mm:ss tt");
+
+            panelFormularios.Dock = DockStyle.Fill;
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)

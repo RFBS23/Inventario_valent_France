@@ -789,6 +789,7 @@
             this.Text = "Ventas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DashboardVendedor_FormClosing);
+            this.Load += new System.EventHandler(this.DashboardVendedor_Load);
             this.panelFormularios.ResumeLayout(false);
             this.banner.ResumeLayout(false);
             this.banner.PerformLayout();

@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Inventario - Valent France.exe" size="13077928">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Inventario - Valent France.exe" size="13091240">
       <assemblyIdentity name="Inventario - Valent France" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cvyr1l4cOITdihECFKQNvjKH0cK3c/IUCI8ZB+cKQm4=</dsig:DigestValue>
+        <dsig:DigestValue>yz1pxLfRQLFVSLnkqaIDqtcDjT4v5jZ3sk1Ebdbclhg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

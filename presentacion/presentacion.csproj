@@ -403,6 +403,9 @@
     <EmbeddedResource Include="frmfromularioAlmacenes.resx">
       <DependentUpon>frmfromularioAlmacenes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frminformacion.resx">
+      <DependentUpon>frminformacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>

@@ -65,6 +65,7 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmCategorias.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmConfiguracion.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmfromularioAlmacenes.resources
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frminformacion.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmProductos.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmproductos_tienda.resources
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presentacion.frmProveedores.resources

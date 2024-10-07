@@ -1,11 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E9481A8B-B47E-43A5-AC59-1466ADB69584}|..\\..\\..\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aiproj|C:\\Users\\fabri\\Documents\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip||{AE40A4D1-A614-4A08-B9E2-B74E011783ED}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -13,23 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 278,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Inventario-ValentFrance.aip",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip",
-              "RelativeDocumentMoniker": "..\\..\\..\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip",
-              "RelativeToolTip": "..\\..\\..\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-09-30T09:51:41.417Z",
-              "EditorCaption": ""
             }
           ]
         }
