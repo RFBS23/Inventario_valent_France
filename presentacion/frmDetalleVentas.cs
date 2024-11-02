@@ -138,8 +138,9 @@ namespace presentacion
             Ticket_Html = Ticket_Html.Replace("@rucnegocio", odatos.ruc);
             Ticket_Html = Ticket_Html.Replace("@nombrenegocio", odatos.nombre.ToUpper());
             Ticket_Html = Ticket_Html.Replace("@direcnegocio", odatos.direccion);
+            Ticket_Html = Ticket_Html.Replace("@numerodeventa", txtnumerocomprobante.Text.ToUpper());
             Ticket_Html = Ticket_Html.Replace("@tipodocumento", txtcomprobante.Text.ToUpper());
-            Ticket_Html = Ticket_Html.Replace("@numerodocumento", txtnumerocomprobante.Text.ToUpper());
+            //Ticket_Html = Ticket_Html.Replace("@numerodocumento", txtnumerocomprobante.Text.ToUpper());
             Ticket_Html = Ticket_Html.Replace("@fecharegistro", txtfecha.Text);
             Ticket_Html = Ticket_Html.Replace("@usuarioregistro", txtusuario.Text.ToUpper());
             Ticket_Html = Ticket_Html.Replace("@nombrecliente", txtnombrecliente.Text.ToUpper());
@@ -149,10 +150,11 @@ namespace presentacion
             foreach (DataGridViewRow row in tabladetallesventas.Rows)
             {
                 filas += "<tr>";
-                filas += "<th>" + row.Cells["nombre"].Value.ToString() + "</th>";
-                filas += "<th>" + row.Cells["descuento"].Value.ToString() + "</th>";
-                filas += "<th>" + row.Cells["precioventa"].Value.ToString() + "</th>";
-                filas += "<th>" + row.Cells["stock"].Value.ToString() + "</th>";
+                filas += "<th>" + row.Cells["stock"].Value.ToString() + " x " + "</th>";
+                filas += "<th>" + row.Cells["nombre"].Value.ToString() + row.Cells["descuento"].Value.ToString() + "                " + row.Cells["precioventa"].Value.ToString()  + "</th>";
+                //filas += "<th>" + row.Cells["descuento"].Value.ToString() + "</th>";
+                //filas += "<th>" + row.Cells["precioventa"].Value.ToString() + "</th>";
+                //filas += "<th>" + row.Cells["stock"].Value.ToString() + "</th>";
                 filas += "</tr>";
             }
             Ticket_Html = Ticket_Html.Replace("@filas", filas);

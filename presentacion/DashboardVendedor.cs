@@ -107,7 +107,14 @@ namespace presentacion
             lblfecha.Text = $"Fecha ingreso: {fechaActual.Day}/{fechaActual.Month}/{fechaActual.Year}";
             lblhora.Text = "Hora: " + DateTime.Now.ToString("hh:mm:ss tt");
 
+
+
             panelFormularios.Dock = DockStyle.Fill;
+        }
+
+        private void btnopreporte_Click(object sender, EventArgs e)
+        {
+            formularioAbierto(new frmreportesventas());
         }
     }
 }

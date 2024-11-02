@@ -43,6 +43,8 @@ namespace presentacion
             txtdescuento.Text = "0.00";
 
             this.promo2x1.CheckedChanged += new System.EventHandler(this.promo2x1_CheckedChanged);
+            btnAgregar.Visible = true;
+            btn2x1.Visible = false;
         }
 
         private async void btnbuscarcliente_Click(object sender, EventArgs e)
@@ -616,11 +618,16 @@ namespace presentacion
             {
                 // Si está marcado, establecer la cantidad a 2
                 txtcantidadprod.Text = "2";
+                btnAgregar.Visible = false;
+                btn2x1.Visible = true;
+                txtdescuento.Text = "0";
             }
             else
             {
                 // Si está desmarcado, restablecer la cantidad a 1 (o cualquier valor que necesites)
                 txtcantidadprod.Text = "1";
+                btnAgregar.Visible = true;
+                btn2x1.Visible = false;
             }
         }
     }

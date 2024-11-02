@@ -55,7 +55,11 @@
         <div class="center bold" style="font-size: 18px;">@nombrenegocio</div>
         <div class="center">@rucnegocio</div>
         <div class="center">@direcnegocio</div>
-        <hr />
+        <h3>--------------------------------------------------------------------</h3>
+		<div class="box" style="border: 1px solid #000000; padding: 10px; text-align: center; margin: 10px auto; border-radius: 10px;">
+			<div class="bold" style="font-size: 14px;">Tu número de venta es:</div>
+			<div style="font-size: 20px;">@numeroventa</div>
+		</div>	
         <div>
             <div><span class="bold">Fecha de emisión:</span> @fecharegistro</div>
             <div><span class="bold">Vendedor:</span> @usuarioregistro</div>
@@ -63,14 +67,15 @@
         </div>
         <hr />
         <table style="width:100%">
-            <thead>
+            <!--<thead>
                 <tr>
+					<th>Cant.</th>
                     <th>Producto</th>
+					
                     <th>Desc %</th>
-                    <th>Prec S/.</th>
-                    <th>Cant.</th>
+                    <th>Prec S/.</th>                  
                 </tr>
-            </thead>
+            </thead>-->
             <tbody>
                 @filas
             </tbody>

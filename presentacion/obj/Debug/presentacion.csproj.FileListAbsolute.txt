@@ -87,3 +87,12 @@ C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\presenta.D2D8CCE5.Up2Date
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\Inventario - Valent France.exe
 C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\obj\Debug\Inventario - Valent France.pdb
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\ClosedXML.Parser.dll
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\RBush.dll
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\ClosedXML.pdb
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\ClosedXML.Parser.xml
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\fabri\Documents\Programacion\C-Sharp\Inventario\presentacion\bin\Debug\RBush.xml

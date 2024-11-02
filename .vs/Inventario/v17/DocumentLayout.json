@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\dashboardvendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\dashboardvendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 278,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmVentas.cs",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmVentas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs",
+              "RelativeToolTip": "presentacion\\frmVentas.cs",
+              "ViewState": "AgIAAGYCAAAAAAAAAAAAAHUCAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T05:27:11.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs",
+              "RelativeDocumentMoniker": "presentacion\\frmVentas.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "presentacion\\frmVentas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T05:25:18.476Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardVendedor.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\DashboardVendedor.cs",
+              "RelativeDocumentMoniker": "presentacion\\DashboardVendedor.cs",
+              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\DashboardVendedor.cs [Dise\u00F1o]",
+              "RelativeToolTip": "presentacion\\DashboardVendedor.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T05:19:22.555Z"
             }
           ]
         }
