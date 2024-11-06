@@ -97,10 +97,6 @@ namespace presentacion
                 txtcolores.Text = oProductos.colores.ToString();
                 txtdescuento.Text = oProductos.descuento.ToString();
                 txtcantidadprod.Select();
-
-                promo2x1.Checked = oProductos.promo2x1;
-                promo2x1.Text = oProductos.promo2x1 ? "Promoción 2x1" : "Promoción 2x1";
-
             }
             else
             {
@@ -112,9 +108,6 @@ namespace presentacion
                 txtcolores.Text = "";
                 txtdescuento.Text = "0.00";
                 txtcantidadprod.Value = 1;
-
-                promo2x1.Checked = false;
-                promo2x1.Text = "Promoción 2x1";
             }
         }
 
@@ -250,7 +243,7 @@ namespace presentacion
             txtcodigo.Text = "";
             txtnombres.Text = "";
             txtprecio.Text = "";
-            txtstock.Text = "";
+            txtstock.Text = "0";
             txttalla.Text = "";
             txtcolores.Text = "";
             txtdescuento.Text = "";
@@ -573,13 +566,12 @@ namespace presentacion
                     // Si la promoción está activa, el subtotal será el precio de un producto
                     if (promo2x1.Checked)
                     {
-                        // Solo se sumará el precio de un producto
-                        subtotal = precioProducto; // Usar el precio de un solo producto
-                        cantidad = 2; // Establecer la cantidad a 2 por la promoción
+                        subtotal = precioProducto;
+                        cantidad = 2;
                     }
                     else
                     {
-                        subtotal = precioProducto * cantidad; // Calcular el subtotal normalmente
+                        subtotal = precioProducto * cantidad;
                     }
 
                     // Agregar el producto a la tabla de ventas
@@ -616,7 +608,6 @@ namespace presentacion
         {
             if (promo2x1.Checked)
             {
-                // Si está marcado, establecer la cantidad a 2
                 txtcantidadprod.Text = "2";
                 btnAgregar.Visible = false;
                 btn2x1.Visible = true;
@@ -624,7 +615,6 @@ namespace presentacion
             }
             else
             {
-                // Si está desmarcado, restablecer la cantidad a 1 (o cualquier valor que necesites)
                 txtcantidadprod.Text = "1";
                 btnAgregar.Visible = true;
                 btn2x1.Visible = false;

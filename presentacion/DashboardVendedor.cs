@@ -18,12 +18,6 @@ namespace presentacion
         {
             InitializeComponent();
             usuarioActual = objusuario;
-
-            // Maximizar el formulario al iniciar
-            this.WindowState = FormWindowState.Maximized;
-
-            // Establecer redimensionamiento automático para el formulario
-            this.AutoScaleMode = AutoScaleMode.Font;
         }
 
         private void DashboardVendedor_FormClosing(object sender, FormClosingEventArgs e)
