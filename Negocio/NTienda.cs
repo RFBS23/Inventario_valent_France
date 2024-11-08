@@ -15,6 +15,11 @@ namespace Negocio
         public List<Productos_tienda> Listar()
         {
             return objd_productotienda.Listar();
-        }        
+        }
+
+        public int CantidadProductosTienda()
+        {
+            return objd_productotienda.CantidadProductosTienda();
+        }
     }
 }

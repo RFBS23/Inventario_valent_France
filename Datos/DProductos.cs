@@ -173,5 +173,18 @@ namespace Datos
             }
             return respuesta;
         }
+
+        public int CantidadProductos()
+        {
+            int cantidadUsuarios = 0;
+            using (SqlConnection connection = new SqlConnection(Conexion.cadena))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("select count(*) from productos", connection);
+                cantidadUsuarios = (int)cmd.ExecuteScalar();
+            }
+            return cantidadUsuarios;
+        }
+
     }
 }

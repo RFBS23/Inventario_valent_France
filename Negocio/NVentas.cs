@@ -3,6 +3,7 @@ using Entidad;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,18 @@ namespace Negocio
                 oVenta.oDetalle_Venta = oDetalleVentas;
             }
             return oVenta;
+        }
+
+        public int CantidadVentas()
+        {
+            int cantidadVentas = 0;
+            using (SqlConnection connection = new SqlConnection(Conexion.cadena))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("select count(*) from ventas", connection);
+                cantidadVentas = (int)cmd.ExecuteScalar();
+            }
+            return cantidadVentas;
         }
     }
 }

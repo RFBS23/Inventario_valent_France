@@ -119,5 +119,11 @@ namespace Negocio
         {
             return objd_producto.Eliminar(obj, out Mensaje);
         }
+
+        public int CantidadProductos()
+        {
+            return objd_producto.CantidadProductos();
+        }
+
     }
 }

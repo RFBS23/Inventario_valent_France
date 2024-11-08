@@ -923,7 +923,7 @@
             this.tablaproductos.RowHeadersVisible = false;
             this.tablaproductos.RowHeadersWidth = 51;
             this.tablaproductos.RowTemplate.Height = 30;
-            this.tablaproductos.Size = new System.Drawing.Size(2, 1034);
+            this.tablaproductos.Size = new System.Drawing.Size(0, 1219);
             this.tablaproductos.TabIndex = 64;
             this.tablaproductos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.tablaproductos.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

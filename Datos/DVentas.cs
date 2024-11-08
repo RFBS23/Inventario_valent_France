@@ -212,5 +212,18 @@ namespace Datos
             }
             return oLista;
         }
+
+        public int CantidadVentas()
+        {
+            int cantidadVentas = 0;
+            using (SqlConnection connection = new SqlConnection(Conexion.cadena))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("select count(*) from ventas", connection);
+                cantidadVentas = (int)cmd.ExecuteScalar();
+            }
+            return cantidadVentas;
+        }
+
     }
 }

@@ -63,7 +63,7 @@ namespace presentacion
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            Productos oProductos = new NProducto().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+            Productos oProductos = new NProducto().Listar().Where(p => p.codigo.Equals(txtcodigo.Text, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
             if (oProductos != null)
             {
                 txtidproducto.Text = oProductos.idproducto.ToString();
@@ -330,7 +330,7 @@ namespace presentacion
                 if (enterPressCount == 1)
                 {
                     // Realiza la búsqueda del producto
-                    Productos oProductos = new NProducto().Listar().Where(p => p.codigo == txtcodigo.Text).FirstOrDefault();
+                    Productos oProductos = new NProducto().Listar().Where(p => p.codigo.Equals(txtcodigo.Text, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
                     if (oProductos != null)
                     {
                         txtidproducto.Text = oProductos.idproducto.ToString();

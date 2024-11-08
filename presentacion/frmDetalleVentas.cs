@@ -138,9 +138,8 @@ namespace presentacion
             Ticket_Html = Ticket_Html.Replace("@rucnegocio", odatos.ruc);
             Ticket_Html = Ticket_Html.Replace("@nombrenegocio", odatos.nombre.ToUpper());
             Ticket_Html = Ticket_Html.Replace("@direcnegocio", odatos.direccion);
-            Ticket_Html = Ticket_Html.Replace("@numerodeventa", txtnumerocomprobante.Text.ToUpper());
+            Ticket_Html = Ticket_Html.Replace("@numeroventa", txtnumerocomprobante.Text.ToUpper());
             Ticket_Html = Ticket_Html.Replace("@tipodocumento", txtcomprobante.Text.ToUpper());
-            //Ticket_Html = Ticket_Html.Replace("@numerodocumento", txtnumerocomprobante.Text.ToUpper());
             Ticket_Html = Ticket_Html.Replace("@fecharegistro", txtfecha.Text);
             Ticket_Html = Ticket_Html.Replace("@usuarioregistro", txtusuario.Text.ToUpper());
             Ticket_Html = Ticket_Html.Replace("@nombrecliente", txtnombrecliente.Text.ToUpper());
@@ -162,7 +161,7 @@ namespace presentacion
             Ticket_Html = Ticket_Html.Replace("@pagocon", txtpagocon.Text);
             Ticket_Html = Ticket_Html.Replace("@cambio", txtvuelto.Text);
 
-            string enlace = "https://rfbs23.github.io/portafolio";
+            string enlace = "https://portafolio-fabridev.vercel.app/";
 
             string urlServicioQR = $"https://api.qrserver.com/v1/create-qr-code/?data={enlace}&size=60x60";
 

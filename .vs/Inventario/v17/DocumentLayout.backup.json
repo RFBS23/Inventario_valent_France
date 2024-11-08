@@ -1,19 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|c:\\users\\fabri\\documents\\programacion\\c-sharp\\inventario\\presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A72EE602-A958-4DAD-A41F-8E6E4AEA75A7}|presentacion\\presentacion.csproj|solutionrelative:presentacion\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9481A8B-B47E-43A5-AC59-1466ADB69584}|..\\..\\..\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aiproj|C:\\Users\\fabri\\Documents\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip||{AE40A4D1-A614-4A08-B9E2-B74E011783ED}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -21,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 278,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,42 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmVentas.cs",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs",
-              "RelativeDocumentMoniker": "presentacion\\frmVentas.cs",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs",
-              "RelativeToolTip": "presentacion\\frmVentas.cs",
-              "ViewState": "AgIAAFQCAAAAAAAAAADwv3ACAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T01:47:27.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmVentas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs",
-              "RelativeDocumentMoniker": "presentacion\\frmVentas.cs",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Programacion\\C-Sharp\\Inventario\\presentacion\\frmVentas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "presentacion\\frmVentas.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T01:47:20.559Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Inventario-ValentFrance.aip",
-              "DocumentMoniker": "C:\\Users\\fabri\\Documents\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip",
-              "RelativeDocumentMoniker": "..\\..\\..\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip",
-              "ToolTip": "C:\\Users\\fabri\\Documents\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip",
-              "RelativeToolTip": "..\\..\\..\\Advanced Installer\\Projects\\Inventario-ValentFrance\\Inventario-ValentFrance\\Inventario-ValentFrance.aip",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-06T01:35:08.396Z"
             }
           ]
         }

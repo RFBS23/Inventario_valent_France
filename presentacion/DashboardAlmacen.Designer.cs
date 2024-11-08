@@ -48,7 +48,7 @@
             this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblcantventas = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
@@ -269,6 +269,7 @@
             this.btnopreporte.Size = new System.Drawing.Size(127, 37);
             this.btnopreporte.TabIndex = 4;
             this.btnopreporte.Text = "Ingresar    --->";
+            this.btnopreporte.Click += new System.EventHandler(this.btnopreporte_Click);
             // 
             // label7
             // 
@@ -324,7 +325,7 @@
             // 
             this.guna2Panel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel15.BorderRadius = 20;
-            this.guna2Panel15.Controls.Add(this.label10);
+            this.guna2Panel15.Controls.Add(this.lblcantventas);
             this.guna2Panel15.Controls.Add(this.label5);
             this.guna2Panel15.Controls.Add(this.guna2PictureBox4);
             this.guna2Panel15.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -338,15 +339,15 @@
             this.guna2Panel15.Size = new System.Drawing.Size(523, 241);
             this.guna2Panel15.TabIndex = 2;
             // 
-            // label10
+            // lblcantventas
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(142, 73);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 20);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "00";
+            this.lblcantventas.AutoSize = true;
+            this.lblcantventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcantventas.Location = new System.Drawing.Point(142, 73);
+            this.lblcantventas.Name = "lblcantventas";
+            this.lblcantventas.Size = new System.Drawing.Size(27, 20);
+            this.lblcantventas.TabIndex = 3;
+            this.lblcantventas.Text = "00";
             // 
             // label5
             // 
@@ -1019,7 +1020,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel17;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblcantventas;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel13;

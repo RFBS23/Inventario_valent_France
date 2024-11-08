@@ -414,9 +414,16 @@ namespace presentacion
 
                 if (enterPressCount == 1)
                 {
-                    Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo.ToUpper() == txtcodigo.Text.ToUpper()).FirstOrDefault();
-                    if (oProductos != null)
+                    // Obtiene una lista de productos que coinciden con el código (sin diferenciar mayúsculas y minúsculas)
+                    List<Productos_tienda> productosEncontrados = new NTienda().Listar()
+                        .Where(p => p.codigo.Equals(txtcodigo.Text, StringComparison.OrdinalIgnoreCase))
+                        .ToList();
+
+                    if (productosEncontrados.Count > 0)
                     {
+                        // Selecciona el primer producto encontrado
+                        Productos_tienda oProductos = productosEncontrados.First();
+
                         txtidproducto.Text = oProductos.idproductotienda.ToString();
                         txtnombres.Text = oProductos.nombre;
                         txtstock.Text = oProductos.stock.ToString();
@@ -428,6 +435,7 @@ namespace presentacion
                     }
                     else
                     {
+                        // No se encontraron productos
                         txtidproducto.Text = "0";
                         txtnombres.Text = "";
                         txtstock.Text = "0";

@@ -61,5 +61,17 @@ namespace Datos
             return lista;
         }
 
+        public int CantidadProductosTienda()
+        {
+            int cantidadUsuarios = 0;
+            using (SqlConnection connection = new SqlConnection(Conexion.cadena))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("select count(*) from productos_tienda", connection);
+                cantidadUsuarios = (int)cmd.ExecuteScalar();
+            }
+            return cantidadUsuarios;
+        }
+
     }
 }

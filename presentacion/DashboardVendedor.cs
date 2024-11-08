@@ -1,4 +1,5 @@
 ﻿using Entidad;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -101,14 +102,30 @@ namespace presentacion
             lblfecha.Text = $"Fecha ingreso: {fechaActual.Day}/{fechaActual.Month}/{fechaActual.Year}";
             lblhora.Text = "Hora: " + DateTime.Now.ToString("hh:mm:ss tt");
 
-
-
             panelFormularios.Dock = DockStyle.Fill;
+            cargarcards();
+        }
+
+        private void cargarcards()
+        {
+            NTienda cantproductos = new NTienda();
+            NVentas cantventas = new NVentas();
+
+            int cantidadproductos = cantproductos.CantidadProductosTienda();
+            int cantidadventas = cantventas.CantidadVentas();
+
+            lblcantproductos.Text = cantidadproductos.ToString();
+            lblcantventas.Text = cantidadventas.ToString();
         }
 
         private void btnopreporte_Click(object sender, EventArgs e)
         {
             formularioAbierto(new frmreportesventas());
+        }
+
+        private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

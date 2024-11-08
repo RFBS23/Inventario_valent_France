@@ -152,5 +152,10 @@ namespace presentacion
                 System.Diagnostics.Process.Start(savefile.FileName);
             }
         }
+
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
