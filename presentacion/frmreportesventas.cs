@@ -63,6 +63,7 @@ namespace presentacion
                         rv.nombrecliente,
                         rv.CodigoProducto,
                         rv.NombreProducto,
+                        rv.Colores,
                         rv.Tallas,
                         rv.Categoria,
                         rv.precioventa,
@@ -127,7 +128,8 @@ namespace presentacion
                             row.Cells[11].Value.ToString(),
                             row.Cells[12].Value.ToString(),
                             row.Cells[13].Value.ToString(),
-                            row.Cells[14].Value.ToString()
+                            row.Cells[14].Value.ToString(),
+                            row.Cells[15].Value.ToString()
                         });
                 }
                 SaveFileDialog savefile = new SaveFileDialog();

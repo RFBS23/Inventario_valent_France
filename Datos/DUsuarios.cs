@@ -209,5 +209,47 @@ namespace Datos
             return cantidadUsuarios;
         }
 
+        public Usuarios BuscarPorDocumento(string documento)
+        {
+            Usuarios usuario = null;
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("select u.idusuario, u.documento, u.nombres, u.apellidos, u.nombreusuario, u.correo, u.clave, u.estado, nv.idnivelacceso, nv.nombreacceso from usuarios u");
+                    query.AppendLine("inner join nivelacceso nv on nv.idnivelacceso = u.idnivelacceso");
+                    query.AppendLine("where u.documento = @documento");
+                    SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
+                    cmd.Parameters.AddWithValue("@documento", documento);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            usuario = new Usuarios()
+                            {
+                                idusuario = Convert.ToInt32(dr["idusuario"]),
+                                documento = dr["documento"].ToString(),
+                                nombres = dr["nombres"].ToString(),
+                                apellidos = dr["apellidos"].ToString(),
+                                nombreusuario = dr["nombreusuario"].ToString(),
+                                correo = dr["correo"].ToString(),
+                                clave = dr["clave"].ToString(),
+                                estado = Convert.ToBoolean(dr["estado"]),
+                                oNivelAcceso = new NivelAcceso() { idnivelacceso = Convert.ToInt32(dr["idnivelacceso"]), nombreacceso = dr["nombreacceso"].ToString() },
+                            };
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    usuario = null;
+                }
+            }
+            return usuario;
+        }
+
     }
 }

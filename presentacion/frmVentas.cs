@@ -45,6 +45,17 @@ namespace presentacion
             this.promo2x1.CheckedChanged += new System.EventHandler(this.promo2x1_CheckedChanged);
             btnAgregar.Visible = true;
             btn2x1.Visible = false;
+
+            btnpromo.Visible = false;
+            txtcodigopromo.Visible = false;
+            txtnombrepromo.Visible = false;
+            txttallaspromo.Visible = false;
+            txtcolopromo.Visible = false;
+            txtpreciopromo.Visible = false;
+            txtdescuentopromo.Visible = false;
+            txtcantpromo.Visible = false;
+            txtstockpromo.Visible = false;
+
         }
 
         private async void btnbuscarcliente_Click(object sender, EventArgs e)
@@ -65,6 +76,17 @@ namespace presentacion
                             if (json != null)
                             {
                                 txtcliente.Text = $"{json.nombres} {json.apellidoPaterno} {json.apellidoMaterno}";
+                                string dniCliente = txtddocumento.Text;
+                                var usuarioRegistrado = new NUsuarios().Listar().FirstOrDefault(u => u.documento == dniCliente);
+
+                                if (usuarioRegistrado != null)
+                                {
+                                    txtdescuento.Text = "10";
+                                }
+                                else
+                                {
+                                    txtdescuento.Text = "0";
+                                }
                             }
                             else
                             {
@@ -73,7 +95,7 @@ namespace presentacion
                         }
                         else
                         {
-                            MessageBox.Show($"No se ha podido encontrar el dni buscado..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show($"No se ha podido encontrar el dni buscado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -82,6 +104,13 @@ namespace presentacion
                     MessageBox.Show($"Error al obtener la información del DNI: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void AplicarDescuento()
+        {
+            decimal descuento = 0.10m;
+            string porcentajeDescuento = "10%";
+            txtdescuento.Text = porcentajeDescuento;
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)
@@ -106,7 +135,7 @@ namespace presentacion
                 txtprecio.Text = "";
                 txttalla.Text = "";
                 txtcolores.Text = "";
-                txtdescuento.Text = "0.00";
+                txtdescuento.PlaceholderText = "0";
                 txtcantidadprod.Value = 1;
             }
         }
@@ -246,8 +275,17 @@ namespace presentacion
             txtstock.Text = "0";
             txttalla.Text = "";
             txtcolores.Text = "";
-            txtdescuento.Text = "";
+            txtdescuento.PlaceholderText = "0";
+            txtcodigopromo.Text = "";
+            txtnombrepromo.Text = "";
+            txttallaspromo.Text = "";
+            txtcolopromo.Text = "";
+            txtpreciopromo.Text = "0";
+            txtstockpromo.Text = "";
+            txtdescuentopromo.PlaceholderText = "0";
+
             txtcantidadprod.Value = 1;
+            txtcantpromo.Value = 1;
             promo2x1.Checked = false;
         }
 
@@ -533,6 +571,13 @@ namespace presentacion
                 return;
             }
 
+            if (!decimal.TryParse(txtcantpromo.Text, out cantidad) || cantidad <= 0)
+            {
+                MessageBox.Show("Cantidad inválida", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtcantidadprod.Select();
+                return;
+            }
+
             // Verificar el stock disponible
             int stock = Convert.ToInt32(txtstock.Text);
             if (cantidad > stock)
@@ -575,7 +620,7 @@ namespace presentacion
                     if (promo2x1.Checked)
                     {
                         subtotal = precioProducto;
-                        cantidad = 2;
+                        cantidad = 1;
                     }
                     else
                     {
@@ -597,7 +642,21 @@ namespace presentacion
                         subtotal.ToString("0.00")
                     });
 
-                    calcularTotal2x1(); // Calcular el total con el nuevo subtotal
+                    tablaventas.Rows.Add(new object[]
+                    {
+                        txtidproducto.Text,
+                        txtddocumento.Text,
+                        txtcliente.Text,
+                        txtnombres.Text,
+                        txttallaspromo.Text,
+                        txtcolopromo.Text,
+                        txtpreciopromo.Text,
+                        txtdescuentopromo.Text,
+                        "1",
+                        "0.00"
+                    });
+
+                    calcularTotal2x1();
                     limpiarProducto();
                     txtcodigo.Select();
                 }
@@ -616,17 +675,66 @@ namespace presentacion
         {
             if (promo2x1.Checked)
             {
-                txtcantidadprod.Text = "2";
+                txtcantidadprod.Text = "1";
                 btnAgregar.Visible = false;
                 btn2x1.Visible = true;
                 txtdescuento.Text = "0";
+                txtdescuentopromo.Text = "0";
+
+                btnpromo.Visible = true;
+                txtcodigopromo.Visible = true;
+                txtnombrepromo.Visible = true;
+                txttallaspromo.Visible = true;
+                txtcolopromo.Visible = true;
+                txtpreciopromo.Visible = true;
+                txtdescuentopromo.Visible = true;
+                txtcantpromo.Visible = true;
+                txtstockpromo.Visible = true;
             }
             else
             {
                 txtcantidadprod.Text = "1";
+                txtdescuento.Text = "";
                 btnAgregar.Visible = true;
                 btn2x1.Visible = false;
+
+                btnpromo.Visible = false;
+                txtcodigopromo.Visible = false;
+                txtnombrepromo.Visible = false;
+                txttallaspromo.Visible = false;
+                txtcolopromo.Visible = false;
+                txtpreciopromo.Visible = false;
+                txtdescuentopromo.Visible = false;
+                txtcantpromo.Visible = false;
+                txtstockpromo.Visible = false;
             }
         }
+
+        private void btnpromo_Click(object sender, EventArgs e)
+        {
+            Productos_tienda oProductos = new NTienda().Listar().Where(p => p.codigo.ToUpper() == txtcodigopromo.Text.ToUpper()).FirstOrDefault();
+            if (oProductos != null)
+            {
+                txtidproducto.Text = oProductos.idproductotienda.ToString();
+                txtnombrepromo.Text = oProductos.nombre.ToString() + " (Prom 2x1).";
+                txtstockpromo.Text = oProductos.stock.ToString();
+                txtpreciopromo.Text = oProductos.preciocompra.ToString();
+                txttallaspromo.Text = oProductos.oTallasropa.nombretalla.ToString();
+                txtcolopromo.Text = oProductos.colores.ToString();
+                txtdescuentopromo.Text = "0".ToString();
+                txtcantidadprod.Select();
+            }
+            else
+            {
+                txtidproducto.Text = "0";
+                txtnombrepromo.Text = "";
+                txtpreciopromo.Text = "";
+                txttallaspromo.Text = "";
+                txtcolopromo.Text = "";
+                txtdescuentopromo.PlaceholderText = "  0";
+                txtcantidadprod.Value = 1;
+            }
+        }
+
     }
 }

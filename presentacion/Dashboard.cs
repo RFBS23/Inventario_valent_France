@@ -145,5 +145,10 @@ namespace presentacion
         {
             formularioAbierto(new frmcompra(usuarioActual));
         }
+
+        private void btnNivelAcceso_Click(object sender, EventArgs e)
+        {
+            formularioAbierto(new frmNivelAcceso());
+        }
     }
 }

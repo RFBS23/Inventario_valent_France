@@ -41,7 +41,8 @@ namespace Datos
                                 CodigoProducto = dr["CodigoProducto"].ToString(),
                                 NombreProducto = dr["NombreProducto"].ToString(),
                                 Descuento = dr["Descuento"].ToString(),
-                                Tallas = dr["Tallas"].ToString(),  // Corregido aquí
+                                Tallas = dr["Tallas"].ToString(),
+                                Colores = dr["Colores"].ToString(),
                                 Categoria = dr["Categoria"].ToString(),
                                 precioventa = dr["precioventa"].ToString(),
                                 cantidad = dr["cantidad"].ToString(),
@@ -89,6 +90,7 @@ namespace Datos
                                 nombreproveedor = dr["razonsocial"].ToString(),
                                 CodigoProducto = dr["CodigoProducto"].ToString(),
                                 NombreProducto = dr["NombreProducto"].ToString(),
+                                Colores = dr["Colores"].ToString(),
                                 Tallas = dr["Tallas"].ToString(), 
                                 Categoria = dr["Categoria"].ToString(),
                                 preciocompra = dr["preciocompra"].ToString(),

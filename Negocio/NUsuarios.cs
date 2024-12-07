@@ -98,5 +98,10 @@ namespace Negocio
             return obj_usuario.CantidadUsuarios();
         }
 
+        public Usuarios BuscarPorDocumento(string documento)
+        {
+            return obj_usuario.BuscarPorDocumento(documento);
+        }
+
     }
 }

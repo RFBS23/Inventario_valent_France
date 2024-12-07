@@ -381,6 +381,12 @@
     <Compile Include="frminformacion.Designer.cs">
       <DependentUpon>frminformacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNivelAcceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNivelAcceso.Designer.cs">
+      <DependentUpon>frmNivelAcceso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -503,6 +509,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frminformacion.resx">
       <DependentUpon>frminformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNivelAcceso.resx">
+      <DependentUpon>frmNivelAcceso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>

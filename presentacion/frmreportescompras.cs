@@ -71,6 +71,7 @@ namespace presentacion
                     rc.nombreproveedor,
                     rc.CodigoProducto,
                     rc.NombreProducto,
+                    rc.Colores,
                     rc.Tallas,
                     rc.Categoria,
                     rc.preciocompra,
@@ -131,6 +132,7 @@ namespace presentacion
                             row.Cells[11].Value.ToString(),
                             row.Cells[12].Value.ToString(),
                             row.Cells[13].Value.ToString(),
+                            row.Cells[14].Value.ToString()
                         });
                 }
                 SaveFileDialog savefile = new SaveFileDialog();

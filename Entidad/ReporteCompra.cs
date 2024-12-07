@@ -20,6 +20,7 @@ namespace Entidad
         public string Descuento { get; set; }
         public string Categoria { get; set; }
         public string Tallas { get; set; }
+        public string Colores { get; set; }
         public string preciocompra { get; set; }
         public string precioventa { get; set; }
         public string cantidad { get; set; }

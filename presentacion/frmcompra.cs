@@ -37,7 +37,7 @@ namespace presentacion
 
             txtstock.Text = "0";
             txtprecioventa.Text = "0.00";
-            txtpreciocompra.Text = "0.00";
+            txtpreciocompra.PlaceholderText = "0.00";
             txtidproducto.Text = "0";
             txttotalpagar.Text = "0.00";
         }
@@ -70,8 +70,10 @@ namespace presentacion
                 txtnombres.Text = oProductos.nombre;
                 txtstock.Text = oProductos.stock.ToString();
                 txtprecioventa.Text = oProductos.precioventa.ToString();
+                txtpreciocompra.Text = oProductos.precioventa.ToString();
                 txttalla.Text = oProductos.oTallasropa.nombretalla.ToString();
                 txtcolores.Text = oProductos.colores.ToString();
+                txtcantidadprod.Text = oProductos.stock.ToString();
                 txtcantidadprod.Select();
             }
             else
@@ -80,6 +82,7 @@ namespace presentacion
                 txtnombres.Text = "";
                 txtstock.Text = "0";
                 txtprecioventa.Text = "0.00";
+                txtpreciocompra.PlaceholderText = "0.00";
                 txttalla.Text = "";
                 txtcolores.Text = "";
                 txtcantidadprod.Value = 1;
@@ -92,7 +95,7 @@ namespace presentacion
             txtcodigo.Text = "";
             txtnombres.Text = "";
             txtprecioventa.Text = "0.00";
-            txtpreciocompra.Text = "0.00";
+            txtpreciocompra.PlaceholderText = "0.00";
             txtstock.Text = "";
             txttalla.Text = "";
             txtcolores.Text = "";
@@ -134,6 +137,13 @@ namespace presentacion
             {
                 MessageBox.Show("Precio de venta - Formato incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtprecioventa.Select();
+                return;
+            }
+
+            int stock = Convert.ToInt32(txtstock.Text);
+            if (stock == 0)
+            {
+                MessageBox.Show("El producto seleccionado no tiene stock disponible.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -337,8 +347,10 @@ namespace presentacion
                         txtnombres.Text = oProductos.nombre;
                         txtstock.Text = oProductos.stock.ToString();
                         txtprecioventa.Text = oProductos.precioventa.ToString();
+                        txtpreciocompra.Text = oProductos.precioventa.ToString();
                         txttalla.Text = oProductos.oTallasropa.nombretalla.ToString();
                         txtcolores.Text = oProductos.colores.ToString();
+                        txtcantidadprod.Text = oProductos.stock.ToString();
                         txtcantidadprod.Select();
                     }
                     else
@@ -347,6 +359,7 @@ namespace presentacion
                         txtnombres.Text = "";
                         txtstock.Text = "0";
                         txtprecioventa.Text = "0.00";
+                        txtpreciocompra.PlaceholderText = "0.00";
                         txttalla.Text = "";
                         txtcolores.Text = "";
                         txtcantidadprod.Value = 1;
@@ -385,6 +398,8 @@ namespace presentacion
                         txtprecioventa.Text = oProductos.precioventa.ToString();
                         txttalla.Text = oProductos.oTallasropa.nombretalla.ToString();
                         txtcolores.Text = oProductos.colores.ToString();
+                        txtpreciocompra.Text = oProductos.precioventa.ToString();
+                        txtcantidadprod.Text = oProductos.stock.ToString();
                         txtcantidadprod.Select();
                     }
                     else
@@ -393,6 +408,7 @@ namespace presentacion
                         txtnombres.Text = "";
                         txtstock.Text = "0";
                         txtprecioventa.Text = "0.00";
+                        txtpreciocompra.PlaceholderText = "0.00";
                         txttalla.Text = "";
                         txtcolores.Text = "";
                         txtcantidadprod.Value = 1;

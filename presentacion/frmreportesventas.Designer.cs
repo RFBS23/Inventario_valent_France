@@ -35,21 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.tablareportes = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipodocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numerodocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioregistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrecliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.talla = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.montototal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.btnexportarexcel = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,6 +49,22 @@
             this.txtbuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnbuscar = new Guna.UI2.WinForms.Guna2Button();
             this.lbldni = new System.Windows.Forms.Label();
+            this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipodocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numerodocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioregistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrecliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.talla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.montototal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablareportes)).BeginInit();
             this.SuspendLayout();
@@ -122,6 +123,7 @@
             this.nombrecliente,
             this.codigoproducto,
             this.nombreproducto,
+            this.colores,
             this.talla,
             this.categoria,
             this.precioventa,
@@ -179,136 +181,6 @@
             this.tablareportes.ThemeStyle.RowsStyle.Height = 24;
             this.tablareportes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tablareportes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // FechaRegistro
-            // 
-            this.FechaRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.FechaRegistro.HeaderText = "Fecha Registro";
-            this.FechaRegistro.MinimumWidth = 6;
-            this.FechaRegistro.Name = "FechaRegistro";
-            this.FechaRegistro.ReadOnly = true;
-            this.FechaRegistro.Width = 164;
-            // 
-            // tipodocumento
-            // 
-            this.tipodocumento.HeaderText = "Tipo Documento";
-            this.tipodocumento.MinimumWidth = 6;
-            this.tipodocumento.Name = "tipodocumento";
-            this.tipodocumento.ReadOnly = true;
-            this.tipodocumento.Width = 173;
-            // 
-            // numerodocumento
-            // 
-            this.numerodocumento.HeaderText = "Numero de Venta";
-            this.numerodocumento.MinimumWidth = 6;
-            this.numerodocumento.Name = "numerodocumento";
-            this.numerodocumento.ReadOnly = true;
-            this.numerodocumento.Width = 181;
-            // 
-            // usuarioregistro
-            // 
-            this.usuarioregistro.HeaderText = "Usuario";
-            this.usuarioregistro.MinimumWidth = 6;
-            this.usuarioregistro.Name = "usuarioregistro";
-            this.usuarioregistro.ReadOnly = true;
-            this.usuarioregistro.Width = 101;
-            // 
-            // documento
-            // 
-            this.documento.HeaderText = "Documento del cliente";
-            this.documento.MinimumWidth = 6;
-            this.documento.Name = "documento";
-            this.documento.ReadOnly = true;
-            this.documento.Width = 224;
-            // 
-            // nombrecliente
-            // 
-            this.nombrecliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nombrecliente.HeaderText = "Nombre del cliente";
-            this.nombrecliente.MinimumWidth = 6;
-            this.nombrecliente.Name = "nombrecliente";
-            this.nombrecliente.ReadOnly = true;
-            this.nombrecliente.Width = 194;
-            // 
-            // codigoproducto
-            // 
-            this.codigoproducto.HeaderText = "Codigo Producto";
-            this.codigoproducto.MinimumWidth = 6;
-            this.codigoproducto.Name = "codigoproducto";
-            this.codigoproducto.ReadOnly = true;
-            this.codigoproducto.Width = 175;
-            // 
-            // nombreproducto
-            // 
-            this.nombreproducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nombreproducto.HeaderText = "Nombre del Producto";
-            this.nombreproducto.MinimumWidth = 6;
-            this.nombreproducto.Name = "nombreproducto";
-            this.nombreproducto.ReadOnly = true;
-            this.nombreproducto.Width = 213;
-            // 
-            // talla
-            // 
-            this.talla.HeaderText = "Talla";
-            this.talla.MinimumWidth = 6;
-            this.talla.Name = "talla";
-            this.talla.ReadOnly = true;
-            this.talla.Width = 77;
-            // 
-            // categoria
-            // 
-            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.categoria.FillWeight = 0.570844F;
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.MinimumWidth = 6;
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            this.categoria.Width = 117;
-            // 
-            // precioventa
-            // 
-            this.precioventa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.precioventa.HeaderText = "Precio de Venta";
-            this.precioventa.MinimumWidth = 6;
-            this.precioventa.Name = "precioventa";
-            this.precioventa.ReadOnly = true;
-            this.precioventa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.precioventa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.precioventa.Width = 147;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.MinimumWidth = 6;
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 110;
-            // 
-            // descuento
-            // 
-            this.descuento.HeaderText = "Descuento";
-            this.descuento.MinimumWidth = 6;
-            this.descuento.Name = "descuento";
-            this.descuento.ReadOnly = true;
-            this.descuento.Width = 126;
-            // 
-            // subtotal
-            // 
-            this.subtotal.HeaderText = "Sub Total";
-            this.subtotal.MinimumWidth = 6;
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
-            this.subtotal.Width = 116;
-            // 
-            // montototal
-            // 
-            this.montototal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.montototal.FillWeight = 113.9045F;
-            this.montototal.HeaderText = "Monto Total";
-            this.montototal.MinimumWidth = 6;
-            this.montototal.Name = "montototal";
-            this.montototal.ReadOnly = true;
-            this.montototal.Width = 135;
             // 
             // label3
             // 
@@ -575,6 +447,144 @@
             this.lbldni.TabIndex = 7;
             this.lbldni.Text = "Fecha Inicio:";
             // 
+            // FechaRegistro
+            // 
+            this.FechaRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FechaRegistro.HeaderText = "Fecha Registro";
+            this.FechaRegistro.MinimumWidth = 6;
+            this.FechaRegistro.Name = "FechaRegistro";
+            this.FechaRegistro.ReadOnly = true;
+            this.FechaRegistro.Width = 164;
+            // 
+            // tipodocumento
+            // 
+            this.tipodocumento.HeaderText = "Tipo Venta";
+            this.tipodocumento.MinimumWidth = 6;
+            this.tipodocumento.Name = "tipodocumento";
+            this.tipodocumento.ReadOnly = true;
+            this.tipodocumento.Width = 126;
+            // 
+            // numerodocumento
+            // 
+            this.numerodocumento.HeaderText = "N° de Venta";
+            this.numerodocumento.MinimumWidth = 6;
+            this.numerodocumento.Name = "numerodocumento";
+            this.numerodocumento.ReadOnly = true;
+            this.numerodocumento.Width = 137;
+            // 
+            // usuarioregistro
+            // 
+            this.usuarioregistro.HeaderText = "Vendedor";
+            this.usuarioregistro.MinimumWidth = 6;
+            this.usuarioregistro.Name = "usuarioregistro";
+            this.usuarioregistro.ReadOnly = true;
+            this.usuarioregistro.Width = 115;
+            // 
+            // documento
+            // 
+            this.documento.HeaderText = "Documento";
+            this.documento.MinimumWidth = 6;
+            this.documento.Name = "documento";
+            this.documento.ReadOnly = true;
+            this.documento.Width = 131;
+            // 
+            // nombrecliente
+            // 
+            this.nombrecliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombrecliente.HeaderText = "Cliente";
+            this.nombrecliente.MinimumWidth = 6;
+            this.nombrecliente.Name = "nombrecliente";
+            this.nombrecliente.ReadOnly = true;
+            this.nombrecliente.Width = 95;
+            // 
+            // codigoproducto
+            // 
+            this.codigoproducto.HeaderText = "Codigo";
+            this.codigoproducto.MinimumWidth = 6;
+            this.codigoproducto.Name = "codigoproducto";
+            this.codigoproducto.ReadOnly = true;
+            this.codigoproducto.Width = 94;
+            // 
+            // nombreproducto
+            // 
+            this.nombreproducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreproducto.HeaderText = "Nombre Prod.";
+            this.nombreproducto.MinimumWidth = 6;
+            this.nombreproducto.Name = "nombreproducto";
+            this.nombreproducto.ReadOnly = true;
+            this.nombreproducto.Width = 151;
+            // 
+            // colores
+            // 
+            this.colores.HeaderText = "Colores";
+            this.colores.MinimumWidth = 6;
+            this.colores.Name = "colores";
+            this.colores.ReadOnly = true;
+            this.colores.Width = 101;
+            // 
+            // talla
+            // 
+            this.talla.HeaderText = "Talla";
+            this.talla.MinimumWidth = 6;
+            this.talla.Name = "talla";
+            this.talla.ReadOnly = true;
+            this.talla.Width = 77;
+            // 
+            // categoria
+            // 
+            this.categoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.categoria.FillWeight = 0.570844F;
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.MinimumWidth = 6;
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            this.categoria.Width = 117;
+            // 
+            // precioventa
+            // 
+            this.precioventa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.precioventa.HeaderText = "Precio";
+            this.precioventa.MinimumWidth = 6;
+            this.precioventa.Name = "precioventa";
+            this.precioventa.ReadOnly = true;
+            this.precioventa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.precioventa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.precioventa.Width = 67;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.MinimumWidth = 6;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            this.cantidad.Width = 110;
+            // 
+            // descuento
+            // 
+            this.descuento.HeaderText = "Descuento";
+            this.descuento.MinimumWidth = 6;
+            this.descuento.Name = "descuento";
+            this.descuento.ReadOnly = true;
+            this.descuento.Width = 126;
+            // 
+            // subtotal
+            // 
+            this.subtotal.HeaderText = "Sub Total";
+            this.subtotal.MinimumWidth = 6;
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
+            this.subtotal.Width = 116;
+            // 
+            // montototal
+            // 
+            this.montototal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.montototal.FillWeight = 113.9045F;
+            this.montototal.HeaderText = "Monto Total";
+            this.montototal.MinimumWidth = 6;
+            this.montototal.Name = "montototal";
+            this.montototal.ReadOnly = true;
+            this.montototal.Width = 135;
+            // 
             // frmreportesventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -617,6 +627,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrecliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoproducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreproducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colores;
         private System.Windows.Forms.DataGridViewTextBoxColumn talla;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioventa;

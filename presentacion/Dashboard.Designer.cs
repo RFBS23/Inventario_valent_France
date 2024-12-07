@@ -84,6 +84,7 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnNivelAcceso = new Guna.UI2.WinForms.Guna2Button();
             this.panelMenu.SuspendLayout();
             this.panelFormularios.SuspendLayout();
             this.banner.SuspendLayout();
@@ -109,6 +110,7 @@
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.White;
             this.panelMenu.BorderRadius = 20;
+            this.panelMenu.Controls.Add(this.btnNivelAcceso);
             this.panelMenu.Controls.Add(this.btncompras);
             this.panelMenu.Controls.Add(this.btnDetVentas);
             this.panelMenu.Controls.Add(this.btnlistaproductos);
@@ -156,7 +158,7 @@
             this.btncompras.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btncompras.ImageSize = new System.Drawing.Size(50, 50);
             this.btncompras.IndicateFocus = true;
-            this.btncompras.Location = new System.Drawing.Point(29, 804);
+            this.btncompras.Location = new System.Drawing.Point(29, 866);
             this.btncompras.Name = "btncompras";
             this.btncompras.PressedColor = System.Drawing.Color.Transparent;
             this.btncompras.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -190,7 +192,7 @@
             this.btnDetVentas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDetVentas.ImageSize = new System.Drawing.Size(50, 50);
             this.btnDetVentas.IndicateFocus = true;
-            this.btnDetVentas.Location = new System.Drawing.Point(29, 966);
+            this.btnDetVentas.Location = new System.Drawing.Point(29, 1028);
             this.btnDetVentas.Name = "btnDetVentas";
             this.btnDetVentas.PressedColor = System.Drawing.Color.Transparent;
             this.btnDetVentas.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -224,7 +226,7 @@
             this.btnlistaproductos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnlistaproductos.ImageSize = new System.Drawing.Size(40, 40);
             this.btnlistaproductos.IndicateFocus = true;
-            this.btnlistaproductos.Location = new System.Drawing.Point(29, 468);
+            this.btnlistaproductos.Location = new System.Drawing.Point(29, 530);
             this.btnlistaproductos.Name = "btnlistaproductos";
             this.btnlistaproductos.PressedColor = System.Drawing.Color.Transparent;
             this.btnlistaproductos.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -258,7 +260,7 @@
             this.btnagregarproducto.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnagregarproducto.ImageSize = new System.Drawing.Size(50, 50);
             this.btnagregarproducto.IndicateFocus = true;
-            this.btnagregarproducto.Location = new System.Drawing.Point(29, 388);
+            this.btnagregarproducto.Location = new System.Drawing.Point(29, 450);
             this.btnagregarproducto.Name = "btnagregarproducto";
             this.btnagregarproducto.PressedColor = System.Drawing.Color.Transparent;
             this.btnagregarproducto.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -271,7 +273,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(177, 1217);
+            this.label8.Location = new System.Drawing.Point(177, 1279);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 16);
             this.label8.TabIndex = 18;
@@ -301,7 +303,7 @@
             this.btnconfiguracion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnconfiguracion.ImageSize = new System.Drawing.Size(50, 50);
             this.btnconfiguracion.IndicateFocus = true;
-            this.btnconfiguracion.Location = new System.Drawing.Point(29, 1065);
+            this.btnconfiguracion.Location = new System.Drawing.Point(29, 1127);
             this.btnconfiguracion.Name = "btnconfiguracion";
             this.btnconfiguracion.PressedColor = System.Drawing.Color.Transparent;
             this.btnconfiguracion.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -335,7 +337,7 @@
             this.btnreportespdf.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnreportespdf.ImageSize = new System.Drawing.Size(50, 50);
             this.btnreportespdf.IndicateFocus = true;
-            this.btnreportespdf.Location = new System.Drawing.Point(29, 885);
+            this.btnreportespdf.Location = new System.Drawing.Point(29, 947);
             this.btnreportespdf.Name = "btnreportespdf";
             this.btnreportespdf.PressedColor = System.Drawing.Color.Transparent;
             this.btnreportespdf.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -369,7 +371,7 @@
             this.btnventas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnventas.ImageSize = new System.Drawing.Size(50, 50);
             this.btnventas.IndicateFocus = true;
-            this.btnventas.Location = new System.Drawing.Point(29, 721);
+            this.btnventas.Location = new System.Drawing.Point(29, 783);
             this.btnventas.Name = "btnventas";
             this.btnventas.PressedColor = System.Drawing.Color.Transparent;
             this.btnventas.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -403,7 +405,7 @@
             this.btnProveedor.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProveedor.ImageSize = new System.Drawing.Size(50, 50);
             this.btnProveedor.IndicateFocus = true;
-            this.btnProveedor.Location = new System.Drawing.Point(29, 635);
+            this.btnProveedor.Location = new System.Drawing.Point(29, 697);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.PressedColor = System.Drawing.Color.Transparent;
             this.btnProveedor.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -437,7 +439,7 @@
             this.btnTallas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTallas.ImageSize = new System.Drawing.Size(50, 50);
             this.btnTallas.IndicateFocus = true;
-            this.btnTallas.Location = new System.Drawing.Point(29, 548);
+            this.btnTallas.Location = new System.Drawing.Point(29, 610);
             this.btnTallas.Name = "btnTallas";
             this.btnTallas.PressedColor = System.Drawing.Color.Transparent;
             this.btnTallas.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -471,7 +473,7 @@
             this.btninformacion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btninformacion.ImageSize = new System.Drawing.Size(50, 50);
             this.btninformacion.IndicateFocus = true;
-            this.btninformacion.Location = new System.Drawing.Point(29, 1144);
+            this.btninformacion.Location = new System.Drawing.Point(29, 1206);
             this.btninformacion.Name = "btninformacion";
             this.btninformacion.PressedColor = System.Drawing.Color.Transparent;
             this.btninformacion.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -505,7 +507,7 @@
             this.btnUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUsuarios.ImageSize = new System.Drawing.Size(50, 50);
             this.btnUsuarios.IndicateFocus = true;
-            this.btnUsuarios.Location = new System.Drawing.Point(29, 306);
+            this.btnUsuarios.Location = new System.Drawing.Point(29, 293);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.PressedColor = System.Drawing.Color.Transparent;
             this.btnUsuarios.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -539,7 +541,7 @@
             this.btnCategoria.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCategoria.ImageSize = new System.Drawing.Size(50, 50);
             this.btnCategoria.IndicateFocus = true;
-            this.btnCategoria.Location = new System.Drawing.Point(29, 220);
+            this.btnCategoria.Location = new System.Drawing.Point(29, 211);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.PressedColor = System.Drawing.Color.Transparent;
             this.btnCategoria.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -573,7 +575,7 @@
             this.btnInicio.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnInicio.ImageSize = new System.Drawing.Size(50, 50);
             this.btnInicio.IndicateFocus = true;
-            this.btnInicio.Location = new System.Drawing.Point(29, 135);
+            this.btnInicio.Location = new System.Drawing.Point(29, 132);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.PressedColor = System.Drawing.Color.Transparent;
             this.btnInicio.ShadowDecoration.Color = System.Drawing.Color.Transparent;
@@ -1066,6 +1068,39 @@
             this.guna2Panel8.Size = new System.Drawing.Size(38, 240);
             this.guna2Panel8.TabIndex = 1;
             // 
+            // btnNivelAcceso
+            // 
+            this.btnNivelAcceso.Animated = true;
+            this.btnNivelAcceso.BackColor = System.Drawing.Color.Transparent;
+            this.btnNivelAcceso.BorderRadius = 10;
+            this.btnNivelAcceso.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnNivelAcceso.CheckedState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNivelAcceso.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnNivelAcceso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNivelAcceso.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNivelAcceso.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNivelAcceso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNivelAcceso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNivelAcceso.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.btnNivelAcceso.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(139)))), ((int)(((byte)(255)))));
+            this.btnNivelAcceso.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNivelAcceso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.btnNivelAcceso.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.btnNivelAcceso.HoverState.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNivelAcceso.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(108)))), ((int)(((byte)(255)))));
+            this.btnNivelAcceso.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnNivelAcceso.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnNivelAcceso.IndicateFocus = true;
+            this.btnNivelAcceso.Location = new System.Drawing.Point(29, 369);
+            this.btnNivelAcceso.Name = "btnNivelAcceso";
+            this.btnNivelAcceso.PressedColor = System.Drawing.Color.Transparent;
+            this.btnNivelAcceso.ShadowDecoration.Color = System.Drawing.Color.Transparent;
+            this.btnNivelAcceso.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.btnNivelAcceso.Size = new System.Drawing.Size(232, 56);
+            this.btnNivelAcceso.TabIndex = 23;
+            this.btnNivelAcceso.Text = "Nivel de Acceso";
+            this.btnNivelAcceso.Click += new System.EventHandler(this.btnNivelAcceso_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1166,5 +1201,6 @@
         private Guna.UI2.WinForms.Guna2Button btnagregarproducto;
         private Guna.UI2.WinForms.Guna2Button btnDetVentas;
         private Guna.UI2.WinForms.Guna2Button btncompras;
+        private Guna.UI2.WinForms.Guna2Button btnNivelAcceso;
     }
 }
